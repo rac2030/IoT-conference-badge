@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SHTC1
+D Temperature Humidity Sensor Digital DFN4 Sensirion SHTC1 Temperature & Humidity Sensor 4-Pin DFN, -40  +125 C
+K
+F http://docs-europe.electrocomponents.com/webdocs/13dd/0900766b813ddca0.pdf
+$ENDCMP
+#
+#End Doc Library

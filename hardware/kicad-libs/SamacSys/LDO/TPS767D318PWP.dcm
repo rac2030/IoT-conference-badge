@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPS767D318PWP
+D TPS767D318PWP, Dual Low Dropout Voltage Regulator, 1A, 1.8 V, 3.3 V 2%, 5.07W, 28-Pin HTSSOP EP
+K
+F http://www.ti.com/lit/gpn/tps767d3
+$ENDCMP
+#
+#End Doc Library

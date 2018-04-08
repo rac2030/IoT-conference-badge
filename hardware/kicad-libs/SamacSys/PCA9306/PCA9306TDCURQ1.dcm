@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP PCA9306TDCURQ1
+D Automotive Dual Bidirectional I2C Bus and SMBus Voltage-Level Translator
+K
+F http://www.ti.com/lit/gpn/pca9306-q1
+$ENDCMP
+#
+#End Doc Library
