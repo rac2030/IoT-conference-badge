@@ -1,0 +1,765 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ublox_NINA-W102
+LIBS:PCA9306TDCURQ1
+LIBS:SGPC3-2.5k
+LIBS:SHTC1
+LIBS:1655
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Brainstorm draft"
+Date "2018-04-09"
+Rev "0.2"
+Comp ""
+Comment1 "Integrated feedback from Urs"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L NINA-W102 U?
+U 1 1 5AC26BCB
+P 6100 2500
+F 0 "U?" H 6250 2400 60  0000 C CNN
+F 1 "NINA-W102" H 6100 2550 60  0000 C CNN
+F 2 "" H 5900 2100 60  0001 C CNN
+F 3 "" H 5900 2100 60  0001 C CNN
+	1    6100 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5AC26C2D
+P 3950 1250
+F 0 "#PWR?" H 3950 1100 50  0001 C CNN
+F 1 "+3.3V" H 3950 1390 50  0000 C CNN
+F 2 "" H 3950 1250 50  0001 C CNN
+F 3 "" H 3950 1250 50  0001 C CNN
+	1    3950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC26C45
+P 4300 4000
+F 0 "#PWR?" H 4300 3750 50  0001 C CNN
+F 1 "GND" H 4300 3850 50  0000 C CNN
+F 2 "" H 4300 4000 50  0001 C CNN
+F 3 "" H 4300 4000 50  0001 C CNN
+	1    4300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5AC26DCC
+P 4150 3400
+F 0 "C?" H 4175 3500 50  0000 L CNN
+F 1 "100nF" H 4175 3300 50  0000 L CNN
+F 2 "" H 4188 3250 50  0001 C CNN
+F 3 "" H 4150 3400 50  0001 C CNN
+	1    4150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5AC26E35
+P 4500 3400
+F 0 "C?" H 4525 3500 50  0000 L CNN
+F 1 "100nF" H 4525 3300 50  0000 L CNN
+F 2 "" H 4538 3250 50  0001 C CNN
+F 3 "" H 4500 3400 50  0001 C CNN
+	1    4500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L PCA9306 U?
+U 1 1 5AC27BE9
+P 3700 5800
+F 0 "U?" H 3400 6250 50  0000 L CNN
+F 1 "PCA9306" H 3900 6250 50  0000 L CNN
+F 2 "" H 3300 6150 50  0001 C CNN
+F 3 "" H 3400 6250 50  0001 C CNN
+	1    3700 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L SGPC3-2.5k U?
+U 1 1 5AC27DF2
+P 950 5800
+F 0 "U?" H 2000 6100 50  0000 L CNN
+F 1 "SGPC3-2.5k" H 2000 6000 50  0000 L CNN
+F 2 "SON80P245X245X90-7N" H 2000 5900 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/2/SGPC3-2.5K.pdf" H 2000 5800 50  0001 L CNN
+F 4 "SENSIRION - SGPC3-2.5K - DIGITAL LOW POWER GAS SENSOR, 1.8V, DFN" H 2000 5700 50  0001 L CNN "Description"
+F 5 "0.9" H 2000 5600 50  0001 L CNN "Height"
+F 6 "Sensirion" H 2000 5500 50  0001 L CNN "Manufacturer_Name"
+F 7 "SGPC3-2.5k" H 2000 5400 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 2000 5300 50  0001 L CNN "RS Part Number"
+F 9 "" H 2000 5200 50  0001 L CNN "RS Price/Stock"
+	1    950  5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 LED?
+U 1 1 5AC27ED2
+P 9600 4000
+F 0 "LED?" H 10550 4300 50  0000 L CNN
+F 1 "SK6812" H 10550 4200 50  0000 L CNN
+F 2 "WS2812B_1" H 10550 4100 50  0001 L CNN
+F 3 "http://www.adafruit.com/datasheets/WS2812B.pdf" H 10550 4000 50  0001 L CNN
+F 4 "Intelligent control LED integrated light source, 4-pin SMD" H 10550 3900 50  0001 L CNN "Description"
+F 5 "Adafruit" H 10550 3700 50  0001 L CNN "Manufacturer_Name"
+F 6 "1655" H 10550 3600 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "70928826" H 10550 3300 50  0001 L CNN "Allied_Number"
+F 8 "http://www.alliedelec.com/adafruit-industries-1655/70928826/" H 10550 3200 50  0001 L CNN "Allied Price/Stock"
+	1    9600 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L SHTC1 IC?
+U 1 1 5AC27FD1
+P 5750 4750
+F 0 "IC?" H 6600 5050 50  0000 L CNN
+F 1 "SHTC3" H 6600 4950 50  0000 L CNN
+F 2 "SON100P200X200X7500-5N" H 6600 4850 50  0001 L CNN
+F 3 "http://docs-europe.electrocomponents.com/webdocs/13dd/0900766b813ddca0.pdf" H 6600 4750 50  0001 L CNN
+F 4 "Temperature Humidity Sensor Digital DFN4 Sensirion SHTC1 Temperature & Humidity Sensor 4-Pin DFN, -40  +125 C" H 6600 4650 50  0001 L CNN "Description"
+F 5 "75" H 6600 4550 50  0001 L CNN "Height"
+F 6 "Sensirion" H 6600 4450 50  0001 L CNN "Manufacturer_Name"
+F 7 "SHTC1" H 6600 4350 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "8765070P" H 6600 4250 50  0001 L CNN "RS Part Number"
+F 9 "http://uk.rs-online.com/web/p/products/8765070P" H 6600 4150 50  0001 L CNN "RS Price/Stock"
+	1    5750 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +1V8 #PWR?
+U 1 1 5AC287D9
+P 3600 5050
+F 0 "#PWR?" H 3600 4900 50  0001 C CNN
+F 1 "+1V8" H 3600 5190 50  0000 C CNN
+F 2 "" H 3600 5050 50  0001 C CNN
+F 3 "" H 3600 5050 50  0001 C CNN
+	1    3600 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC2881A
+P 3700 6300
+F 0 "#PWR?" H 3700 6050 50  0001 C CNN
+F 1 "GND" H 3700 6150 50  0000 C CNN
+F 2 "" H 3700 6300 50  0001 C CNN
+F 3 "" H 3700 6300 50  0001 C CNN
+	1    3700 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC28867
+P 4500 5600
+F 0 "#PWR?" H 4500 5350 50  0001 C CNN
+F 1 "GND" H 4500 5450 50  0000 C CNN
+F 2 "" H 4500 5600 50  0001 C CNN
+F 3 "" H 4500 5600 50  0001 C CNN
+	1    4500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5AC28890
+P 4500 5050
+F 0 "#PWR?" H 4500 4900 50  0001 C CNN
+F 1 "+3.3V" H 4500 5190 50  0000 C CNN
+F 2 "" H 4500 5050 50  0001 C CNN
+F 3 "" H 4500 5050 50  0001 C CNN
+	1    4500 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AC288B9
+P 4500 5250
+F 0 "R?" H 4530 5270 50  0000 L CNN
+F 1 "200k" H 4530 5210 50  0000 L CNN
+F 2 "" H 4500 5250 50  0001 C CNN
+F 3 "" H 4500 5250 50  0001 C CNN
+	1    4500 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5AC28A9D
+P 4500 5500
+F 0 "C?" H 4510 5570 50  0000 L CNN
+F 1 "100pF" H 4510 5420 50  0000 L CNN
+F 2 "" H 4500 5500 50  0001 C CNN
+F 3 "" H 4500 5500 50  0001 C CNN
+	1    4500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2850 4850 2850
+Wire Wire Line
+	3950 1250 3950 2950
+Wire Wire Line
+	3950 2950 4850 2950
+Connection ~ 3950 2850
+Wire Wire Line
+	4300 4000 4300 3550
+Wire Wire Line
+	4150 3550 4500 3550
+Connection ~ 4300 3550
+Wire Wire Line
+	4150 3250 4150 2850
+Connection ~ 4150 2850
+Wire Wire Line
+	4500 3250 4500 2950
+Connection ~ 4500 2950
+Wire Wire Line
+	4850 2550 3700 2550
+Wire Wire Line
+	3700 2550 3700 3850
+Wire Wire Line
+	3700 3850 4300 3850
+Connection ~ 4300 3850
+Wire Wire Line
+	3600 5050 3600 5300
+Wire Wire Line
+	3800 5300 4300 5300
+Wire Wire Line
+	4300 5300 4300 5700
+Wire Wire Line
+	4300 5700 4100 5700
+Wire Wire Line
+	4500 5350 4500 5400
+Wire Wire Line
+	4500 5400 4300 5400
+Connection ~ 4300 5400
+Connection ~ 4500 5400
+Text GLabel 5700 5800 2    60   BiDi ~ 0
+NINA_SCL
+Wire Wire Line
+	4100 5800 5700 5800
+Connection ~ 4800 5800
+Text GLabel 5700 6000 2    60   BiDi ~ 0
+NINA_SDA
+Wire Wire Line
+	4800 6000 5700 6000
+Wire Wire Line
+	4800 6000 4800 5900
+$Comp
+L R_Small R?
+U 1 1 5AC29E48
+P 3150 5550
+F 0 "R?" H 3180 5570 50  0000 L CNN
+F 1 "200k" H 3180 5510 50  0000 L CNN
+F 2 "" H 3150 5550 50  0001 C CNN
+F 3 "" H 3150 5550 50  0001 C CNN
+	1    3150 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AC29EF5
+P 2850 5550
+F 0 "R?" H 2880 5570 50  0000 L CNN
+F 1 "200k" H 2880 5510 50  0000 L CNN
+F 2 "" H 2850 5550 50  0001 C CNN
+F 3 "" H 2850 5550 50  0001 C CNN
+	1    2850 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 5450 2850 5200
+Wire Wire Line
+	950  5200 3600 5200
+Connection ~ 3600 5200
+Wire Wire Line
+	3150 5450 3150 5200
+Connection ~ 3150 5200
+Wire Wire Line
+	2150 5800 3300 5800
+Wire Wire Line
+	3150 5800 3150 5650
+Wire Wire Line
+	3300 5900 2850 5900
+Wire Wire Line
+	2850 5650 2850 6850
+Connection ~ 3150 5800
+Wire Wire Line
+	2850 6850 700  6850
+Wire Wire Line
+	700  6850 700  6000
+Wire Wire Line
+	700  6000 950  6000
+Connection ~ 2850 5900
+$Comp
+L R_Small R?
+U 1 1 5AC2A273
+P 2600 5550
+F 0 "R?" H 2630 5570 50  0000 L CNN
+F 1 "10k" H 2630 5510 50  0000 L CNN
+F 2 "" H 2600 5550 50  0001 C CNN
+F 3 "" H 2600 5550 50  0001 C CNN
+	1    2600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 5650 2600 5800
+Connection ~ 2600 5800
+Wire Wire Line
+	2600 5450 2600 5200
+Connection ~ 2850 5200
+Wire Wire Line
+	2150 5900 2500 5900
+Wire Wire Line
+	2500 5900 2500 5200
+Connection ~ 2600 5200
+$Comp
+L GND #PWR?
+U 1 1 5AC2A45B
+P 2150 6100
+F 0 "#PWR?" H 2150 5850 50  0001 C CNN
+F 1 "GND" H 2150 5950 50  0000 C CNN
+F 2 "" H 2150 6100 50  0001 C CNN
+F 3 "" H 2150 6100 50  0001 C CNN
+	1    2150 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 6000 2150 6100
+$Comp
+L GND #PWR?
+U 1 1 5AC2A4F2
+P 600 6000
+F 0 "#PWR?" H 600 5750 50  0001 C CNN
+F 1 "GND" H 600 5850 50  0000 C CNN
+F 2 "" H 600 6000 50  0001 C CNN
+F 3 "" H 600 6000 50  0001 C CNN
+	1    600  6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  5900 600  5900
+Wire Wire Line
+	600  5850 600  6000
+$Comp
+L C_Small C?
+U 1 1 5AC2A57B
+P 600 5750
+F 0 "C?" H 610 5820 50  0000 L CNN
+F 1 "100nF" H 610 5670 50  0000 L CNN
+F 2 "" H 600 5750 50  0001 C CNN
+F 3 "" H 600 5750 50  0001 C CNN
+	1    600  5750
+	1    0    0    -1  
+$EndComp
+Connection ~ 600  5900
+Wire Wire Line
+	950  5200 950  5800
+Wire Wire Line
+	950  5650 600  5650
+Connection ~ 2500 5200
+Connection ~ 950  5650
+Wire Wire Line
+	4500 5050 4500 5150
+$Comp
+L C_Small C?
+U 1 1 5AC2A9CD
+P 6250 4550
+F 0 "C?" H 6260 4620 50  0000 L CNN
+F 1 "100nF" H 6260 4470 50  0000 L CNN
+F 2 "" H 6250 4550 50  0001 C CNN
+F 3 "" H 6250 4550 50  0001 C CNN
+	1    6250 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6150 4550 5750 4550
+Wire Wire Line
+	5750 4350 5750 4750
+$Comp
+L +3.3V #PWR?
+U 1 1 5AC2AB96
+P 5750 4350
+F 0 "#PWR?" H 5750 4200 50  0001 C CNN
+F 1 "+3.3V" H 5750 4490 50  0000 C CNN
+F 2 "" H 5750 4350 50  0001 C CNN
+F 3 "" H 5750 4350 50  0001 C CNN
+	1    5750 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC2ABDA
+P 6900 4850
+F 0 "#PWR?" H 6900 4600 50  0001 C CNN
+F 1 "GND" H 6900 4700 50  0000 C CNN
+F 2 "" H 6900 4850 50  0001 C CNN
+F 3 "" H 6900 4850 50  0001 C CNN
+	1    6900 4850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5750 4550
+Wire Wire Line
+	5750 4850 5550 4850
+Connection ~ 5550 5800
+$Comp
+L R_Small R?
+U 1 1 5AC2AEF4
+P 4300 1300
+F 0 "R?" H 4330 1320 50  0000 L CNN
+F 1 "10k" H 4330 1260 50  0000 L CNN
+F 2 "" H 4300 1300 50  0001 C CNN
+F 3 "" H 4300 1300 50  0001 C CNN
+	1    4300 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AC2AF40
+P 4300 1500
+F 0 "R?" H 4330 1520 50  0000 L CNN
+F 1 "10k" H 4330 1460 50  0000 L CNN
+F 2 "" H 4300 1500 50  0001 C CNN
+F 3 "" H 4300 1500 50  0001 C CNN
+	1    4300 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 4550 6500 4550
+Wire Wire Line
+	6500 4550 6500 4350
+Wire Wire Line
+	6500 4350 6900 4350
+Connection ~ 6900 4750
+Wire Wire Line
+	6750 4750 6900 4750
+Wire Wire Line
+	6900 4350 6900 4850
+Wire Wire Line
+	6750 4850 6750 5900
+Wire Wire Line
+	6750 5900 5550 5900
+Wire Wire Line
+	5550 5900 5550 6000
+Connection ~ 5550 6000
+Wire Notes Line
+	5400 4050 5400 5400
+Wire Notes Line
+	5400 5400 7400 5400
+Wire Notes Line
+	7400 5400 7400 4050
+Wire Notes Line
+	7400 4050 5400 4050
+Text Notes 7350 4150 2    60   ~ 0
+Temp. / Humidity Sensor
+Wire Notes Line
+	5350 4700 5350 6950
+Wire Notes Line
+	5350 6950 500  6950
+Wire Notes Line
+	500  6950 500  4700
+Wire Notes Line
+	500  4700 5350 4700
+Text Notes 1400 4850 2    60   ~ 0
+Air Quality Sensor
+$Comp
+L 1655 LED?
+U 1 1 5AC2C475
+P 9600 4600
+F 0 "LED?" H 10550 4900 50  0000 L CNN
+F 1 "SK6812" H 10550 4800 50  0000 L CNN
+F 2 "WS2812B_1" H 10550 4700 50  0001 L CNN
+F 3 "http://www.adafruit.com/datasheets/WS2812B.pdf" H 10550 4600 50  0001 L CNN
+F 4 "Intelligent control LED integrated light source, 4-pin SMD" H 10550 4500 50  0001 L CNN "Description"
+F 5 "Adafruit" H 10550 4300 50  0001 L CNN "Manufacturer_Name"
+F 6 "1655" H 10550 4200 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "70928826" H 10550 3900 50  0001 L CNN "Allied_Number"
+F 8 "http://www.alliedelec.com/adafruit-industries-1655/70928826/" H 10550 3800 50  0001 L CNN "Allied Price/Stock"
+	1    9600 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1655 LED?
+U 1 1 5AC2C4FB
+P 9600 5150
+F 0 "LED?" H 10550 5450 50  0000 L CNN
+F 1 "SK6812" H 10550 5350 50  0000 L CNN
+F 2 "WS2812B_1" H 10550 5250 50  0001 L CNN
+F 3 "http://www.adafruit.com/datasheets/WS2812B.pdf" H 10550 5150 50  0001 L CNN
+F 4 "Intelligent control LED integrated light source, 4-pin SMD" H 10550 5050 50  0001 L CNN "Description"
+F 5 "Adafruit" H 10550 4850 50  0001 L CNN "Manufacturer_Name"
+F 6 "1655" H 10550 4750 50  0001 L CNN "Manufacturer_Part_Number"
+F 7 "70928826" H 10550 4450 50  0001 L CNN "Allied_Number"
+F 8 "http://www.alliedelec.com/adafruit-industries-1655/70928826/" H 10550 4350 50  0001 L CNN "Allied Price/Stock"
+	1    9600 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 4100 9600 4450
+Wire Wire Line
+	9600 4450 11000 4450
+Wire Wire Line
+	11000 4450 11000 4700
+Wire Wire Line
+	11000 4700 10700 4700
+Wire Wire Line
+	9600 4700 9600 5000
+Wire Wire Line
+	9600 5000 11000 5000
+Wire Wire Line
+	10700 5250 11000 5250
+NoConn ~ 9600 5250
+NoConn ~ 6250 5350
+$Comp
+L GND #PWR?
+U 1 1 5AC2E3CA
+P 10800 4600
+F 0 "#PWR?" H 10800 4350 50  0001 C CNN
+F 1 "GND" H 10800 4450 50  0000 C CNN
+F 2 "" H 10800 4600 50  0001 C CNN
+F 3 "" H 10800 4600 50  0001 C CNN
+	1    10800 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10800 4600 10700 4600
+$Comp
+L GND #PWR?
+U 1 1 5AC2E4D6
+P 10800 5150
+F 0 "#PWR?" H 10800 4900 50  0001 C CNN
+F 1 "GND" H 10800 5000 50  0000 C CNN
+F 2 "" H 10800 5150 50  0001 C CNN
+F 3 "" H 10800 5150 50  0001 C CNN
+	1    10800 5150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10800 5150 10700 5150
+$Comp
+L GND #PWR?
+U 1 1 5AC2E56B
+P 10800 4000
+F 0 "#PWR?" H 10800 3750 50  0001 C CNN
+F 1 "GND" H 10800 3850 50  0000 C CNN
+F 2 "" H 10800 4000 50  0001 C CNN
+F 3 "" H 10800 4000 50  0001 C CNN
+	1    10800 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10800 4000 10700 4000
+Wire Wire Line
+	11000 5250 11000 5000
+$Comp
+L +3.3V #PWR?
+U 1 1 5AC2E637
+P 9250 3750
+F 0 "#PWR?" H 9250 3600 50  0001 C CNN
+F 1 "+3.3V" H 9250 3890 50  0000 C CNN
+F 2 "" H 9250 3750 50  0001 C CNN
+F 3 "" H 9250 3750 50  0001 C CNN
+	1    9250 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 4000 9600 4000
+Wire Wire Line
+	9250 3750 9250 5150
+Wire Wire Line
+	9250 4600 9600 4600
+Connection ~ 9250 4000
+Wire Wire Line
+	9250 5150 9600 5150
+Connection ~ 9250 4600
+$Comp
+L C_Small C?
+U 1 1 5AC2E846
+P 9350 4200
+F 0 "C?" H 9360 4270 50  0000 L CNN
+F 1 "100nF" H 9360 4120 50  0000 L CNN
+F 2 "" H 9350 4200 50  0001 C CNN
+F 3 "" H 9350 4200 50  0001 C CNN
+	1    9350 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC2EB3A
+P 9350 4350
+F 0 "#PWR?" H 9350 4100 50  0001 C CNN
+F 1 "GND" H 9350 4200 50  0000 C CNN
+F 2 "" H 9350 4350 50  0001 C CNN
+F 3 "" H 9350 4350 50  0001 C CNN
+	1    9350 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 4300 9350 4350
+Wire Wire Line
+	9350 4100 9350 4000
+Connection ~ 9350 4000
+$Comp
+L C_Small C?
+U 1 1 5AC2ECF9
+P 9350 4800
+F 0 "C?" H 9360 4870 50  0000 L CNN
+F 1 "100nF" H 9360 4720 50  0000 L CNN
+F 2 "" H 9350 4800 50  0001 C CNN
+F 3 "" H 9350 4800 50  0001 C CNN
+	1    9350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC2ECFF
+P 9350 4950
+F 0 "#PWR?" H 9350 4700 50  0001 C CNN
+F 1 "GND" H 9350 4800 50  0000 C CNN
+F 2 "" H 9350 4950 50  0001 C CNN
+F 3 "" H 9350 4950 50  0001 C CNN
+	1    9350 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 4900 9350 4950
+Wire Wire Line
+	9350 4700 9350 4600
+$Comp
+L C_Small C?
+U 1 1 5AC2EDA7
+P 9350 5350
+F 0 "C?" H 9360 5420 50  0000 L CNN
+F 1 "100nF" H 9360 5270 50  0000 L CNN
+F 2 "" H 9350 5350 50  0001 C CNN
+F 3 "" H 9350 5350 50  0001 C CNN
+	1    9350 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AC2EDAD
+P 9350 5500
+F 0 "#PWR?" H 9350 5250 50  0001 C CNN
+F 1 "GND" H 9350 5350 50  0000 C CNN
+F 2 "" H 9350 5500 50  0001 C CNN
+F 3 "" H 9350 5500 50  0001 C CNN
+	1    9350 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 5450 9350 5500
+Wire Wire Line
+	9350 5250 9350 5150
+Connection ~ 9350 5150
+Connection ~ 9350 4600
+Wire Wire Line
+	7500 2750 11100 2750
+Wire Wire Line
+	11100 2750 11100 4100
+Wire Wire Line
+	11100 4100 10700 4100
+Wire Notes Line
+	8800 3500 11150 3500
+Wire Notes Line
+	11150 3500 11150 5750
+Wire Notes Line
+	11150 5750 8800 5750
+Text Notes 10500 3850 2    60   ~ 0
+3 x RGBW LED Daisychain
+Text GLabel 6650 1150 1    60   BiDi ~ 0
+NINA_SCL
+Text GLabel 6450 1150 1    60   BiDi ~ 0
+NINA_SDA
+Text Notes 6150 600  0    60   ~ 0
+Random I2C ports?
+Text Notes 11000 2900 2    60   ~ 0
+Random data port?
+Wire Wire Line
+	6650 1150 6650 1500
+Wire Wire Line
+	6450 1150 6450 1500
+$Comp
+L C_Small C?
+U 1 1 5ACAD80F
+P 8950 3950
+F 0 "C?" H 8960 4020 50  0000 L CNN
+F 1 "47uF" H 8960 3870 50  0000 L CNN
+F 2 "" H 8950 3950 50  0001 C CNN
+F 3 "" H 8950 3950 50  0001 C CNN
+	1    8950 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 3850 9250 3850
+Connection ~ 9250 3850
+Wire Wire Line
+	8950 4050 8950 5500
+Wire Wire Line
+	8950 5500 9350 5500
+Wire Notes Line
+	8800 5750 8800 3500
+Text Notes 7900 900  0    60   ~ 0
+Which pullups? 10k or 200k?\nhttp://www.ti.com/lit/an/slva689/slva689.pdf
+Wire Wire Line
+	4800 5900 4100 5900
+Wire Wire Line
+	5550 4850 5550 5800
+Wire Wire Line
+	4400 1300 4400 1200
+Wire Wire Line
+	4400 1200 6450 1200
+Connection ~ 6450 1200
+Wire Wire Line
+	4400 1500 4500 1500
+Wire Wire Line
+	4500 1500 4500 1300
+Wire Wire Line
+	4500 1300 6650 1300
+Connection ~ 6650 1300
+Wire Wire Line
+	4200 1300 3950 1300
+Connection ~ 3950 1300
+Wire Wire Line
+	4200 1500 3950 1500
+Wire Wire Line
+	3950 1500 3950 1450
+Connection ~ 3950 1450
+$EndSCHEMATC
