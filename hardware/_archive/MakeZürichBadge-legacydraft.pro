@@ -1,4 +1,4 @@
-update=Mon 09 Apr 2018 00:45:17 CEST
+update=Mon 09 Apr 2018 01:25:24 CEST
 version=1
 last_client=eeschema
 [general]
@@ -68,3 +68,13 @@ LibName34=../kicad-libs/SamacSys/PCA9306/PCA9306TDCURQ1
 LibName35=../kicad-libs/SamacSys/Sensirion/SGPC3-2.5k
 LibName36=../kicad-libs/SamacSys/Sensirion/SHTC1
 LibName37=../kicad-libs/SamacSys/WS28B/1655
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
