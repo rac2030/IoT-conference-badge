@@ -1,4 +1,4 @@
-update=Mon 09 Apr 2018 00:38:31 CEST
+update=Thu Apr 12 02:06:47 2018
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,7 +62,14 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=kicad-libs/rac-libs/ublox_NINA-W102/ublox_NINA-W102
-LibName34=kicad-libs/SamacSys/WS28B/1655
-LibName35=kicad-libs/SamacSys/Sensirion/SGPC3-2.5k
-LibName36=kicad-libs/SamacSys/Sensirion/SHTC1
-LibName37=kicad-libs/SamacSys/PCA9306/PCA9306TDCURQ1
+LibName34=kicad-libs/badgeComponents
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

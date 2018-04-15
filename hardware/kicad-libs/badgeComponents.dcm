@@ -1,0 +1,33 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CP2102N-A01-GQFN20
+D SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20
+F https://componentsearchengine.com/Datasheets/2/CP2102N-A01-GQFN20.pdf
+$ENDCMP
+#
+$CMP LTC3101EUF#PBF
+D LDO Voltage Regulators 2-Cell AA Multioutput DC/DC Converter
+F http://www.analog.com/media/en/technical-documentation/data-sheets/3101fb.pdf
+$ENDCMP
+#
+$CMP NINA-W102
+D STAND-ALONE MULTIRADIO MODULE
+F https://www.u-blox.com/sites/default/files/NINA-W10_DataSheet_%28UBX-17065507%29.pdf
+$ENDCMP
+#
+$CMP SGPC3-2.5k
+D SENSIRION - SGPC3-2.5K - DIGITAL LOW POWER GAS SENSOR, 1.8V, DFN
+F https://componentsearchengine.com/Datasheets/2/SGPC3-2.5K.pdf
+$ENDCMP
+#
+$CMP SHTC3
+D Humidity and Temperature Sensor IC
+F https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf
+$ENDCMP
+#
+$CMP WS2812b
+D Intelligent control LED integrated light source, 4-pin SMD
+F http://www.adafruit.com/datasheets/WS2812B.pdf
+$ENDCMP
+#
+#End Doc Library

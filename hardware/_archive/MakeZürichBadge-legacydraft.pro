@@ -1,6 +1,6 @@
-update=Mon 09 Apr 2018 01:25:24 CEST
+update=Thu Apr 12 01:03:54 2018
 version=1
-last_client=eeschema
+last_client=kicad
 [general]
 version=1
 RootSch=
@@ -27,6 +27,16 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -68,13 +78,8 @@ LibName34=../kicad-libs/SamacSys/PCA9306/PCA9306TDCURQ1
 LibName35=../kicad-libs/SamacSys/Sensirion/SGPC3-2.5k
 LibName36=../kicad-libs/SamacSys/Sensirion/SHTC1
 LibName37=../kicad-libs/SamacSys/WS28B/1655
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName38=/home/rac/Documents/electronics/IoT-conference-badge/hardware/kicad-libs/SamacSys/LDO/LIB_LTC3101EUF#PBF/LTC3101EUF#PBF/KiCad/LTC3101EUF#PBF
+LibName39=/home/rac/Documents/electronics/IoT-conference-badge/hardware/kicad-libs/SamacSys/LIB_NINA-W102/NINA-W102/KiCad/NINA-W102
+LibName40=/home/rac/Documents/electronics/IoT-conference-badge/hardware/kicad-libs/SamacSys/Sensirion/LIB_SHTC3/SHTC3/KiCad/SHTC3
+LibName41=/home/rac/Documents/electronics/IoT-conference-badge/hardware/kicad-libs/badgeComponents
+LibName42=/home/rac/Documents/electronics/IoT-conference-badge/hardware/kicad-libs/SamacSys/LIB_CP2102N-A01-GQFN20/CP2102N-A01-GQFN20/KiCad/CP2102N-A01-GQFN20
