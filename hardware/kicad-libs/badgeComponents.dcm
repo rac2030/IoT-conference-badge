@@ -5,6 +5,12 @@ D SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20
 F https://componentsearchengine.com/Datasheets/2/CP2102N-A01-GQFN20.pdf
 $ENDCMP
 #
+$CMP I2C_HEADER
+D Generic connector, single row, 01x04
+K connector
+F ~
+$ENDCMP
+#
 $CMP LTC3101EUF#PBF
 D LDO Voltage Regulators 2-Cell AA Multioutput DC/DC Converter
 F http://www.analog.com/media/en/technical-documentation/data-sheets/3101fb.pdf
