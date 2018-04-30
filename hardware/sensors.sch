@@ -137,17 +137,6 @@ F 3 "" H 4500 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R?
-U 1 1 5AD3962F
-P 4250 3950
-F 0 "R?" H 4280 3970 50  0000 L CNN
-F 1 "10k" H 4280 3910 50  0000 L CNN
-F 2 "" H 4250 3950 50  0001 C CNN
-F 3 "" H 4250 3950 50  0001 C CNN
-	1    4250 3950
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR017
 U 1 1 5AD39636
 P 3800 5000
@@ -238,11 +227,15 @@ F 7 "SGPC3-2.5k" H 3650 3800 50  0001 L CNN "Manufacturer_Part_Number"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 3450 5250 3700
+	5250 3450 5250 3600
+Wire Wire Line
+	5250 3600 5250 3700
 Wire Wire Line
 	5450 3700 5950 3700
 Wire Wire Line
-	5950 3700 5950 4100
+	5950 3700 5950 3800
+Wire Wire Line
+	5950 3800 5950 4100
 Wire Wire Line
 	5950 4100 5750 4100
 Wire Wire Line
@@ -252,27 +245,41 @@ Wire Wire Line
 Connection ~ 5950 3800
 Connection ~ 6150 3800
 Wire Wire Line
-	5750 4200 7450 4200
+	5750 4200 7200 4200
 Wire Wire Line
-	6450 4400 7450 4400
+	7200 4200 7450 4200
+Wire Wire Line
+	6450 4400 7200 4400
+Wire Wire Line
+	7200 4400 7450 4400
 Wire Wire Line
 	6450 4400 6450 4300
 Wire Wire Line
 	4500 3850 4500 3600
 Wire Wire Line
-	2600 3600 5250 3600
+	2600 3600 4150 3600
+Wire Wire Line
+	4150 3600 4250 3600
+Wire Wire Line
+	4250 3600 4500 3600
+Wire Wire Line
+	4500 3600 4800 3600
+Wire Wire Line
+	4800 3600 5250 3600
 Connection ~ 5250 3600
 Wire Wire Line
 	4800 3850 4800 3600
 Connection ~ 4800 3600
 Wire Wire Line
-	3800 4200 4950 4200
+	4800 4200 4950 4200
 Wire Wire Line
 	4800 4200 4800 4050
 Wire Wire Line
 	4950 4300 4500 4300
 Wire Wire Line
-	4500 4050 4500 5250
+	4500 4050 4500 4300
+Wire Wire Line
+	4500 4300 4500 5250
 Connection ~ 4800 4200
 Wire Wire Line
 	4500 5250 2350 5250
@@ -281,26 +288,24 @@ Wire Wire Line
 Wire Wire Line
 	2350 4400 2600 4400
 Connection ~ 4500 4300
-Wire Wire Line
-	4250 4050 4250 4200
-Connection ~ 4250 4200
-Wire Wire Line
-	4250 3850 4250 3600
 Connection ~ 4500 3600
 Wire Wire Line
 	3800 4300 4150 4300
 Wire Wire Line
 	4150 4300 4150 3600
-Connection ~ 4250 3600
 Wire Wire Line
 	3800 4400 3800 5000
 Wire Wire Line
 	2600 4300 2250 4300
 Wire Wire Line
-	2250 4250 2250 4400
+	2250 4250 2250 4300
+Wire Wire Line
+	2250 4300 2250 4400
 Connection ~ 2250 4300
 Wire Wire Line
-	2600 3600 2600 4200
+	2600 3600 2600 4050
+Wire Wire Line
+	2600 4050 2600 4200
 Wire Wire Line
 	2600 4050 2250 4050
 Connection ~ 4150 3600
@@ -310,7 +315,9 @@ Wire Wire Line
 Wire Wire Line
 	7800 2950 7400 2950
 Wire Wire Line
-	7400 2750 7400 3150
+	7400 2750 7400 2950
+Wire Wire Line
+	7400 2950 7400 3150
 Connection ~ 7400 2950
 Wire Wire Line
 	7400 3250 7200 3250
@@ -356,7 +363,9 @@ SCL
 Text HLabel 7450 4400 2    60   BiDi Italic 0
 SDA
 Wire Wire Line
-	8550 2950 8550 3250
+	8550 2950 8550 3150
+Wire Wire Line
+	8550 3150 8550 3250
 Wire Wire Line
 	3800 5000 3200 5000
 Text Notes 5900 5750 2    60   Italic 0
@@ -385,4 +394,10 @@ F 3 "" H 7400 2750 50  0001 C CNN
 	1    7400 2750
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4250 4200 4800 4200
+Wire Wire Line
+	3800 4200 4250 4200
+Text Notes 8200 2000 2    60   Italic 0
+leave 200k pullups as TI reference design or put them to 10k as sensirion reference design or to 4.7k as we have it on the other side of the level converter?
 $EndSCHEMATC
