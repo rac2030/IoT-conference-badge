@@ -40,7 +40,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 6
 Title "IoT conference badge - mainboard"
-Date ""
+Date "2018-04-30"
 Rev "0.2.0"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
@@ -368,8 +368,6 @@ Wire Wire Line
 	8550 3150 8550 3250
 Wire Wire Line
 	3800 5000 3200 5000
-Text Notes 5900 5750 2    60   Italic 0
-Is PAD to GND correct or did I get that wrong?
 Wire Wire Line
 	8550 3250 8400 3250
 $Comp
