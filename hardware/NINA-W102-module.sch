@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 6
+Sheet 6 7
 Title "IoT conference badge - mainboard"
 Date "2018-04-29"
 Rev "0.2.0"

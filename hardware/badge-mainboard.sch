@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title "IoT conference badge - mainboard"
 Date "2018-04-09"
 Rev "0.2.0"
@@ -229,75 +229,75 @@ F 3 "" H 8950 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 3300 800  0    60   Italic 0
-Which pullups? 10k or 200k?\nhttp://www.ti.com/lit/an/slva689/slva689.pdf
+Pullup calculation info\nhttp://www.ti.com/lit/an/slva689/slva689.pdf
 $Sheet
-S 1300 3100 800  350 
+S 9250 1050 800  350 
 U 5AD378C9
 F0 "sensors" 60
 F1 "sensors.sch" 60
-F2 "SCL" B R 2100 3200 60 
-F3 "SDA" B R 2100 3350 60 
+F2 "SCL" B R 10050 1150 60 
+F3 "SDA" B R 10050 1300 60 
 $EndSheet
-Text GLabel 2200 3350 2    60   BiDi ~ 0
+Text GLabel 10150 1300 2    60   BiDi ~ 0
 NINA_SDA
-Text GLabel 2200 3200 2    60   BiDi ~ 0
+Text GLabel 10150 1150 2    60   BiDi ~ 0
 NINA_SCL
 $Sheet
-S 2250 5900 1000 900 
+S 1650 6450 1000 900 
 U 5AD3BA03
 F0 "programmer" 60
 F1 "programmer.sch" 60
-F2 "DTR" O L 2250 6100 60 
-F3 "RXD" I L 2250 6250 60 
-F4 "TXD" O L 2250 6400 60 
-F5 "CTS" O L 2250 6550 60 
-F6 "VBUS_OUT" O R 3250 6100 60 
+F2 "DTR" O L 1650 6650 60 
+F3 "RXD" I L 1650 6800 60 
+F4 "TXD" O L 1650 6950 60 
+F5 "CTS" O L 1650 7100 60 
+F6 "VBUS_OUT" O R 2650 6650 60 
 $EndSheet
-Text GLabel 1950 6400 0    60   Input Italic 0
+Text GLabel 1350 6950 0    60   Input Italic 0
 TXD
-Text GLabel 1950 6250 0    60   Output Italic 0
+Text GLabel 1350 6800 0    60   Output Italic 0
 RXD
 $Sheet
-S 1250 1150 1700 800 
+S 5050 4650 1700 800 
 U 5AD3E430
 F0 "EPD" 60
 F1 "EPD.sch" 60
-F2 "DIN" I L 1250 1300 60 
-F3 "CLK" I L 1250 1400 60 
-F4 "CS" I L 1250 1500 60 
-F5 "DC" I L 1250 1600 60 
-F6 "RST" I L 1250 1700 60 
-F7 "BUSY" O L 1250 1800 60 
+F2 "DIN" I L 5050 4800 60 
+F3 "CLK" I L 5050 4900 60 
+F4 "CS" I L 5050 5000 60 
+F5 "DC" I L 5050 5100 60 
+F6 "RST" I L 5050 5200 60 
+F7 "BUSY" O L 5050 5300 60 
 $EndSheet
 $Sheet
-S 3750 5950 1200 550 
+S 3150 6500 1200 550 
 U 5AD42326
 F0 "power" 60
 F1 "power.sch" 60
-F2 "VBUS_IN" I L 3750 6100 60 
-F3 "1.8_OUT" O R 4950 6100 60 
-F4 "3.3_OUT" O R 4950 6300 60 
+F2 "VBUS_IN" I L 3150 6650 60 
+F3 "1.8_OUT" O R 4350 6650 60 
+F4 "3.3_OUT" O R 4350 6850 60 
 $EndSheet
 $Comp
 L +1V8 #PWR08
 U 1 1 5AD43521
-P 5050 5900
-F 0 "#PWR08" H 5050 5750 50  0001 C CNN
-F 1 "+1V8" H 5050 6040 50  0000 C CNN
-F 2 "" H 5050 5900 50  0001 C CNN
-F 3 "" H 5050 5900 50  0001 C CNN
-	1    5050 5900
+P 4450 6450
+F 0 "#PWR08" H 4450 6300 50  0001 C CNN
+F 1 "+1V8" H 4450 6590 50  0000 C CNN
+F 2 "" H 4450 6450 50  0001 C CNN
+F 3 "" H 4450 6450 50  0001 C CNN
+	1    4450 6450
 	1    0    0    -1  
 $EndComp
 $Comp
 L +3V3 #PWR09
 U 1 1 5AD44887
-P 5350 5900
-F 0 "#PWR09" H 5350 5750 50  0001 C CNN
-F 1 "+3V3" H 5350 6040 50  0000 C CNN
-F 2 "" H 5350 5900 50  0001 C CNN
-F 3 "" H 5350 5900 50  0001 C CNN
-	1    5350 5900
+P 4750 6450
+F 0 "#PWR09" H 4750 6300 50  0001 C CNN
+F 1 "+3V3" H 4750 6590 50  0000 C CNN
+F 2 "" H 4750 6450 50  0001 C CNN
+F 3 "" H 4750 6450 50  0001 C CNN
+	1    4750 6450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -445,9 +445,9 @@ F 3 "" H 7250 2000 50  0001 C CNN
 $EndComp
 Text Notes 8850 1850 2    60   ~ 0
 I2C Breakouts for users
-Text GLabel 1950 6550 0    60   Output ~ 0
+Text GLabel 1350 7100 0    60   Output ~ 0
 CTS
-Text GLabel 1950 6100 0    60   Output ~ 0
+Text GLabel 1350 6650 0    60   Output ~ 0
 DTR
 Wire Notes Line
 	500  6950 500  4700
@@ -521,23 +521,23 @@ Wire Notes Line
 	8800 5750 8800 3500
 Connection ~ 6450 1200
 Wire Wire Line
-	2100 3200 2200 3200
+	10050 1150 10150 1150
 Wire Wire Line
-	2100 3350 2200 3350
+	10050 1300 10150 1300
 Wire Wire Line
-	1950 6250 2250 6250
+	1350 6800 1650 6800
 Wire Wire Line
-	1950 6400 2250 6400
+	1350 6950 1650 6950
 Wire Wire Line
-	3250 6100 3750 6100
+	2650 6650 3150 6650
 Wire Wire Line
-	4950 6100 5050 6100
+	4350 6650 4450 6650
 Wire Wire Line
-	5050 6100 5050 5900
+	4450 6650 4450 6450
 Wire Wire Line
-	4950 6300 5350 6300
+	4350 6850 4750 6850
 Wire Wire Line
-	5350 6300 5350 5900
+	4750 6850 4750 6450
 Wire Wire Line
 	6450 1200 6250 1200
 Wire Wire Line
@@ -600,9 +600,9 @@ Wire Notes Line
 Wire Notes Line
 	8900 2550 7700 2550
 Wire Wire Line
-	1950 6100 2250 6100
+	1350 6650 1650 6650
 Wire Wire Line
-	2250 6550 1950 6550
+	1650 7100 1350 7100
 Text GLabel 6500 2550 2    60   Output Italic 0
 TXD
 Text GLabel 6200 2450 2    60   Input Italic 0
@@ -619,4 +619,30 @@ Wire Wire Line
 	6200 2450 6100 2450
 Wire Wire Line
 	6500 2550 6100 2550
+$Sheet
+S 2550 2250 1150 650 
+U 5AE85D2E
+F0 "userInteractions" 60
+F1 "userInteractions.sch" 60
+F2 "BTN_1" U R 3700 2350 60 
+F3 "BTN_2" U R 3700 2450 60 
+F4 "BTN_3" U R 3700 2550 60 
+F5 "BTN_4" U R 3700 2650 60 
+$EndSheet
+Wire Wire Line
+	4800 2450 3700 2450
+Wire Wire Line
+	4800 2550 3700 2550
+Wire Wire Line
+	4800 2650 3700 2650
+Wire Wire Line
+	3700 2350 3900 2350
+Wire Wire Line
+	3900 2350 3900 1550
+Wire Wire Line
+	3900 1550 6200 1550
+Wire Wire Line
+	6200 1550 6200 1850
+Wire Wire Line
+	6200 1850 6100 1850
 $EndSCHEMATC
