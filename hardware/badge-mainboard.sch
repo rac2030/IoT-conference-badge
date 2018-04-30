@@ -645,4 +645,6 @@ Wire Wire Line
 	6200 1550 6200 1850
 Wire Wire Line
 	6200 1850 6100 1850
+Text Notes 10050 2250 2    60   Italic 0
+Adding pullups or not\nfor user breakouts?
 $EndSCHEMATC
