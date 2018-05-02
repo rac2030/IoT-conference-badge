@@ -54,4 +54,15 @@ Text HLabel 9250 1850 2    60   Output Italic 0
 1.8_OUT
 Text HLabel 9250 2050 2    60   Output Italic 0
 3.3_OUT
+$Comp
+L Conn_01x02 J?
+U 1 1 5AE92ED9
+P 3300 3400
+F 0 "J?" H 3300 3500 50  0000 C CNN
+F 1 "Vin" H 3300 3200 50  0000 C CNN
+F 2 "" H 3300 3400 50  0001 C CNN
+F 3 "" H 3300 3400 50  0001 C CNN
+	1    3300 3400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
