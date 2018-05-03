@@ -65,4 +65,6 @@ F 3 "" H 3300 3400 50  0001 C CNN
 	1    3300 3400
 	1    0    0    -1  
 $EndComp
+Text Notes 800  700  0    60   ~ 0
+Reverse current protection paper from TI: http://www.ti.com/lit/an/slva730/slva730.pdf\nFrom Maxim: https://www.maximintegrated.com/en/app-notes/index.mvp/id/636
 $EndSCHEMATC
