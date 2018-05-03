@@ -1,0 +1,63 @@
+PCBNEW-LibModule-V1  2018-04-11 23:35:51
+# encoding utf-8
+Units mm
+$INDEX
+SHTC3
+$EndINDEX
+$MODULE SHTC3
+Po 0 0 0 15 5ace8dc7 00000000 ~~
+Li SHTC3
+Cd SHTC3
+Kw Integrated Circuit
+Sc 0
+At SMD
+AR 
+Op 0 0 0
+T0 0.000 -0.1 1.27 1.27 0 0.254 N V 21 N "IC**"
+T1 0.000 -0.1 1.27 1.27 0 0.254 N I 21 N "SHTC3"
+DS -1 -1.4 1 -1.4 0.2 24
+DS 1 -1.4 1 0.6 0.2 24
+DS 1 0.6 -1 0.6 0.2 24
+DS -1 0.6 -1 -1.4 0.2 24
+DS -2 -2.6 2 -2.6 0.1 24
+DS 2 -2.6 2 2.4 0.1 24
+DS 2 2.4 -2 2.4 0.1 24
+DS -2 2.4 -2 -2.6 0.1 24
+DS -1 -1.4 -1 0.6 0.1 21
+DS 1 0.6 1 -1.4 0.1 21
+DS -0.6 1.3 -0.6 1.3 0.2 21
+DS -0.4 1.3 -0.4 1.3 0.2 21
+DA -0.5 1.3 -0.600 1.3 1800 0.2 21
+DA -0.5 1.3 -0.400 1.3 1800 0.2 21
+$PAD
+Po -0.500 0.525
+Sh "1" R 0.350 0.550 0 0 0
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$PAD
+Po 0.500 0.525
+Sh "2" R 0.350 0.550 0 0 0
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$PAD
+Po 0.500 -1.325
+Sh "3" R 0.350 0.550 0 0 0
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$PAD
+Po -0.500 -1.325
+Sh "4" R 0.350 0.550 0 0 0
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$PAD
+Po 0.000 -0.4
+Sh "5" R 0.700 1.600 0 0 900
+At SMD N 00888000
+Ne 0 ""
+$EndPAD
+$EndMODULE SHTC3
+$EndLIBRARY

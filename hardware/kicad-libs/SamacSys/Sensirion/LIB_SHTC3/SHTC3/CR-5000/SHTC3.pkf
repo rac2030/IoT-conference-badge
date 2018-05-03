@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "SHTC3"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "SHTC3")
+        (spec "default")
+    )
+)

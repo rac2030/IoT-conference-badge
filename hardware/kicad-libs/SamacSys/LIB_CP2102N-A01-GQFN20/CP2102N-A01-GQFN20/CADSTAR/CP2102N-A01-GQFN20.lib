@@ -1,0 +1,18 @@
+.CP2102N-A01-GQFN20 :1 ;SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20
+QFN50P300X300X80-21N-D
+*STM IC
+*NGS
+*PLB 1="GPIO.1 / RS485" 2="GPIO.0 / CLK" 3="GND(1)" 4="D+" 5="D-" 6="VDD" 7="VREGIN" 8="VBUS" 9="RSTB" 10="NC" 11="SUSPENDB" 12="GND(2)" 13="WAKEUP" 14="SUSPEND" 15="CTS" 16="RTS" 17="RXD" 18="TXD" 19="GPIO.3 / RXT" 20="GPIO.2 / TXT" 21="TP - GND"
+*MXP 21
+*DFN CP2102N-A01-GQFN20
+~!Manufacturer_Name (Silicon Labs)
+~!Manufacturer_Part_Number (CP2102N-A01-GQFN20)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Arrow Part Number (CP2102N-A01-GQFN20)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/cp2102n-a01-gqfn20/silicon-labs)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/2/CP2102N-A01-GQFN20.pdf)
+~!Height (0.8mm)
+~!3D_Model (CP2102N-A01-GQFN20)
+CP2102N-A01-GQFN20
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 21.1!U 20.1!U 19.1!U 18.1!U 17.1!U 16.1!U 

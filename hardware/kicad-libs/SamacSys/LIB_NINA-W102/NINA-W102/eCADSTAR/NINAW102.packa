@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "NINA-W102"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2018-04-09-09:42:54)
+    (mountForm default
+        (footprintRef "NINAW102")
+        (spec "System")
+    )
+)

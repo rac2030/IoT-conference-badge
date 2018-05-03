@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/1172690/42587/2.24/48/4/Integrated Circuit/-->
+<!DOCTYPE curve SYSTEM "eagle.dtd">
+<eagle version="7.7.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;STAND-ALONE MULTIRADIO MODULE&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="NINAW102">
+<description>&lt;b&gt;NINA-W102&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-6.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="2" x="-5.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="3" x="-4.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="4" x="-3.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="5" x="-2.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="6" x="-1.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="7" x="-0.200" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="8" x="0.800" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="9" x="1.800" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="10" x="2.800" y="-3.875" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="11" x="2.725" y="-1.750" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="12" x="2.725" y="-0.750" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="13" x="2.725" y="0.250" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="14" x="2.725" y="1.250" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="15" x="2.725" y="2.250" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="16" x="2.800" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="17" x="1.800" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="18" x="0.800" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="19" x="-0.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="20" x="-1.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="21" x="-2.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="22" x="-3.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="23" x="-4.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="24" x="-5.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="25" x="-6.200" y="4.375" dx="1.150" dy="0.700" layer="1" rot="R90.000"/>
+<smd name="26" x="-6.125" y="2.250" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="27" x="-6.125" y="1.250" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="28" x="-6.125" y="0.250" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="29" x="-6.125" y="-0.750" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="30" x="-6.125" y="-1.750" dx="1.150" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="31" x="-4.750" y="-2.500" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="32" x="-4.750" y="-1.400" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="33" x="-4.750" y="-0.300" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="34" x="-4.750" y="0.800" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="35" x="-4.750" y="1.900" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="36" x="-4.750" y="3.000" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="37" x="-3.420" y="-0.325" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="38" x="-3.420" y="0.825" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="39" x="-2.270" y="-1.475" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="40" x="-2.270" y="-0.325" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="41" x="-2.270" y="0.825" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="42" x="-2.270" y="1.975" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="43" x="-1.120" y="-0.325" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="44" x="-1.120" y="0.825" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="45" x="0.030" y="-1.475" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="46" x="0.030" y="-0.325" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="47" x="0.030" y="0.825" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<smd name="48" x="0.030" y="1.975" dx="0.700" dy="0.700" layer="1" rot="R0.000"/>
+<text x="0.000" y="0.000" align="center" size="1.27" layer="25" rot="R0" >&gt;NAME</text>
+<text x="0.000" y="0.000" align="center" size="1.27" layer="27" rot="R0" >&gt;VALUE</text>
+<wire x1="-7" y1="5.25" x2="7" y2="5.25" width="0.2" layer="51"/>
+<wire x1="7" y1="5.25" x2="7" y2="-4.75" width="0.2" layer="51"/>
+<wire x1="7" y1="-4.75" x2="-7" y2="-4.75" width="0.2" layer="51"/>
+<wire x1="-7" y1="-4.75" x2="-7" y2="5.25" width="0.2" layer="51"/>
+<wire x1="-7" y1="5.25" x2="7" y2="5.25" width="0.1" layer="21"/>
+<wire x1="7" y1="5.25" x2="7" y2="-4.75" width="0.1" layer="21"/>
+<wire x1="7" y1="-4.75" x2="-7" y2="-4.75" width="0.1" layer="21"/>
+<wire x1="-7" y1="-4.75" x2="-7" y2="5.25" width="0.1" layer="21"/>
+<wire x1="-8" y1="6.25" x2="8" y2="6.25" width="0.1" layer="51"/>
+<wire x1="8" y1="6.25" x2="8" y2="-6.25" width="0.1" layer="51"/>
+<wire x1="8" y1="-6.25" x2="-8" y2="-6.25" width="0.1" layer="51"/>
+<wire x1="-8" y1="-6.25" x2="-8" y2="6.25" width="0.1" layer="51"/>
+<wire x1="-6.3" y1="-5.15" x2="-6.3" y2="-5.15" width="0.2" layer="21"/>
+<wire x1="-6.300" y1="-5.150" x2="-6.100" y2="-5.150" width="0.2" layer="21" curve="-180.0"/>
+<wire x1="-6.1" y1="-5.15" x2="-6.1" y2="-5.15" width="0.2" layer="21"/>
+<wire x1="-6.100" y1="-5.150" x2="-6.300" y2="-5.150" width="0.2" layer="21" curve="-180.0"/>
+</package>
+</packages>
+<symbols>
+<symbol name="NINA-W102">
+<wire x1="5.08" y1="2.54" x2="96.52" y2="2.54" width="0.254" layer="94"/>
+<wire x1="96.52" y1="-60.96" x2="96.52" y2="2.54" width="0.254" layer="94"/>
+<wire x1="96.52" y1="-60.96" x2="5.08" y2="-60.96" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-60.96" width="0.254" layer="94"/>
+<text x="97.79" y="7.62" align="center-left" size="1.778" layer="95">&gt;NAME</text>
+<text x="97.79" y="5.08" align="center-left" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GPIO_1/_SPI_V_DI" x="0" y="0" length="middle" direction="io" rot="R0"/>
+<pin name="GPI_2/_ADC_2" x="0" y="-2.54" length="middle" direction="io" rot="R0"/>
+<pin name="GPI_3/_ADC_3" x="0" y="-5.08" length="middle" direction="io" rot="R0"/>
+<pin name="GPI_4/_ADC_4" x="0" y="-7.62" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_5/_LPO_IN" x="0" y="-10.16" length="middle" direction="io" rot="R0"/>
+<pin name="GND(1)" x="0" y="-12.7" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_7" x="0" y="-15.24" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_8/_RMII_TXEN/_SPI_V_HD/" x="0" y="-17.78" length="middle" direction="io" rot="R0"/>
+<pin name="VCC_IO" x="0" y="-20.32" length="middle" direction="io" rot="R0"/>
+<pin name="VCC" x="0" y="-22.86" length="middle" direction="io" rot="R0"/>
+<pin name="RSVD(1)" x="0" y="-25.4" length="middle" direction="io" rot="R0"/>
+<pin name="GND(2)" x="0" y="-27.94" length="middle" direction="io" rot="R0"/>
+<pin name="ANT" x="0" y="-30.48" length="middle" direction="io" rot="R0"/>
+<pin name="GND(3)" x="0" y="-33.02" length="middle" direction="io" rot="R0"/>
+<pin name="RSVD(2)" x="0" y="-35.56" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_16/_RMII_RXD0/_DAC_16" x="0" y="-38.1" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_17/_RMII_RXD1/_DAC_17" x="0" y="-40.64" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_18/_RMII_CRSDV" x="0" y="-43.18" length="middle" direction="io" rot="R0"/>
+<pin name="RESET_N" x="0" y="-45.72" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_20/_UART_RTS/_RMII_TXD1/_SPI_V_WP" x="0" y="-48.26" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_21/_UART_CTS/_RMII_TXD0/_SPI_V_DO/" x="0" y="-50.8" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_22/_UART_TXD" x="0" y="-53.34" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_23/_UART_RXD" x="0" y="-55.88" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_24/_RMII_MDIO" x="0" y="-58.42" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO_25/_RMII_MDCLK/" x="101.6" y="0" length="middle" direction="io" rot="R180"/>
+<pin name="GND(4)" x="101.6" y="-2.54" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_27/_RMII_CLK/_SYS_BOOT" x="101.6" y="-5.08" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_28/_SPI_V_CS" x="101.6" y="-7.62" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_29/_SPI_V_CLK" x="101.6" y="-10.16" length="middle" direction="io" rot="R180"/>
+<pin name="GND(5)" x="101.6" y="-12.7" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_31/_JTAG_TMS" x="101.6" y="-15.24" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_32/_JTAG_TDO" x="101.6" y="-17.78" length="middle" direction="io" rot="R180"/>
+<pin name="RSVD(3)" x="101.6" y="-20.32" length="middle" direction="io" rot="R180"/>
+<pin name="GPI_34/_ADC_3" x="101.6" y="-22.86" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_35/_JTAG_CLK" x="101.6" y="-25.4" length="middle" direction="io" rot="R180"/>
+<pin name="GPIO_36/_JTAG_TDI/" x="101.6" y="-27.94" length="middle" direction="io" rot="R180"/>
+<pin name="GND(6)" x="101.6" y="-30.48" length="middle" direction="io" rot="R180"/>
+<pin name="GND(7)" x="101.6" y="-33.02" length="middle" direction="io" rot="R180"/>
+<pin name="GND(8)" x="101.6" y="-35.56" length="middle" direction="io" rot="R180"/>
+<pin name="GND(9)" x="101.6" y="-38.1" length="middle" direction="io" rot="R180"/>
+<pin name="GND(10)" x="101.6" y="-40.64" length="middle" direction="io" rot="R180"/>
+<pin name="GND(11)" x="101.6" y="-43.18" length="middle" direction="io" rot="R180"/>
+<pin name="GND(12)" x="101.6" y="-45.72" length="middle" direction="io" rot="R180"/>
+<pin name="GND(13)" x="101.6" y="-48.26" length="middle" direction="io" rot="R180"/>
+<pin name="GND(14)" x="101.6" y="-50.8" length="middle" direction="io" rot="R180"/>
+<pin name="GND(15)" x="101.6" y="-53.34" length="middle" direction="io" rot="R180"/>
+<pin name="GND(16)" x="101.6" y="-55.88" length="middle" direction="io" rot="R180"/>
+<pin name="GND(17)" x="101.6" y="-58.42" length="middle" direction="io" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NINA-W102" prefix="IC">
+<description>&lt;b&gt;STAND-ALONE MULTIRADIO MODULE&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://www.u-blox.com/sites/default/files/NINA-W10_DataSheet_(UBX-17065507).pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="NINA-W102" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NINAW102">
+<connects>
+<connect gate="G$1" pin="GPIO_1/_SPI_V_DI" pad="1"/>
+<connect gate="G$1" pin="GPI_2/_ADC_2" pad="2"/>
+<connect gate="G$1" pin="GPI_3/_ADC_3" pad="3"/>
+<connect gate="G$1" pin="GPI_4/_ADC_4" pad="4"/>
+<connect gate="G$1" pin="GPIO_5/_LPO_IN" pad="5"/>
+<connect gate="G$1" pin="GND(1)" pad="6"/>
+<connect gate="G$1" pin="GPIO_7" pad="7"/>
+<connect gate="G$1" pin="GPIO_8/_RMII_TXEN/_SPI_V_HD/" pad="8"/>
+<connect gate="G$1" pin="VCC_IO" pad="9"/>
+<connect gate="G$1" pin="VCC" pad="10"/>
+<connect gate="G$1" pin="RSVD(1)" pad="11"/>
+<connect gate="G$1" pin="GND(2)" pad="12"/>
+<connect gate="G$1" pin="ANT" pad="13"/>
+<connect gate="G$1" pin="GND(3)" pad="14"/>
+<connect gate="G$1" pin="RSVD(2)" pad="15"/>
+<connect gate="G$1" pin="GPIO_16/_RMII_RXD0/_DAC_16" pad="16"/>
+<connect gate="G$1" pin="GPIO_17/_RMII_RXD1/_DAC_17" pad="17"/>
+<connect gate="G$1" pin="GPIO_18/_RMII_CRSDV" pad="18"/>
+<connect gate="G$1" pin="RESET_N" pad="19"/>
+<connect gate="G$1" pin="GPIO_20/_UART_RTS/_RMII_TXD1/_SPI_V_WP" pad="20"/>
+<connect gate="G$1" pin="GPIO_21/_UART_CTS/_RMII_TXD0/_SPI_V_DO/" pad="21"/>
+<connect gate="G$1" pin="GPIO_22/_UART_TXD" pad="22"/>
+<connect gate="G$1" pin="GPIO_23/_UART_RXD" pad="23"/>
+<connect gate="G$1" pin="GPIO_24/_RMII_MDIO" pad="24"/>
+<connect gate="G$1" pin="GPIO_25/_RMII_MDCLK/" pad="25"/>
+<connect gate="G$1" pin="GND(4)" pad="26"/>
+<connect gate="G$1" pin="GPIO_27/_RMII_CLK/_SYS_BOOT" pad="27"/>
+<connect gate="G$1" pin="GPIO_28/_SPI_V_CS" pad="28"/>
+<connect gate="G$1" pin="GPIO_29/_SPI_V_CLK" pad="29"/>
+<connect gate="G$1" pin="GND(5)" pad="30"/>
+<connect gate="G$1" pin="GPIO_31/_JTAG_TMS" pad="31"/>
+<connect gate="G$1" pin="GPIO_32/_JTAG_TDO" pad="32"/>
+<connect gate="G$1" pin="RSVD(3)" pad="33"/>
+<connect gate="G$1" pin="GPI_34/_ADC_3" pad="34"/>
+<connect gate="G$1" pin="GPIO_35/_JTAG_CLK" pad="35"/>
+<connect gate="G$1" pin="GPIO_36/_JTAG_TDI/" pad="36"/>
+<connect gate="G$1" pin="GND(6)" pad="37"/>
+<connect gate="G$1" pin="GND(7)" pad="38"/>
+<connect gate="G$1" pin="GND(8)" pad="39"/>
+<connect gate="G$1" pin="GND(9)" pad="40"/>
+<connect gate="G$1" pin="GND(10)" pad="41"/>
+<connect gate="G$1" pin="GND(11)" pad="42"/>
+<connect gate="G$1" pin="GND(12)" pad="43"/>
+<connect gate="G$1" pin="GND(13)" pad="44"/>
+<connect gate="G$1" pin="GND(14)" pad="45"/>
+<connect gate="G$1" pin="GND(15)" pad="46"/>
+<connect gate="G$1" pin="GND(16)" pad="47"/>
+<connect gate="G$1" pin="GND(17)" pad="48"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="Manufacturer_Name" value="U-Blox" constant="no"/>
+<attribute name="Manufacturer_Part_Number" value="NINA-W102" constant="no"/>
+<attribute name="RS_Part_Number" value="" constant="no"/>
+<attribute name="RS_Price/Stock" value="" constant="no"/>
+<attribute name="Arrow_Part_Number" value="NINA-W102" constant="no"/>
+<attribute name="Arrow_Price/Stock" value="" constant="no"/>
+<attribute name="Description" value="STAND-ALONE MULTIRADIO MODULE" constant="no"/>
+<attribute name="Height" value="3mm" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

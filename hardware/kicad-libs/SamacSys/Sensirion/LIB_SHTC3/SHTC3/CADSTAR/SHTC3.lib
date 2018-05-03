@@ -1,0 +1,17 @@
+.SHTC3 :1 ;Humidity and Temperature Sensor IC
+SHTC3
+*STM IC
+*NGS
+*PLB 1="VDD" 2="SCL" 3="SDA" 4="VSS" 5="PAD"
+*MXP 5
+*DFN SHTC3
+~!Manufacturer_Name (Sensirion)
+~!Manufacturer_Part_Number (SHTC3)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Arrow Part Number (SHTC3)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf)
+~!Height (0mm)
+SHTC3
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SHTC3
+D Humidity and Temperature Sensor IC
+K
+F https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf
+$ENDCMP
+#
+#End Doc Library

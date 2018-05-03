@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/381013/42587/2.24/21/4/Integrated Circuit/-->
+<!DOCTYPE curve SYSTEM "eagle.dtd">
+<eagle version="7.7.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="QFN50P300X300X80-21N">
+<description>&lt;b&gt;20-Pin QFN&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-1.6" y="1" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="2" x="-1.6" y="0.5" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="3" x="-1.6" y="0" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="4" x="-1.6" y="-0.5" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="5" x="-1.6" y="-1" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="6" x="-1" y="-1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="7" x="-0.5" y="-1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="8" x="0" y="-1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="9" x="0.5" y="-1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="10" x="1" y="-1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="11" x="1.6" y="-1" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="12" x="1.6" y="-0.5" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="13" x="1.6" y="0" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="14" x="1.6" y="0.5" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="15" x="1.6" y="1" dx="0.55" dy="0.3" layer="1" rot="R0"/>
+<smd name="16" x="1" y="1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="17" x="0.5" y="1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="18" x="0" y="1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="19" x="-0.5" y="1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="20" x="-1" y="1.6" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="21" x="0" y="0" dx="1.8" dy="1.8" layer="1" rot="R90"/>
+<text x="0" y="0" align="center" size="1.27" layer="25" rot="R0" >&gt;NAME</text>
+<text x="0" y="0" align="center" size="1.27" layer="27" rot="R0" >&gt;VALUE</text>
+<wire x1="-2.125" y1="2.125" x2="2.125" y2="2.125" width="0.05" layer="51"/>
+<wire x1="2.125" y1="2.125" x2="2.125" y2="-2.125" width="0.05" layer="51"/>
+<wire x1="2.125" y1="-2.125" x2="-2.125" y2="-2.125" width="0.05" layer="51"/>
+<wire x1="-2.125" y1="-2.125" x2="-2.125" y2="2.125" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="1" x2="-1" y2="1.5" width="0.1" layer="51"/>
+<circle x="-1.875" y="1.75" radius="0.125" width="0.25" layer="25"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CP2102N-A01-GQFN20">
+<wire x1="5.08" y1="20.32" x2="40.64" y2="20.32" width="0.254" layer="94"/>
+<wire x1="40.64" y1="-22.86" x2="40.64" y2="20.32" width="0.254" layer="94"/>
+<wire x1="40.64" y1="-22.86" x2="5.08" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="5.08" y1="20.32" x2="5.08" y2="-22.86" width="0.254" layer="94"/>
+<text x="41.91" y="25.4" align="center-left" size="1.778" layer="95">&gt;NAME</text>
+<text x="41.91" y="22.86" align="center-left" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GPIO.1_/_RS485" x="0" y="0" length="middle" direction="io" rot="R0"/>
+<pin name="GPIO.0_/_CLK" x="0" y="-2.54" length="middle" direction="io" rot="R0"/>
+<pin name="GND(1)" x="0" y="-5.08" length="middle" direction="io" rot="R0"/>
+<pin name="D+" x="0" y="-7.62" length="middle" direction="io" rot="R0"/>
+<pin name="D-" x="0" y="-10.16" length="middle" direction="io" rot="R0"/>
+<pin name="VDD" x="17.78" y="-27.94" length="middle" direction="io" rot="R90"/>
+<pin name="VREGIN" x="20.32" y="-27.94" length="middle" direction="io" rot="R90"/>
+<pin name="VBUS" x="22.86" y="-27.94" length="middle" direction="io" rot="R90"/>
+<pin name="RSTB" x="25.4" y="-27.94" length="middle" direction="io" rot="R90"/>
+<pin name="NC" x="27.94" y="-27.94" length="middle" direction="nc" rot="R90"/>
+<pin name="CTS" x="45.72" y="0" length="middle" direction="io" rot="R180"/>
+<pin name="SUSPEND" x="45.72" y="-2.54" length="middle" direction="io" rot="R180"/>
+<pin name="WAKEUP" x="45.72" y="-5.08" length="middle" direction="io" rot="R180"/>
+<pin name="GND(2)" x="45.72" y="-7.62" length="middle" direction="io" rot="R180"/>
+<pin name="SUSPENDB" x="45.72" y="-10.16" length="middle" direction="io" rot="R180"/>
+<pin name="TP_-_GND" x="15.24" y="25.4" length="middle" direction="io" rot="R270"/>
+<pin name="GPIO.2_/_TXT" x="17.78" y="25.4" length="middle" direction="io" rot="R270"/>
+<pin name="GPIO.3_/_RXT" x="20.32" y="25.4" length="middle" direction="io" rot="R270"/>
+<pin name="TXD" x="22.86" y="25.4" length="middle" direction="io" rot="R270"/>
+<pin name="RXD" x="25.4" y="25.4" length="middle" direction="io" rot="R270"/>
+<pin name="RTS" x="27.94" y="25.4" length="middle" direction="io" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CP2102N-A01-GQFN20" prefix="IC">
+<description>&lt;b&gt;SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://componentsearchengine.com/Datasheets/2/CP2102N-A01-GQFN20.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="CP2102N-A01-GQFN20" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="QFN50P300X300X80-21N">
+<connects>
+<connect gate="G$1" pin="GPIO.1_/_RS485" pad="1"/>
+<connect gate="G$1" pin="GPIO.0_/_CLK" pad="2"/>
+<connect gate="G$1" pin="GND(1)" pad="3"/>
+<connect gate="G$1" pin="D+" pad="4"/>
+<connect gate="G$1" pin="D-" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="6"/>
+<connect gate="G$1" pin="VREGIN" pad="7"/>
+<connect gate="G$1" pin="VBUS" pad="8"/>
+<connect gate="G$1" pin="RSTB" pad="9"/>
+<connect gate="G$1" pin="NC" pad="10"/>
+<connect gate="G$1" pin="SUSPENDB" pad="11"/>
+<connect gate="G$1" pin="GND(2)" pad="12"/>
+<connect gate="G$1" pin="WAKEUP" pad="13"/>
+<connect gate="G$1" pin="SUSPEND" pad="14"/>
+<connect gate="G$1" pin="CTS" pad="15"/>
+<connect gate="G$1" pin="RTS" pad="16"/>
+<connect gate="G$1" pin="RXD" pad="17"/>
+<connect gate="G$1" pin="TXD" pad="18"/>
+<connect gate="G$1" pin="GPIO.3_/_RXT" pad="19"/>
+<connect gate="G$1" pin="GPIO.2_/_TXT" pad="20"/>
+<connect gate="G$1" pin="TP_-_GND" pad="21"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="Manufacturer_Name" value="Silicon Labs" constant="no"/>
+<attribute name="Manufacturer_Part_Number" value="CP2102N-A01-GQFN20" constant="no"/>
+<attribute name="RS_Part_Number" value="" constant="no"/>
+<attribute name="RS_Price/Stock" value="" constant="no"/>
+<attribute name="Arrow_Part_Number" value="CP2102N-A01-GQFN20" constant="no"/>
+<attribute name="Arrow_Price/Stock" value="https://www.arrow.com/en/products/cp2102n-a01-gqfn20/silicon-labs" constant="no"/>
+<attribute name="Description" value="SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20" constant="no"/>
+<attribute name="Height" value="0.8mm" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

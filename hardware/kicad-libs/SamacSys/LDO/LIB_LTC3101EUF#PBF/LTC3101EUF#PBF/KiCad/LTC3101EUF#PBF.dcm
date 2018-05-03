@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LTC3101EUF#PBF
+D LDO Voltage Regulators 2-Cell AA Multioutput DC/DC Converter
+K
+F http://www.analog.com/media/en/technical-documentation/data-sheets/3101fb.pdf
+$ENDCMP
+#
+#End Doc Library

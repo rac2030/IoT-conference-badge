@@ -1,0 +1,18 @@
+.LTC3101EUF_PBF :1 ;LDO Voltage Regulators 2-Cell AA Multioutput DC/DC Converter
+QFN50P400X400X80-25N-D
+*STM IC
+*NGS
+*PLB 1="PWM" 2="SW1" 3="BAT1" 4="USB1" 5="SW2" 6="PWRON" 7="FB3" 8="PWRKEY" 9="PBSTAT" 10="LDO" 11="MAX" 12="CRS" 13="'RESET'" 14="BAT2" 15="SW3A" 16="USB2" 17="OUT3" 18="HSO" 19="ENA3" 20="SW3B" 21="ENA1" 22="FB2" 23="FB1" 24="ENA2" 25="EP (GND)"
+*MXP 25
+*DFN LTC3101EUF_PBF
+~!Manufacturer_Name (Linear Technology)
+~!Manufacturer_Part_Number (LTC3101EUF#PBF)
+~!RS Part Number (-)
+~!RS Price/Stock (-)
+~!Arrow Part Number (LTC3101EUF#PBF)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/ltc3101eufpbf/linear-technology)
+~!Link Datasheet (http://www.analog.com/media/en/technical-documentation/data-sheets/3101fb.pdf)
+~!Height (0.8mm)
+~!3D_Model (LTC3101EUF#PBF)
+LTC3101EUF_PBF
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 25.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 
