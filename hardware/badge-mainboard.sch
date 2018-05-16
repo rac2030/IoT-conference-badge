@@ -40,8 +40,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 5
 Title "IoT conference badge - mainboard"
-Date "2018-04-09"
-Rev "0.2.0"
+Date "2018-05-17"
+Rev "0.3.0"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -403,14 +403,6 @@ F 3 "" H 8500 2000 50  0001 C CNN
 $EndComp
 Text Notes 10100 1850 2    60   ~ 0
 I2C Breakouts for users
-Text GLabel 6500 2550 2    60   Output Italic 0
-TXD
-Text GLabel 6200 2450 2    60   Input Italic 0
-RXD
-Text GLabel 6200 1950 2    60   Input ~ 0
-CTS
-Text GLabel 6200 2850 2    60   Input ~ 0
-DTR
 $Sheet
 S 2550 2250 1150 650 
 U 5AE85D2E
@@ -589,14 +581,6 @@ Wire Notes Line
 	10150 1750 10150 2550
 Wire Notes Line
 	10150 2550 8950 2550
-Wire Wire Line
-	6200 1950 6100 1950
-Wire Wire Line
-	6200 2850 6100 2850
-Wire Wire Line
-	6200 2450 6100 2450
-Wire Wire Line
-	6500 2550 6100 2550
 Wire Wire Line
 	4800 2450 3700 2450
 Wire Wire Line

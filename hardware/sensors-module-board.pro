@@ -1,4 +1,4 @@
-update=Wed May 16 18:58:24 2018
+update=Thu May 17 00:26:19 2018
 version=1
 last_client=eeschema
 [general]
@@ -64,3 +64,13 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=kicad-libs/badgeComponents
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
