@@ -1,0 +1,18 @@
+.TPS78918DBVT :1 ;Texas Instruments TPS78918DBVT, LDO Voltage Regulator, 0.1A, 1.8 V, 2.7  10 Vin, 5-Pin SOT-23
+SOT95P280X145-5N
+*STM PS
+*NGS
+*PLB 1="VIN" 2="GND" 3="EN" 4="BYPASS" 5="VOUT"
+*MXP 5
+*DFN TPS78918DBVT
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPS78918DBVT)
+~!RS Part Number (6614425P)
+~!Link RS Price/Stock (http://uk.rs-online.com/web/p/products/6614425P)
+~!Arrow Part Number (TPS78918DBVT)
+~!Link Arrow Price/Stock (http://uk.rs-online.com/web/p/products/6614425P)
+~!Link Datasheet (http://www.ti.com/lit/ds/symlink/tps789.pdf)
+~!Height (1.45mm)
+~!3D_Model (TPS78918DBVT)
+TPS78918DBVT
+1.1!I 2.1!G 3.1!I 4.1!I 5.1!Y 

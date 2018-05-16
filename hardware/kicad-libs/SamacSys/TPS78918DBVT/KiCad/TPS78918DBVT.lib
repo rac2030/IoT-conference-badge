@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model TPS78918DBVT
+#/418062/42587/2.26/5/0/Power Supply
+DEF TPS78918DBVT PS 0 30 Y Y 1 F N
+F0 "PS" 1050 300 50 H V L CNN
+F1 "TPS78918DBVT" 1050 200 50 H V L CNN
+F2 "SOT95P280X145-5N" 1050 100 50 H I L CNN
+F3 "http://www.ti.com/lit/ds/symlink/tps789.pdf" 1050 0 50 H I L CNN
+F4 "Texas Instruments TPS78918DBVT, LDO Voltage Regulator, 0.1A, 1.8 V, 2.7  10 Vin, 5-Pin SOT-23" 1050 -100 50 H I L CNN "Description"
+F5 "1.45" 1050 -200 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "TPS78918DBVT" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "6614425P" 1050 -500 50 H I L CNN "RS Part Number"
+F9 "http://uk.rs-online.com/web/p/products/6614425P" 1050 -600 50 H I L CNN "RS Price/Stock"
+F10 "TPS78918DBVT" 1050 -700 50 H I L CNN "Arrow Part Number"
+F11 "http://uk.rs-online.com/web/p/products/6614425P" 1050 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X VIN 1 0 0 200 R 50 50 0 0 B
+X GND 2 0 -100 200 R 50 50 0 0 B
+X EN 3 0 -200 200 R 50 50 0 0 B
+X BYPASS 4 1200 0 200 L 50 50 0 0 B
+X VOUT 5 1200 -100 200 L 50 50 0 0 B
+P 5 0 1 6 200 100 1000 100 1000 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPS78918DBVT"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2017-11-13-10:38:00)
+    (mountForm default
+        (footprintRef "SOT95P280X145-5N")
+        (spec "System")
+    )
+)

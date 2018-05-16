@@ -21,6 +21,18 @@ D STAND-ALONE MULTIRADIO MODULE
 F https://www.u-blox.com/sites/default/files/NINA-W10_DataSheet_%28UBX-17065507%29.pdf
 $ENDCMP
 #
+$CMP PCA9306
+D Dual bidirectional I2C Bus and SMBus voltage level translator
+K Dual bidirectional I2C Bus and SMBus voltage level translator
+F http://www.ti.com/lit/ds/symlink/pca9306.pdf
+$ENDCMP
+#
+$CMP PCA9306_c
+D Dual bidirectional I2C Bus and SMBus voltage level translator
+K Dual bidirectional I2C Bus and SMBus voltage level translator
+F http://www.ti.com/lit/ds/symlink/pca9306.pdf
+$ENDCMP
+#
 $CMP SGPC3-2.5k
 D SENSIRION - SGPC3-2.5K - DIGITAL LOW POWER GAS SENSOR, 1.8V, DFN
 F https://componentsearchengine.com/Datasheets/2/SGPC3-2.5K.pdf
@@ -29,6 +41,11 @@ $ENDCMP
 $CMP SHTC3
 D Humidity and Temperature Sensor IC
 F https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf
+$ENDCMP
+#
+$CMP TPS78918DBVR
+D Texas Instruments TPS78918DBVR, LDO Voltage Regulator, 0.1A, 1.8 V, 2.7  10 Vin, 5-Pin SOT-23
+F http://www.ti.com/lit/ds/symlink/tps789.pdf
 $ENDCMP
 #
 $CMP WS2812b
