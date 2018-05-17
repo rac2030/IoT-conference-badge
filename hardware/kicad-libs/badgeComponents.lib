@@ -293,8 +293,8 @@ ENDDEF
 #
 # SHTC3
 #
-DEF SHTC3 IC 0 30 Y Y 1 F N
-F0 "IC" 450 -50 50 H V L CNN
+DEF SHTC3 U 0 30 Y Y 1 F N
+F0 "U" 450 -50 50 H V L CNN
 F1 "SHTC3" 500 -200 50 H V L CNN
 F2 "SHTC3" 850 100 50 H I L CNN
 F3 "https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf" 850 0 50 H I L CNN
