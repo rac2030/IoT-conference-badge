@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name PCA9306TDCURQ1)(type Legacy)(uri "$(KIPRJMOD)/kicad-libs/SamacSys/PCA9306/PCA9306TDCURQ1.mod")(options "")(descr ""))
+  (lib (name SHTC3)(type Legacy)(uri "$(KIPRJMOD)/kicad-libs/SamacSys/Sensirion/LIB_SHTC3/SHTC3/KiCad/SHTC3.mod")(options "")(descr ""))
+  (lib (name SGPC3-2.5k)(type Legacy)(uri "$(KIPRJMOD)/kicad-libs/SamacSys/Sensirion/SGPC3-2.5k.mod")(options "")(descr ""))
+  (lib (name TPS78918DBVT)(type Legacy)(uri "$(KIPRJMOD)/kicad-libs/SamacSys/TPS78918DBVT/KiCad/TPS78918DBVT.mod")(options "")(descr ""))
+)
