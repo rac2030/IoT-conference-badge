@@ -38,7 +38,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 4
 Title "IoT conference badge - mainboard"
 Date "2018-05-17"
 Rev "0.3.0"
@@ -240,35 +240,15 @@ F7 "BUSY" O L 5050 4700 60
 F8 "GND" O R 6750 5200 60 
 F9 "VCC" I R 6750 4950 60 
 $EndSheet
-$Sheet
-S 3150 6500 1200 550 
-U 5AD42326
-F0 "power" 60
-F1 "power.sch" 60
-F2 "VBUS_IN" I L 3150 6650 60 
-F3 "1.8_OUT" O R 4350 6650 60 
-F4 "3.3_OUT" O R 4350 6850 60 
-$EndSheet
-$Comp
-L +1V8 #PWR08
-U 1 1 5AD43521
-P 4450 6450
-F 0 "#PWR08" H 4450 6300 50  0001 C CNN
-F 1 "+1V8" H 4450 6590 50  0000 C CNN
-F 2 "" H 4450 6450 50  0001 C CNN
-F 3 "" H 4450 6450 50  0001 C CNN
-	1    4450 6450
-	1    0    0    -1  
-$EndComp
 $Comp
 L +3V3 #PWR09
 U 1 1 5AD44887
-P 4750 6450
-F 0 "#PWR09" H 4750 6300 50  0001 C CNN
-F 1 "+3V3" H 4750 6590 50  0000 C CNN
-F 2 "" H 4750 6450 50  0001 C CNN
-F 3 "" H 4750 6450 50  0001 C CNN
-	1    4750 6450
+P 4900 6350
+F 0 "#PWR09" H 4900 6200 50  0001 C CNN
+F 1 "+3V3" H 4900 6490 50  0000 C CNN
+F 2 "" H 4900 6350 50  0001 C CNN
+F 3 "" H 4900 6350 50  0001 C CNN
+	1    4900 6350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -461,6 +441,124 @@ F 3 "" H 9600 1000 50  0001 C CNN
 	1    9600 1000
 	1    0    0    -1  
 $EndComp
+Text Notes 7050 4450 2    60   ~ 0
+Needs to be tested first, not sure about the pins
+$Comp
+L +3V3 #PWR?
+U 1 1 5B01D407
+P 7150 4800
+F 0 "#PWR?" H 7150 4650 50  0001 C CNN
+F 1 "+3V3" H 7150 4940 50  0000 C CNN
+F 2 "" H 7150 4800 50  0001 C CNN
+F 3 "" H 7150 4800 50  0001 C CNN
+	1    7150 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B01D538
+P 7200 5350
+F 0 "#PWR?" H 7200 5100 50  0001 C CNN
+F 1 "GND" H 7200 5200 50  0000 C CNN
+F 2 "" H 7200 5350 50  0001 C CNN
+F 3 "" H 7200 5350 50  0001 C CNN
+	1    7200 5350
+	1    0    0    -1  
+$EndComp
+Text Notes 11100 5700 2    60   ~ 0
+180mA max.
+Text Notes 6400 5400 2    60   ~ 0
+Assume 20mA to 30mA max.
+Text Notes 6250 3450 2    60   ~ 0
+500mA max. power consumption
+$Comp
+L LM1117-3.3 U?
+U 1 1 5B02845A
+P 4150 6350
+F 0 "U?" H 4000 6475 50  0000 C CNN
+F 1 "LM1117-3.3" H 4150 6475 50  0000 L CNN
+F 2 "" H 4150 6350 50  0001 C CNN
+F 3 "" H 4150 6350 50  0001 C CNN
+	1    4150 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5B028A3F
+P 3400 6600
+F 0 "C?" H 3410 6670 50  0000 L CNN
+F 1 "10uF (Tantalum)" H 3410 6520 50  0000 L CNN
+F 2 "" H 3400 6600 50  0001 C CNN
+F 3 "" H 3400 6600 50  0001 C CNN
+	1    3400 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5B029060
+P 4550 6600
+F 0 "C?" H 4560 6670 50  0000 L CNN
+F 1 "10uF (Tantalum)" H 4560 6520 50  0000 L CNN
+F 2 "" H 4550 6600 50  0001 C CNN
+F 3 "" H 4550 6600 50  0001 C CNN
+	1    4550 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B029570
+P 4150 6900
+F 0 "#PWR?" H 4150 6650 50  0001 C CNN
+F 1 "GND" H 4150 6750 50  0000 C CNN
+F 2 "" H 4150 6900 50  0001 C CNN
+F 3 "" H 4150 6900 50  0001 C CNN
+	1    4150 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 J?
+U 1 1 5B02ACC9
+P 2550 6450
+F 0 "J?" H 2550 6550 50  0000 C CNN
+F 1 "Vin" H 2550 6250 50  0000 C CNN
+F 2 "" H 2550 6450 50  0001 C CNN
+F 3 "" H 2550 6450 50  0001 C CNN
+	1    2550 6450
+	-1   0    0    1   
+$EndComp
+$Comp
+L D_Small D?
+U 1 1 5B02BB97
+P 3100 6350
+F 0 "D?" H 3050 6430 50  0000 L CNN
+F 1 "D_Small" H 2950 6270 50  0000 L CNN
+F 2 "" V 3100 6350 50  0001 C CNN
+F 3 "" V 3100 6350 50  0001 C CNN
+	1    3100 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5B02C983
+P 1750 6600
+F 0 "BT?" H 1850 6700 50  0000 L CNN
+F 1 "Battery 3x1.5V AAA" H 1450 6250 50  0000 L CNN
+F 2 "" V 1750 6660 50  0001 C CNN
+F 3 "" V 1750 6660 50  0001 C CNN
+	1    1750 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 J?
+U 1 1 5B02CAFA
+P 2200 6450
+F 0 "J?" H 2200 6550 50  0000 C CNN
+F 1 "Vin" H 2200 6250 50  0000 C CNN
+F 2 "" H 2200 6450 50  0001 C CNN
+F 3 "" H 2200 6450 50  0001 C CNN
+	1    2200 6450
+	-1   0    0    1   
+$EndComp
 Wire Notes Line
 	500  6950 500  4700
 Wire Wire Line
@@ -527,14 +625,6 @@ Wire Wire Line
 	8950 5500 9350 5500
 Wire Notes Line
 	8800 5750 8800 3500
-Wire Wire Line
-	4350 6650 4450 6650
-Wire Wire Line
-	4450 6650 4450 6450
-Wire Wire Line
-	4350 6850 4750 6850
-Wire Wire Line
-	4750 6850 4750 6450
 Wire Wire Line
 	6100 2950 11100 2950
 Wire Wire Line
@@ -665,30 +755,6 @@ Wire Wire Line
 	2350 1850 2350 5000
 Wire Wire Line
 	2350 5000 5050 5000
-Text Notes 7050 4450 2    60   ~ 0
-Needs to be tested first, not sure about the pins
-$Comp
-L +3V3 #PWR?
-U 1 1 5B01D407
-P 7150 4800
-F 0 "#PWR?" H 7150 4650 50  0001 C CNN
-F 1 "+3V3" H 7150 4940 50  0000 C CNN
-F 2 "" H 7150 4800 50  0001 C CNN
-F 3 "" H 7150 4800 50  0001 C CNN
-	1    7150 4800
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 5B01D538
-P 7200 5350
-F 0 "#PWR?" H 7200 5100 50  0001 C CNN
-F 1 "GND" H 7200 5200 50  0000 C CNN
-F 2 "" H 7200 5350 50  0001 C CNN
-F 3 "" H 7200 5350 50  0001 C CNN
-	1    7200 5350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6750 4950 7150 4950
 Wire Wire Line
@@ -715,4 +781,56 @@ Wire Wire Line
 	4250 2950 4800 2950
 Wire Wire Line
 	5050 4900 3950 4900
+Wire Wire Line
+	4150 6650 4150 6900
+Wire Wire Line
+	4450 6350 4900 6350
+Wire Wire Line
+	4550 6500 4550 6350
+Connection ~ 4550 6350
+Wire Wire Line
+	3400 6700 3400 6850
+Wire Wire Line
+	2950 6850 4550 6850
+Connection ~ 4150 6850
+Wire Wire Line
+	4550 6850 4550 6700
+Wire Wire Line
+	3200 6350 3850 6350
+Wire Wire Line
+	3400 6350 3400 6500
+Connection ~ 3400 6350
+Connection ~ 3400 6850
+Wire Wire Line
+	2400 6450 2950 6450
+Wire Wire Line
+	2950 6450 2950 6850
+Connection ~ 2750 6450
+Wire Wire Line
+	1750 6150 1750 6400
+Wire Wire Line
+	1750 6800 2450 6800
+Wire Wire Line
+	2450 6800 2450 6450
+Connection ~ 2450 6450
+Wire Wire Line
+	2750 6350 3000 6350
+Wire Wire Line
+	2400 6350 2800 6350
+Connection ~ 2800 6350
+Wire Wire Line
+	2450 6350 2450 6150
+Wire Wire Line
+	2450 6150 1750 6150
+Connection ~ 2450 6350
+Wire Notes Line
+	1300 5900 1300 7150
+Wire Notes Line
+	1300 7150 5300 7150
+Wire Notes Line
+	5300 7150 5300 5900
+Wire Notes Line
+	5300 5900 1300 5900
+Text Notes 1950 6000 2    60   ~ 0
+Power circuit
 $EndSCHEMATC
