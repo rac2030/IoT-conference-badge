@@ -39,6 +39,12 @@ K Dual bidirectional I2C Bus and SMBus voltage level translator
 F http://www.ti.com/lit/ds/symlink/pca9306.pdf
 $ENDCMP
 #
+$CMP Rpi_02x20_WaveShareEPD
+D Rpi 2x20 WaveShare EPD header
+K connector
+F https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
+$ENDCMP
+#
 $CMP SGPC3-2.5k
 D SENSIRION - SGPC3-2.5K - DIGITAL LOW POWER GAS SENSOR, 1.8V, DFN
 F https://componentsearchengine.com/Datasheets/2/SGPC3-2.5K.pdf
