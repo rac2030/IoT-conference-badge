@@ -40,7 +40,7 @@ encoding utf-8
 Sheet 1 1
 Title "IoT conference badge - sensors module board"
 Date "2018-05-16"
-Rev "0.1.0"
+Rev "0.1.1"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -184,10 +184,10 @@ Temp. / Humidity Sensor
 Text Notes 3050 3250 2    60   ~ 0
 Air Quality Sensor
 $Comp
-L SHTC3 IC1
+L SHTC3 U3
 U 1 1 5AD39664
 P 7400 3150
-F 0 "IC1" H 7850 3100 50  0000 L CNN
+F 0 "U3" H 7850 3100 50  0000 L CNN
 F 1 "SHTC3" H 7900 2950 50  0000 L CNN
 F 2 "SHTC3:SHTC3" H 8250 3250 50  0001 L CNN
 F 3 "https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf" H 8250 3150 50  0001 L CNN
@@ -252,23 +252,23 @@ $EndComp
 $Comp
 L +3V3 #PWR09
 U 1 1 5AFC5301
-P 9950 3900
-F 0 "#PWR09" H 9950 3750 50  0001 C CNN
-F 1 "+3V3" H 9950 4040 50  0000 C CNN
-F 2 "" H 9950 3900 50  0001 C CNN
-F 3 "" H 9950 3900 50  0001 C CNN
-	1    9950 3900
+P 9950 3750
+F 0 "#PWR09" H 9950 3600 50  0001 C CNN
+F 1 "+3V3" H 9950 3890 50  0000 C CNN
+F 2 "" H 9950 3750 50  0001 C CNN
+F 3 "" H 9950 3750 50  0001 C CNN
+	1    9950 3750
 	1    0    0    -1  
 $EndComp
 $Comp
 L PWR_FLAG #FLG010
 U 1 1 5AFC53F0
-P 10350 3900
-F 0 "#FLG010" H 10350 3975 50  0001 C CNN
-F 1 "PWR_FLAG" H 10350 4050 50  0000 C CNN
-F 2 "" H 10350 3900 50  0001 C CNN
-F 3 "" H 10350 3900 50  0001 C CNN
-	1    10350 3900
+P 10350 3750
+F 0 "#FLG010" H 10350 3825 50  0001 C CNN
+F 1 "PWR_FLAG" H 10350 3900 50  0000 C CNN
+F 2 "" H 10350 3750 50  0001 C CNN
+F 3 "" H 10350 3750 50  0001 C CNN
+	1    10350 3750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -362,6 +362,28 @@ F 3 "" H 2250 4400 50  0001 C CNN
 	1    2250 4400
 	1    0    0    -1  
 $EndComp
+$Comp
+L I2C_HEADER J1
+U 1 1 5AFCC73D
+P 9700 4100
+F 0 "J1" H 9700 4300 50  0000 C CNN
+F 1 "I2C_HEADER" H 9700 3800 50  0000 C CNN
+F 2 "badgeComponents:I2C_header_Pitch2.54mm" H 9700 4100 50  0001 C CNN
+F 3 "" H 9700 4100 50  0001 C CNN
+	1    9700 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L I2C_HEADER J2
+U 1 1 5AFF6355
+P 10350 4100
+F 0 "J2" H 10350 4300 50  0000 C CNN
+F 1 "I2C_boardconnector" H 10350 3800 50  0000 C CNN
+F 2 "badgeComponents:I2C_header_halfround_Pitch2.54mm" H 10350 4100 50  0001 C CNN
+F 3 "" H 10350 4100 50  0001 C CNN
+	1    10350 4100
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	5250 3450 5250 3700
 Wire Wire Line
@@ -436,18 +458,13 @@ Wire Notes Line
 Wire Notes Line
 	2150 3100 7000 3100
 Wire Wire Line
-	5750 4300 9500 4300
+	5750 4300 10150 4300
 Wire Wire Line
 	7200 3250 7200 4200
 Wire Wire Line
 	8550 2950 8550 3350
 Wire Wire Line
 	8550 3250 8400 3250
-Wire Wire Line
-	10350 4000 10350 3900
-Wire Wire Line
-	9850 4000 10350 4000
-Connection ~ 9950 4000
 Wire Wire Line
 	2350 6300 1900 6300
 Wire Wire Line
@@ -520,32 +537,17 @@ Wire Wire Line
 Wire Wire Line
 	8400 3150 8550 3150
 Connection ~ 8550 3150
-$Comp
-L I2C_HEADER J1
-U 1 1 5AFCC73D
-P 9700 4100
-F 0 "J1" H 9700 4300 50  0000 C CNN
-F 1 "I2C_HEADER" H 9700 3800 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9700 4100 50  0001 C CNN
-F 3 "" H 9700 4100 50  0001 C CNN
-	1    9700 4100
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	5750 4200 9500 4200
+	5750 4200 10150 4200
 Wire Wire Line
-	7400 3350 7400 3700
+	7400 3550 10800 3550
 Wire Wire Line
-	7400 3700 10550 3700
-Wire Wire Line
-	10550 3700 10550 4700
-Wire Wire Line
-	10550 4700 9350 4700
+	9350 4700 10800 4700
 Wire Wire Line
 	9350 4700 9350 4300
 Connection ~ 9350 4300
 Wire Wire Line
-	9500 4100 8900 4100
+	8900 4100 10150 4100
 Wire Wire Line
 	8900 4100 8900 3850
 Wire Wire Line
@@ -553,17 +555,61 @@ Wire Wire Line
 Wire Wire Line
 	8700 3850 8700 3950
 Wire Wire Line
-	9500 4000 9350 4000
+	9350 4000 10150 4000
 Wire Wire Line
 	9350 4000 9350 3800
-Wire Wire Line
-	9350 3800 9850 3800
-Wire Wire Line
-	9850 3800 9850 4000
-Wire Wire Line
-	9950 3900 9950 4000
 Wire Wire Line
 	6150 3800 6150 3650
 Connection ~ 6150 3700
 Connection ~ 5950 3700
+Wire Wire Line
+	9950 3750 9950 3800
+Wire Wire Line
+	9350 3800 10350 3800
+Wire Wire Line
+	10350 3800 10350 3750
+Connection ~ 9950 3800
+Wire Wire Line
+	10800 4700 10800 3550
+Connection ~ 9500 4000
+Connection ~ 9500 4100
+Connection ~ 9500 4200
+Connection ~ 9500 4300
+$Comp
+L BOARD_CONNECTOR J3
+U 1 1 5AFF6F3A
+P 10400 5150
+F 0 "J3" H 10400 5350 50  0000 C CNN
+F 1 "BOARD_CONNECTOR" H 10400 4850 50  0000 C CNN
+F 2 "badgeComponents:GND_BOARD_CONNECTOR_halfround_Pitch2.54mm" H 10400 5150 50  0001 C CNN
+F 3 "" H 10400 5150 50  0001 C CNN
+	1    10400 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 5AFF7026
+P 9850 5600
+F 0 "#PWR015" H 9850 5350 50  0001 C CNN
+F 1 "GND" H 9850 5450 50  0000 C CNN
+F 2 "" H 9850 5600 50  0001 C CNN
+F 3 "" H 9850 5600 50  0001 C CNN
+	1    9850 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 5050 9850 5600
+Wire Wire Line
+	9850 5350 10200 5350
+Wire Wire Line
+	10200 5250 9850 5250
+Connection ~ 9850 5350
+Wire Wire Line
+	10200 5150 9850 5150
+Connection ~ 9850 5250
+Wire Wire Line
+	10200 5050 9850 5050
+Connection ~ 9850 5150
+Wire Wire Line
+	7400 3350 7400 3550
 $EndSCHEMATC
