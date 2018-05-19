@@ -647,4 +647,64 @@ Wire Wire Line
 Wire Wire Line
 	9750 1250 9750 850 
 Connection ~ 9750 850 
+Wire Wire Line
+	4800 2350 4000 2350
+Wire Wire Line
+	4000 2350 4000 4800
+Wire Wire Line
+	4000 4800 5050 4800
+Wire Wire Line
+	5100 4900 3950 4900
+Wire Wire Line
+	3950 4900 3950 1950
+Wire Wire Line
+	3950 1950 4800 1950
+Wire Wire Line
+	4800 1850 2350 1850
+Wire Wire Line
+	2350 1850 2350 5000
+Wire Wire Line
+	2350 5000 5050 5000
+$Comp
+L GND #PWR?
+U 1 1 5B015D33
+P 2800 5150
+F 0 "#PWR?" H 2800 4900 50  0001 C CNN
+F 1 "GND" H 2800 5000 50  0000 C CNN
+F 2 "" H 2800 5150 50  0001 C CNN
+F 3 "" H 2800 5150 50  0001 C CNN
+	1    2800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5150 2800 5100
+Wire Wire Line
+	2800 5100 5050 5100
+$Comp
+L +3V3 #PWR?
+U 1 1 5B017B96
+P 2500 5450
+F 0 "#PWR?" H 2500 5300 50  0001 C CNN
+F 1 "+3V3" H 2500 5590 50  0000 C CNN
+F 2 "" H 2500 5450 50  0001 C CNN
+F 3 "" H 2500 5450 50  0001 C CNN
+	1    2500 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5450 2500 5550
+Wire Wire Line
+	2500 5550 3200 5550
+Wire Wire Line
+	3200 5550 3200 5200
+Wire Wire Line
+	3200 5200 5050 5200
+Wire Wire Line
+	4800 2950 3850 2950
+Wire Wire Line
+	3850 2950 3850 5300
+Wire Wire Line
+	3850 5300 5050 5300
+Text Notes 7050 4450 2    60   ~ 0
+Needs to be tested first, not sure about the pins
 $EndSCHEMATC
