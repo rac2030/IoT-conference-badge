@@ -41,7 +41,7 @@ encoding utf-8
 Sheet 2 2
 Title "IoT conference badge - mainboard"
 Date "2018-05-20"
-Rev "0.3.4"
+Rev "0.3.5"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -54,7 +54,7 @@ U 1 1 5AE63E40
 P 4500 3450
 F 0 "J6" H 4500 4250 50  0000 C CNN
 F 1 "NINA Module left header" H 4050 2650 50  0000 C CNN
-F 2 "" H 4500 3450 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x15_Pitch2.54mm" H 4500 3450 50  0001 C CNN
 F 3 "" H 4500 3450 50  0001 C CNN
 	1    4500 3450
 	1    0    0    -1  
@@ -65,7 +65,7 @@ U 1 1 5AE63E71
 P 7100 3450
 F 0 "J9" H 7100 4250 50  0000 C CNN
 F 1 "Nina module right header" H 6650 2650 50  0000 C CNN
-F 2 "" H 7100 3450 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x15_Pitch2.54mm" H 7100 3450 50  0001 C CNN
 F 3 "" H 7100 3450 50  0001 C CNN
 	1    7100 3450
 	-1   0    0    -1  
@@ -138,7 +138,7 @@ U 1 1 5AE71527
 P 5000 3450
 F 0 "J7" H 5000 4250 50  0000 C CNN
 F 1 "Shield left header" H 5050 2650 50  0000 C CNN
-F 2 "" H 5000 3450 50  0001 C CNN
+F 2 "lib:1X15_LOCK" H 5000 3450 50  0001 C CNN
 F 3 "" H 5000 3450 50  0001 C CNN
 	1    5000 3450
 	1    0    0    -1  
@@ -149,7 +149,7 @@ U 1 1 5AE715D2
 P 6550 3450
 F 0 "J8" H 6550 4250 50  0000 C CNN
 F 1 "Shield right header" H 6600 2650 50  0000 C CNN
-F 2 "" H 6550 3450 50  0001 C CNN
+F 2 "lib:1X15_LOCK" H 6550 3450 50  0001 C CNN
 F 3 "" H 6550 3450 50  0001 C CNN
 	1    6550 3450
 	-1   0    0    -1  
