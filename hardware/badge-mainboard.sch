@@ -41,7 +41,7 @@ encoding utf-8
 Sheet 1 2
 Title "IoT conference badge - mainboard"
 Date "2018-05-20"
-Rev "0.3.3"
+Rev "0.3.4"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -1204,7 +1204,7 @@ F 3 "" H 5800 1400 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5200 1200 5200 1400
+	5200 1200 5200 1450
 Wire Wire Line
 	5200 1400 5650 1400
 Wire Wire Line
@@ -1215,4 +1215,25 @@ Wire Notes Line
 	6350 950  6350 1600
 Wire Notes Line
 	6350 1600 4350 1600
+$Comp
+L D_Zener_Small D1
+U 1 1 5B0199E5
+P 4700 1450
+F 0 "D1" H 4700 1350 50  0000 C CNN
+F 1 "D_Zener_3v3" H 4700 1550 50  0000 C CNN
+F 2 "" V 4700 1450 50  0001 C CNN
+F 3 "" V 4700 1450 50  0001 C CNN
+	1    4700 1450
+	-1   0    0    1   
+$EndComp
+Connection ~ 5200 1400
+Wire Wire Line
+	5200 1450 4800 1450
+Wire Wire Line
+	4600 1450 4600 1250
+Wire Wire Line
+	4600 1250 4750 1250
+Wire Wire Line
+	4750 1250 4750 1200
+Connection ~ 4750 1200
 $EndSCHEMATC
