@@ -3,7 +3,7 @@
   (general
     (links 46)
     (no_connects 0)
-    (area 135.949999 121.949999 150.050001 150.050001)
+    (area 131.414287 114.484095 159.85 158.300001)
     (thickness 1.6)
     (drawings 30)
     (tracks 309)
@@ -94,7 +94,7 @@
       (mirror false)
       (drillshape 1)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory ./sensors-module-board_rev.0.1.0.svg))
   )
 
   (net 0 "")

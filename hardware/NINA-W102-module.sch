@@ -76,7 +76,7 @@ Text HLabel 3000 3950 0    60   BiDi ~ 0
 GPIO_8
 Text HLabel 3000 4150 0    60   Input ~ 0
 VCC
-Text Notes 3450 4550 0    60   ~ 0
+Text Notes 2250 4550 0    60   ~ 0
 VCC_IO (PIN 14) is coupled to VCC as we use 3.3v for IO
 Text HLabel 8000 2750 2    60   Input ~ 0
 GPI_34
@@ -132,16 +132,16 @@ F 3 "" H 7050 3450 50  0001 C CNN
 	1    7050 3450
 	-1   0    0    -1  
 $EndComp
-Text Notes 6600 2400 2    60   ~ 0
+Text Notes 6300 2400 2    60   ~ 0
 shield header will be on the outside
 $Comp
-L NINA-W102minimalbreakout U?
+L NINA-W102minimalbreakout U3
 U 1 1 5B03A795
 P 5500 3300
-F 0 "U?" H 5500 3250 60  0000 C CNN
+F 0 "U3" H 5500 3250 60  0000 C CNN
 F 1 "NINA-W102minimalbreakout" H 5500 4050 60  0000 C CNN
-F 2 "" H 5500 2900 60  0001 C CNN
-F 3 "" H 5500 2900 60  0001 C CNN
+F 2 "badgeComponents:ublox_NINA-W102_minimal_breakout" H 5500 2900 60  0001 C CNN
+F 3 "http://rac.su/ninab" H 5500 2900 60  0001 C CNN
 	1    5500 3300
 	1    0    0    -1  
 $EndComp

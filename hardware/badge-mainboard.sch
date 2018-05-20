@@ -336,7 +336,7 @@ U 1 1 5AFCE10D
 P 8650 900
 F 0 "U2" H 8650 900 60  0000 C CNN
 F 1 "sensor-module-board" H 8650 750 60  0000 C CNN
-F 2 "" H 8650 900 60  0001 C CNN
+F 2 "badgeComponents:Sensors_module_board" H 8650 900 60  0001 C CNN
 F 3 "" H 8650 900 60  0001 C CNN
 	1    8650 900 
 	1    0    0    -1  
