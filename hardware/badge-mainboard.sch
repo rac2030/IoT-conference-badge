@@ -821,10 +821,6 @@ Wire Wire Line
 Wire Wire Line
 	2700 2550 4800 2550
 Wire Wire Line
-	6200 1150 6200 1850
-Wire Wire Line
-	6200 1850 6100 1850
-Wire Wire Line
 	7800 1900 7800 2150
 Connection ~ 7800 2150
 Wire Wire Line
@@ -999,8 +995,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 1250 1800 1500
 Connection ~ 1700 1250
-Wire Wire Line
-	1700 1150 6200 1150
 Connection ~ 1700 1150
 Wire Wire Line
 	1400 3100 1400 3000
@@ -1147,4 +1141,78 @@ Wire Notes Line
 	2150 900  2150 550 
 Text Notes 3850 1000 2    60   ~ 0
 User interactions
+Wire Wire Line
+	1700 1150 3550 1150
+Wire Wire Line
+	3550 1150 3550 2050
+Wire Wire Line
+	3550 2050 4800 2050
+$Comp
+L R_Small R9
+U 1 1 5B00DCEE
+P 4900 1200
+F 0 "R9" H 4930 1220 50  0000 L CNN
+F 1 "100k" H 4930 1160 50  0000 L CNN
+F 2 "" H 4900 1200 50  0001 C CNN
+F 3 "" H 4900 1200 50  0001 C CNN
+	1    4900 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R10
+U 1 1 5B00DF64
+P 5500 1200
+F 0 "R10" H 5530 1220 50  0000 L CNN
+F 1 "470k" H 5500 1100 50  0000 L CNN
+F 2 "" H 5500 1200 50  0001 C CNN
+F 3 "" H 5500 1200 50  0001 C CNN
+	1    5500 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5000 1200 5400 1200
+Wire Wire Line
+	6100 1850 6300 1850
+Connection ~ 5200 1200
+Text Label 1050 6700 0    60   ~ 0
++BATT
+Text Label 1050 7350 0    60   ~ 0
+-BATT
+Text Label 5700 1200 0    60   ~ 0
++BATT
+Text Label 4700 1200 2    60   ~ 0
+-BATT
+Wire Wire Line
+	5600 1200 5700 1200
+Wire Wire Line
+	4800 1200 4700 1200
+Wire Notes Line
+	4350 950  4350 1600
+Wire Notes Line
+	4350 950  6350 950 
+Text Notes 4400 1050 0    60   ~ 0
+Voltage divider for battery measurement
+$Comp
+L JUMPER-SMT_2_NC JP1
+U 1 1 5B0140EF
+P 5800 1400
+F 0 "JP1" H 5700 1500 45  0000 L BNN
+F 1 "JUMPER-disable-batt-measurement" H 5000 1250 45  0000 L BNN
+F 2 "SMT-JUMPER_2_NC" H 5800 1600 20  0001 C CNN
+F 3 "" H 5800 1400 60  0001 C CNN
+	1    5800 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1200 5200 1400
+Wire Wire Line
+	5200 1400 5650 1400
+Wire Wire Line
+	5950 1400 6300 1400
+Wire Wire Line
+	6300 1400 6300 1850
+Wire Notes Line
+	6350 950  6350 1600
+Wire Notes Line
+	6350 1600 4350 1600
 $EndSCHEMATC

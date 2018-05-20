@@ -17,6 +17,11 @@ K connector
 F ~
 $ENDCMP
 #
+$CMP JUMPER-SMT_2_NC
+D Normally closed trace jumper This jumper has a trace between two pads so it's normally closed (NC). Use a razor knife to open the connection. For best results follow the IPC guidelines for cutting traces: <ul><li>Cutout at least 0.063 mm (0.005 in).</li><li>Remove all loose material to clean up the cut area.</li><li>Seal the cut with an approved epoxy.</li></ul>Reapply solder to reclose the connection. 
+K PROD_ID:XXX-00000
+$ENDCMP
+#
 $CMP LTC3101EUF#PBF
 D LDO Voltage Regulators 2-Cell AA Multioutput DC/DC Converter
 F http://www.analog.com/media/en/technical-documentation/data-sheets/3101fb.pdf
