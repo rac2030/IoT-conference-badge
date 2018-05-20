@@ -968,8 +968,6 @@ Wire Wire Line
 Wire Wire Line
 	4750 5850 4750 6000
 Wire Notes Line
-	4100 3750 4100 6350
-Wire Notes Line
 	4100 6350 8700 6350
 Wire Notes Line
 	8700 6350 8700 3750
@@ -1236,4 +1234,14 @@ Wire Wire Line
 Wire Wire Line
 	4750 1250 4750 1200
 Connection ~ 4750 1200
+Text Notes 2500 5700 0    60   ~ 0
+VCC is the upper right pin (towards inside the module)\nthe connector is at the bottom of the display\nthe cable is at the right side
+Wire Notes Line
+	4100 5200 2450 5200
+Wire Notes Line
+	2450 5200 2450 6350
+Wire Notes Line
+	2450 6350 4150 6350
+Wire Notes Line
+	4100 3750 4100 5200
 $EndSCHEMATC
