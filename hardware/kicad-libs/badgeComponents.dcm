@@ -32,6 +32,11 @@ D STAND-ALONE MULTIRADIO MODULE
 F https://www.u-blox.com/sites/default/files/NINA-W10_DataSheet_%28UBX-17065507%29.pdf
 $ENDCMP
 #
+$CMP NINA-W102_minimal_breakout
+D ublox NINA-W102 minimal breakout
+F http://rac.su/ninab
+$ENDCMP
+#
 $CMP PCA9306
 D Dual bidirectional I2C Bus and SMBus voltage level translator
 K Dual bidirectional I2C Bus and SMBus voltage level translator
