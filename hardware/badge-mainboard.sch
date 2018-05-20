@@ -40,8 +40,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "IoT conference badge - mainboard"
-Date "2018-05-19"
-Rev "0.3.2"
+Date "2018-05-20"
+Rev "0.3.3"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -424,17 +424,6 @@ F 1 "Vin" H 1850 6800 50  0000 C CNN
 F 2 "" H 1850 7000 50  0001 C CNN
 F 3 "" H 1850 7000 50  0001 C CNN
 	1    1850 7000
-	-1   0    0    1   
-$EndComp
-$Comp
-L D_Small D1
-U 1 1 5B02BB97
-P 2400 6900
-F 0 "D1" H 2350 6980 50  0000 L CNN
-F 1 "D_Small" H 2250 6820 50  0000 L CNN
-F 2 "" V 2400 6900 50  0001 C CNN
-F 3 "" V 2400 6900 50  0001 C CNN
-	1    2400 6900
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -896,7 +885,7 @@ Connection ~ 3450 7400
 Wire Wire Line
 	3850 7400 3850 7250
 Wire Wire Line
-	2500 6900 3150 6900
+	2050 6900 3150 6900
 Wire Wire Line
 	2700 6900 2700 7050
 Connection ~ 2700 6900
@@ -913,8 +902,6 @@ Wire Wire Line
 Wire Wire Line
 	1750 7350 1750 7000
 Connection ~ 1750 7000
-Wire Wire Line
-	2050 6900 2300 6900
 Wire Wire Line
 	1700 6900 2100 6900
 Connection ~ 2100 6900
@@ -1144,20 +1131,6 @@ Connection ~ 1100 7350
 Wire Wire Line
 	1650 6650 1650 6700
 Connection ~ 1650 6700
-Connection ~ 2950 6900
-Wire Wire Line
-	2950 6750 2950 6900
-$Comp
-L PWR_FLAG #FLG027
-U 1 1 5B050DA9
-P 2950 6750
-F 0 "#FLG027" H 2950 6825 50  0001 C CNN
-F 1 "PWR_FLAG" H 2950 6900 50  0000 C CNN
-F 2 "" H 2950 6750 50  0001 C CNN
-F 3 "" H 2950 6750 50  0001 C CNN
-	1    2950 6750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4350 2150 4800 2150
 Wire Notes Line
