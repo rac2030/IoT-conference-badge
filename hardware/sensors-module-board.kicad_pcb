@@ -1,6 +1,9 @@
-(kicad_pcb (version 20170919) (host pcbnew "(2017-09-19 revision dddaa7e69)-makepkg")
+(kicad_pcb (version 4) (host pcbnew 4.0.7-e2-6376~60~ubuntu17.10.1)
 
   (general
+    (links 46)
+    (no_connects 0)
+    (area 135.949999 121.949999 150.050001 150.050001)
     (thickness 1.6)
     (drawings 30)
     (tracks 309)
@@ -36,8 +39,8 @@
     (45 Margin user)
     (46 B.CrtYd user)
     (47 F.CrtYd user)
-    (48 B.Fab user hide)
-    (49 F.Fab user hide)
+    (48 B.Fab user)
+    (49 F.Fab user)
   )
 
   (setup
@@ -71,8 +74,6 @@
       (layerselection 0x00030_80000001)
       (usegerberextensions false)
       (usegerberattributes true)
-      (usegerberadvancedattributes true)
-      (creategerberjobfile true)
       (excludeedgelayer true)
       (linewidth 0.100000)
       (plotframeref false)
@@ -82,6 +83,7 @@
       (hpglpennumber 1)
       (hpglpenspeed 20)
       (hpglpendiameter 15)
+      (hpglpenoverlay 2)
       (psnegative false)
       (psa4output false)
       (plotreference true)
@@ -761,22 +763,22 @@
     (arrow2a (pts (xy 136 119.8) (xy 137.126504 120.386421)))
     (arrow2b (pts (xy 136 119.8) (xy 137.126504 119.213579)))
   )
-  (gr_text "SENSIRION\nmodule" (at 141.8 140.6 90) (layer B.SilkS)
+  (gr_text "SENSIRION\nmodule" (at 142.8 132.6 270) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text rev.0.1.2 (at 146.2 140.4 90) (layer B.SilkS)
+  (gr_text rev.0.1.2 (at 143.2 141.4 360) (layer B.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text SDA (at 148.6 148.4 90) (layer B.SilkS)
-    (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
+  (gr_text SDA (at 146.8 146 270) (layer B.SilkS)
+    (effects (font (size 1 1) (thickness 0.1)) (justify mirror))
   )
-  (gr_text SCL (at 144.3355 147.066) (layer B.SilkS)
-    (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
+  (gr_text SCL (at 144.3355 146 270) (layer B.SilkS)
+    (effects (font (size 1 1) (thickness 0.1)) (justify mirror))
   )
-  (gr_text GND (at 141.605 147.066) (layer B.SilkS)
-    (effects (font (size 0.8 0.8) (thickness 0.1)) (justify mirror))
+  (gr_text GND (at 141.8 146.2 270) (layer B.SilkS)
+    (effects (font (size 1 1) (thickness 0.1)) (justify mirror))
   )
-  (gr_text 3V3 (at 137.16 148.3995 90) (layer B.SilkS)
+  (gr_text 3V3 (at 139.2 146.2 270) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.1)) (justify mirror))
   )
   (gr_line (start 147 134) (end 147 132) (angle 90) (layer Edge.Cuts) (width 0.1))
@@ -1396,43 +1398,35 @@
       )
     )
     (polygon
-      (pts
-        (xy 139.192 139.6365) (xy 137.3505 141.478) (xy 137.3505 141.859) (xy 141.6685 141.859) (xy 141.6685 139.6365)
+      (pts        (xy 139.192 139.6365) (xy 137.3505 141.478) (xy 137.3505 141.859) (xy 141.6685 141.859) (xy 141.6685 139.6365)
       )
     )
     (polygon
-      (pts
-        (xy 143.9545 139.7) (xy 143.9545 141.7955) (xy 148.5265 141.7955) (xy 148.5265 139.7)
+      (pts        (xy 143.9545 139.7) (xy 143.9545 141.7955) (xy 148.5265 141.7955) (xy 148.5265 139.7)
       )
     )
     (polygon
-      (pts
-        (xy 147.3835 134.5565) (xy 147.3835 138.938) (xy 149.606 138.938) (xy 149.606 134.5565)
+      (pts        (xy 147.3835 134.5565) (xy 147.3835 138.938) (xy 149.606 138.938) (xy 149.606 134.5565)
       )
     )
     (polygon
-      (pts
-        (xy 144.78 134.1755) (xy 142.5575 136.3345) (xy 145.288 136.3345) (xy 145.288 134.1755)
+      (pts        (xy 144.78 134.1755) (xy 142.5575 136.3345) (xy 145.288 136.3345) (xy 145.288 134.1755)
       )
     )
     (polygon
-      (pts
-        (xy 139.446 143.3195) (xy 141.097 143.3195) (xy 141.097 146.177) (xy 139.446 146.177)
+      (pts        (xy 139.446 143.3195) (xy 141.097 143.3195) (xy 141.097 146.177) (xy 139.446 146.177)
       )
     )
     (polygon
-      (pts
-        (xy 141.9225 143.3195) (xy 143.5735 143.3195) (xy 143.5735 146.1135) (xy 141.9225 146.1135)
+      (pts        (xy 141.9225 143.3195) (xy 143.5735 143.3195) (xy 143.5735 146.1135) (xy 141.9225 146.1135)
       )
     )
     (polygon
-      (pts
-        (xy 143.9545 136.9695) (xy 145.161 136.9695) (xy 145.161 139.065) (xy 143.9545 139.065)
+      (pts        (xy 143.9545 136.9695) (xy 145.161 136.9695) (xy 145.161 139.065) (xy 143.9545 139.065)
       )
     )
     (polygon
-      (pts
-        (xy 141.9225 136.9695) (xy 141.9225 139.0015) (xy 140.843 139.0015) (xy 140.843 138.049)
+      (pts        (xy 141.9225 136.9695) (xy 141.9225 139.0015) (xy 140.843 139.0015) (xy 140.843 138.049)
       )
     )
     (filled_polygon
