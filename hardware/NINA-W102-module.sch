@@ -115,9 +115,10 @@ L Conn_01x15_Female J7
 U 1 1 5AE71527
 P 3850 3450
 F 0 "J7" H 3850 4250 50  0000 C CNN
-F 1 "Shield left header" H 3900 2650 50  0000 C CNN
+F 1 "Shield left header" H 3550 2650 50  0000 C CNN
 F 2 "badgeComponents:HEADER_1X15_LOCK" H 3850 3450 50  0001 C CNN
 F 3 "" H 3850 3450 50  0001 C CNN
+F 4 "Leave unpopulated" H 3850 3450 60  0001 C CNN "Description"
 	1    3850 3450
 	1    0    0    -1  
 $EndComp
@@ -126,9 +127,10 @@ L Conn_01x15_Female J8
 U 1 1 5AE715D2
 P 7050 3450
 F 0 "J8" H 7050 4250 50  0000 C CNN
-F 1 "Shield right header" H 7100 2650 50  0000 C CNN
+F 1 "Shield right header" H 6550 2650 50  0000 C CNN
 F 2 "badgeComponents:HEADER_1X15_LOCK" H 7050 3450 50  0001 C CNN
 F 3 "" H 7050 3450 50  0001 C CNN
+F 4 "Leave unpopulated" H 7050 3450 60  0001 C CNN "Description"
 	1    7050 3450
 	-1   0    0    -1  
 $EndComp
@@ -142,6 +144,7 @@ F 0 "U3" H 5500 3250 60  0000 C CNN
 F 1 "NINA-W102minimalbreakout" H 5500 4050 60  0000 C CNN
 F 2 "badgeComponents:ublox_NINA-W102_minimal_breakout" H 5500 2900 60  0001 C CNN
 F 3 "http://rac.su/ninab" H 5500 2900 60  0001 C CNN
+F 4 "On each side there needs to be a Female header 2.54mm spacing. This is the place where the NINA module will be plugged in" H 5500 3300 60  0001 C CNN "Description"
 	1    5500 3300
 	1    0    0    -1  
 $EndComp
