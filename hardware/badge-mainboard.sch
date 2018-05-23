@@ -34,7 +34,7 @@ LIBS:valves
 LIBS:ublox_NINA-W102
 LIBS:badgeComponents
 LIBS:badge-mainboard-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -143,7 +143,7 @@ F 3 "" H 9350 5100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 10750 3600 2    60   ~ 0
-3 x RGBW LED Daisychain
+2 x RGBW LED Daisychain
 Text Notes 8050 600  0    60   ~ 0
 Random I2C ports, any GPIO works.
 Text Notes 11000 2900 2    60   ~ 0
@@ -751,7 +751,6 @@ Wire Wire Line
 Wire Wire Line
 	9250 4600 9600 4600
 Connection ~ 9250 4000
-Connection ~ 9250 4600
 Wire Wire Line
 	9350 4300 9350 4350
 Wire Wire Line
@@ -828,9 +827,9 @@ Wire Wire Line
 Wire Wire Line
 	9600 950  9600 1000
 Wire Wire Line
-	9800 700  9800 850 
+	9800 850  9800 700 
 Wire Wire Line
-	9800 850  9400 850 
+	9400 850  9800 850 
 Wire Wire Line
 	6400 850  7900 850 
 Wire Wire Line
@@ -887,9 +886,9 @@ Connection ~ 1750 7000
 Wire Wire Line
 	1700 6900 3150 6900
 Wire Wire Line
-	1750 6900 1750 6700
+	1750 6700 1750 6900
 Wire Wire Line
-	1750 6700 1050 6700
+	1050 6700 1750 6700
 Connection ~ 1750 6900
 Wire Notes Line
 	600  6450 600  7700
@@ -902,7 +901,7 @@ Wire Notes Line
 Wire Wire Line
 	8950 5050 9350 5050
 Wire Wire Line
-	9250 3750 9250 5050
+	9250 3750 9250 4600
 Wire Wire Line
 	9350 4950 9350 5100
 Connection ~ 9350 5050
@@ -910,7 +909,6 @@ Wire Wire Line
 	9350 4750 9350 4600
 Wire Wire Line
 	8950 4050 8950 5050
-Connection ~ 9250 5050
 Wire Wire Line
 	6100 2750 6900 2750
 Wire Wire Line
@@ -974,7 +972,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 1250 1800 1250
 Wire Wire Line
-	1700 1250 1700 1050
+	1700 1050 1700 1250
 Wire Wire Line
 	1800 1250 1800 1500
 Connection ~ 1700 1250
@@ -995,7 +993,7 @@ Wire Wire Line
 Wire Wire Line
 	1300 3500 1500 3500
 Wire Wire Line
-	1400 3500 1400 3300
+	1400 3300 1400 3500
 Wire Wire Line
 	1500 3500 1500 3750
 Connection ~ 1400 3500
@@ -1018,7 +1016,7 @@ Wire Wire Line
 Wire Wire Line
 	2300 3500 2500 3500
 Wire Wire Line
-	2400 3500 2400 3300
+	2400 3300 2400 3500
 Wire Wire Line
 	2500 3500 2500 3750
 Connection ~ 2400 3500
@@ -1041,7 +1039,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 3500 3550 3500
 Wire Wire Line
-	3450 3500 3450 3300
+	3450 3300 3450 3500
 Wire Wire Line
 	3550 3500 3550 3750
 Connection ~ 3450 3500
@@ -1168,7 +1166,7 @@ Text Label 4700 1200 2    60   ~ 0
 Wire Wire Line
 	5600 1200 5700 1200
 Wire Wire Line
-	4800 1200 4700 1200
+	4700 1200 4800 1200
 Wire Notes Line
 	4350 950  4350 1600
 Wire Notes Line
