@@ -314,6 +314,7 @@ F 0 "R7" H 7830 1820 50  0000 L CNN
 F 1 "4.7k" H 7830 1760 50  0000 L CNN
 F 2 "Resistors_SMD:R_1206_HandSoldering" H 7800 1800 50  0001 C CNN
 F 3 "" H 7800 1800 50  0001 C CNN
+F 4 "User pullups, leave unpopulated" H 7800 1800 60  0001 C CNN "Description"
 	1    7800 1800
 	-1   0    0    1   
 $EndComp
@@ -325,6 +326,7 @@ F 0 "R8" H 8180 1820 50  0000 L CNN
 F 1 "4.7k" H 8180 1760 50  0000 L CNN
 F 2 "Resistors_SMD:R_1206_HandSoldering" H 8150 1800 50  0001 C CNN
 F 3 "" H 8150 1800 50  0001 C CNN
+F 4 "User pullups, leave unpopulated" H 8150 1800 60  0001 C CNN "Description"
 	1    8150 1800
 	-1   0    0    1   
 $EndComp
@@ -390,6 +392,7 @@ F 0 "C4" H 2710 7220 50  0000 L CNN
 F 1 "10uF (Tantalum)" H 2710 7070 50  0000 L CNN
 F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 2700 7150 50  0001 C CNN
 F 3 "" H 2700 7150 50  0001 C CNN
+F 4 "Tantalum" H 2700 7150 60  0001 C CNN "Description"
 	1    2700 7150
 	1    0    0    -1  
 $EndComp
@@ -401,6 +404,7 @@ F 0 "C6" H 3860 7220 50  0000 L CNN
 F 1 "100uF (Tantalum, ESR: 0.3 - 22 Ohm)" H 3860 7070 50  0000 L CNN
 F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 3850 7150 50  0001 C CNN
 F 3 "" H 3850 7150 50  0001 C CNN
+F 4 "Tantalum with ESR between 0.3 Ohm and 22 Ohm" H 3850 7150 60  0001 C CNN "Description"
 	1    3850 7150
 	1    0    0    -1  
 $EndComp
