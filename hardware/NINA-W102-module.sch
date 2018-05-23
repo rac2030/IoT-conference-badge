@@ -34,14 +34,14 @@ LIBS:valves
 LIBS:ublox_NINA-W102
 LIBS:badgeComponents
 LIBS:badge-mainboard-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title "IoT conference badge - mainboard"
-Date "2018-05-20"
-Rev "0.3.5"
+Date "2018-05-23"
+Rev "0.3.6"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""

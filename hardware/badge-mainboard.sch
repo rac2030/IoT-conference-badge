@@ -34,14 +34,14 @@ LIBS:valves
 LIBS:ublox_NINA-W102
 LIBS:badgeComponents
 LIBS:badge-mainboard-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "IoT conference badge - mainboard"
-Date "2018-05-20"
-Rev "0.3.5"
+Date "2018-05-23"
+Rev "0.3.6"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -70,7 +70,7 @@ U 1 1 5AC2AEF4
 P 7800 700
 F 0 "R5" H 7830 720 50  0000 L CNN
 F 1 "4.7k" H 7830 660 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 7800 700 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 7800 700 50  0001 C CNN
 F 3 "" H 7800 700 50  0001 C CNN
 	1    7800 700 
 	0    -1   -1   0   
@@ -104,7 +104,7 @@ U 1 1 5AC2E846
 P 9350 4200
 F 0 "C8" H 9360 4270 50  0000 L CNN
 F 1 "100nF" H 9360 4120 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 9350 4200 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 9350 4200 50  0001 C CNN
 F 3 "" H 9350 4200 50  0001 C CNN
 	1    9350 4200
 	1    0    0    -1  
@@ -126,7 +126,7 @@ U 1 1 5AC2EDA7
 P 9350 4850
 F 0 "C9" H 9360 4920 50  0000 L CNN
 F 1 "100nF" H 9360 4770 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 9350 4850 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 9350 4850 50  0001 C CNN
 F 3 "" H 9350 4850 50  0001 C CNN
 	1    9350 4850
 	1    0    0    -1  
@@ -151,12 +151,12 @@ Random data port, can be changed if needed
 $Comp
 L C_Small C7
 U 1 1 5ACAD80F
-P 8950 3950
-F 0 "C7" H 8960 4020 50  0000 L CNN
-F 1 "47uF" H 8960 3870 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 8950 3950 50  0001 C CNN
-F 3 "" H 8950 3950 50  0001 C CNN
-	1    8950 3950
+P 8950 4450
+F 0 "C7" H 8960 4520 50  0000 L CNN
+F 1 "47uF" H 8960 4370 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 8950 4450 50  0001 C CNN
+F 3 "" H 8950 4450 50  0001 C CNN
+	1    8950 4450
 	1    0    0    -1  
 $EndComp
 Text Notes 3300 800  0    60   Italic 0
@@ -189,7 +189,7 @@ U 1 1 5AD4A446
 P 7800 1250
 F 0 "R6" H 7830 1270 50  0000 L CNN
 F 1 "4.7k" H 7830 1210 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 7800 1250 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 7800 1250 50  0001 C CNN
 F 3 "" H 7800 1250 50  0001 C CNN
 	1    7800 1250
 	0    1    1    0   
@@ -388,7 +388,7 @@ U 1 1 5B028A3F
 P 2700 7150
 F 0 "C4" H 2710 7220 50  0000 L CNN
 F 1 "10uF (Tantalum)" H 2710 7070 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 2700 7150 50  0001 C CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 2700 7150 50  0001 C CNN
 F 3 "" H 2700 7150 50  0001 C CNN
 	1    2700 7150
 	1    0    0    -1  
@@ -398,8 +398,8 @@ L C_Small C6
 U 1 1 5B029060
 P 3850 7150
 F 0 "C6" H 3860 7220 50  0000 L CNN
-F 1 "10uF (Tantalum)" H 3860 7070 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 3850 7150 50  0001 C CNN
+F 1 "100uF (Tantalum, ESR: 0.3 - 22 Ohm)" H 3860 7070 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-C_EIA-6032-28_Hand" H 3850 7150 50  0001 C CNN
 F 3 "" H 3850 7150 50  0001 C CNN
 	1    3850 7150
 	1    0    0    -1  
@@ -420,7 +420,7 @@ L Battery BT1
 U 1 1 5B02C983
 P 1050 7150
 F 0 "BT1" H 1150 7250 50  0000 L CNN
-F 1 "Battery 3x1.5V AAA" H 750 6800 50  0000 L CNN
+F 1 "Battery 3x1.5V AAA" H 950 6800 50  0000 L CNN
 F 2 "Battery_Holders:Keystone_2479_3xAAA" V 1050 7210 50  0001 C CNN
 F 3 "" V 1050 7210 50  0001 C CNN
 	1    1050 7150
@@ -431,7 +431,7 @@ L Conn_01x02 J1
 U 1 1 5B02CAFA
 P 1500 7000
 F 0 "J1" H 1500 7100 50  0000 C CNN
-F 1 "Vin" H 1500 6800 50  0000 C CNN
+F 1 "Vin" V 1600 6950 50  0000 C CNN
 F 2 "badgeComponents:VIN_1X02_LOCK_LONGPADS" H 1500 7000 50  0001 C CNN
 F 3 "" H 1500 7000 50  0001 C CNN
 	1    1500 7000
@@ -489,7 +489,7 @@ U 1 1 5B04519D
 P 1800 1600
 F 0 "C2" H 1810 1670 50  0000 L CNN
 F 1 "1uF" H 1810 1520 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 1800 1600 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 1800 1600 50  0001 C CNN
 F 3 "" H 1800 1600 50  0001 C CNN
 	1    1800 1600
 	1    0    0    -1  
@@ -522,7 +522,7 @@ U 1 1 5B0451B0
 P 1700 950
 F 0 "R2" H 1730 970 50  0000 L CNN
 F 1 "10k" H 1730 910 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 1700 950 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 1700 950 50  0001 C CNN
 F 3 "" H 1700 950 50  0001 C CNN
 	1    1700 950 
 	1    0    0    -1  
@@ -544,7 +544,7 @@ U 1 1 5B0451CC
 P 1500 3850
 F 0 "C1" H 1510 3920 50  0000 L CNN
 F 1 "1uF" H 1510 3770 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 1500 3850 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 1500 3850 50  0001 C CNN
 F 3 "" H 1500 3850 50  0001 C CNN
 	1    1500 3850
 	1    0    0    -1  
@@ -577,7 +577,7 @@ U 1 1 5B0451DF
 P 1400 3200
 F 0 "R1" H 1430 3220 50  0000 L CNN
 F 1 "10k" H 1430 3160 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 1400 3200 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 1400 3200 50  0001 C CNN
 F 3 "" H 1400 3200 50  0001 C CNN
 	1    1400 3200
 	1    0    0    -1  
@@ -599,7 +599,7 @@ U 1 1 5B0451FB
 P 2500 3850
 F 0 "C3" H 2510 3920 50  0000 L CNN
 F 1 "1uF" H 2510 3770 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 2500 3850 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 2500 3850 50  0001 C CNN
 F 3 "" H 2500 3850 50  0001 C CNN
 	1    2500 3850
 	1    0    0    -1  
@@ -632,7 +632,7 @@ U 1 1 5B04520E
 P 2400 3200
 F 0 "R3" H 2430 3220 50  0000 L CNN
 F 1 "10k" H 2430 3160 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 2400 3200 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 2400 3200 50  0001 C CNN
 F 3 "" H 2400 3200 50  0001 C CNN
 	1    2400 3200
 	1    0    0    -1  
@@ -654,7 +654,7 @@ U 1 1 5B04522A
 P 3550 3850
 F 0 "C5" H 3560 3920 50  0000 L CNN
 F 1 "1uF" H 3560 3770 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206" H 3550 3850 50  0001 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 3550 3850 50  0001 C CNN
 F 3 "" H 3550 3850 50  0001 C CNN
 	1    3550 3850
 	1    0    0    -1  
@@ -687,27 +687,16 @@ U 1 1 5B04523D
 P 3450 3200
 F 0 "R4" H 3480 3220 50  0000 L CNN
 F 1 "10k" H 3480 3160 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 3450 3200 50  0001 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 3450 3200 50  0001 C CNN
 F 3 "" H 3450 3200 50  0001 C CNN
 	1    3450 3200
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDPWR #PWR023
-U 1 1 5B050F10
-P 1650 7500
-F 0 "#PWR023" H 1650 7300 50  0001 C CNN
-F 1 "GNDPWR" H 1650 7370 50  0000 C CNN
-F 2 "" H 1650 7450 50  0001 C CNN
-F 3 "" H 1650 7450 50  0001 C CNN
-	1    1650 7500
-	1    0    0    -1  
-$EndComp
-$Comp
-L +BATT #PWR024
+L +BATT #PWR023
 U 1 1 5B061B9C
 P 800 6800
-F 0 "#PWR024" H 800 6650 50  0001 C CNN
+F 0 "#PWR023" H 800 6650 50  0001 C CNN
 F 1 "+BATT" H 800 6940 50  0000 C CNN
 F 2 "" H 800 6800 50  0001 C CNN
 F 3 "" H 800 6800 50  0001 C CNN
@@ -715,26 +704,95 @@ F 3 "" H 800 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L -BATT #PWR025
-U 1 1 5B062427
-P 800 7400
-F 0 "#PWR025" H 800 7250 50  0001 C CNN
-F 1 "-BATT" H 800 7540 50  0000 C CNN
-F 2 "" H 800 7400 50  0001 C CNN
-F 3 "" H 800 7400 50  0001 C CNN
-	1    800  7400
+L PWR_FLAG #FLG024
+U 1 1 5B0633B4
+P 2200 6850
+F 0 "#FLG024" H 2200 6925 50  0001 C CNN
+F 1 "PWR_FLAG" H 2200 7000 50  0000 C CNN
+F 2 "" H 2200 6850 50  0001 C CNN
+F 3 "" H 2200 6850 50  0001 C CNN
+	1    2200 6850
+	1    0    0    -1  
+$EndComp
+Text Notes 3850 1000 2    60   ~ 0
+User interactions
+$Comp
+L R_Small R9
+U 1 1 5B00DCEE
+P 4900 1200
+F 0 "R9" H 4930 1220 50  0000 L CNN
+F 1 "100k" H 4930 1160 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 4900 1200 50  0001 C CNN
+F 3 "" H 4900 1200 50  0001 C CNN
+	1    4900 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R10
+U 1 1 5B00DF64
+P 5500 1200
+F 0 "R10" H 5530 1220 50  0000 L CNN
+F 1 "470k" H 5500 1100 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" H 5500 1200 50  0001 C CNN
+F 3 "" H 5500 1200 50  0001 C CNN
+	1    5500 1200
+	0    1    1    0   
+$EndComp
+Text Label 1050 6700 0    60   ~ 0
++BATT
+Text Label 1050 7350 0    60   ~ 0
+-BATT
+Text Label 5700 1200 0    60   ~ 0
++BATT
+Text Label 4700 1200 2    60   ~ 0
+-BATT
+Text Notes 4400 1050 0    60   ~ 0
+Voltage divider for battery measurement
+$Comp
+L JUMPER-SMT_2_NC JP1
+U 1 1 5B0140EF
+P 5800 1400
+F 0 "JP1" H 5700 1500 45  0000 L BNN
+F 1 "JUMPER-disable-batt-measurement" H 5000 1250 45  0000 L BNN
+F 2 "badgeComponents:SMT-JUMPER_2_NC_TRACE_SILK" H 5800 1600 20  0001 C CNN
+F 3 "" H 5800 1400 60  0001 C CNN
+	1    5800 1400
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG026
-U 1 1 5B0633B4
-P 1650 6650
-F 0 "#FLG026" H 1650 6725 50  0001 C CNN
-F 1 "PWR_FLAG" H 1650 6800 50  0000 C CNN
-F 2 "" H 1650 6650 50  0001 C CNN
-F 3 "" H 1650 6650 50  0001 C CNN
-	1    1650 6650
-	1    0    0    -1  
+L D_Zener_Small D1
+U 1 1 5B0199E5
+P 4700 1450
+F 0 "D1" H 4700 1350 50  0000 C CNN
+F 1 "D_Zener_3v3" H 4700 1550 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" V 4700 1450 50  0001 C CNN
+F 3 "" V 4700 1450 50  0001 C CNN
+	1    4700 1450
+	-1   0    0    1   
+$EndComp
+Text Notes 2500 5700 0    60   ~ 0
+VCC is the upper right pin (towards inside the module)\nthe connector is at the bottom of the display\nthe cable is at the right side
+$Comp
+L D D2
+U 1 1 5B07EAD9
+P 1550 6700
+F 0 "D2" H 1550 6800 50  0000 C CNN
+F 1 "D" H 1550 6600 50  0000 C CNN
+F 2 "Diodes_SMD:D_1206" H 1550 6700 50  0001 C CNN
+F 3 "" H 1550 6700 50  0001 C CNN
+	1    1550 6700
+	-1   0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG025
+U 1 1 5B0805F9
+P -1550 6700
+F 0 "#FLG025" H -1550 6775 50  0001 C CNN
+F 1 "PWR_FLAG" H -1550 6850 50  0000 C CNN
+F 2 "" H -1550 6700 50  0001 C CNN
+F 3 "" H -1550 6700 50  0001 C CNN
+	1    -1550 6700
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	9600 4100 9600 4450
@@ -862,8 +920,6 @@ Wire Wire Line
 	3850 7050 3850 6900
 Connection ~ 3850 6900
 Wire Wire Line
-	2700 7250 2700 7400
-Wire Wire Line
 	2250 7400 3850 7400
 Connection ~ 3450 7400
 Wire Wire Line
@@ -871,7 +927,6 @@ Wire Wire Line
 Wire Wire Line
 	2700 6900 2700 7050
 Connection ~ 2700 6900
-Connection ~ 2700 7400
 Wire Wire Line
 	1700 7000 2250 7000
 Wire Wire Line
@@ -887,8 +942,6 @@ Wire Wire Line
 	1700 6900 3150 6900
 Wire Wire Line
 	1750 6700 1750 6900
-Wire Wire Line
-	1050 6700 1750 6700
 Connection ~ 1750 6900
 Wire Notes Line
 	600  6450 600  7700
@@ -907,8 +960,6 @@ Wire Wire Line
 Connection ~ 9350 5050
 Wire Wire Line
 	9350 4750 9350 4600
-Wire Wire Line
-	8950 4050 8950 5050
 Wire Wire Line
 	6100 2750 6900 2750
 Wire Wire Line
@@ -984,10 +1035,7 @@ Wire Wire Line
 Wire Wire Line
 	1300 4150 1500 4150
 Wire Wire Line
-	1400 4150 1400 4200
-Wire Wire Line
 	1300 4050 1300 4150
-Connection ~ 1400 4150
 Wire Wire Line
 	1300 3650 1300 3500
 Wire Wire Line
@@ -1006,8 +1054,6 @@ Wire Wire Line
 	2500 4150 2500 3950
 Wire Wire Line
 	2300 4150 2500 4150
-Wire Wire Line
-	2400 4150 2400 4200
 Wire Wire Line
 	2300 4050 2300 4150
 Connection ~ 2400 4150
@@ -1089,9 +1135,6 @@ Wire Notes Line
 Wire Notes Line
 	8550 1300 10150 1300
 Wire Wire Line
-	1650 7500 1650 7350
-Connection ~ 1650 7350
-Wire Wire Line
 	10700 4600 10800 4600
 Wire Wire Line
 	800  6800 800  6900
@@ -1103,9 +1146,6 @@ Wire Wire Line
 Wire Wire Line
 	1100 7400 1100 7350
 Connection ~ 1100 7350
-Wire Wire Line
-	1650 6650 1650 6700
-Connection ~ 1650 6700
 Wire Wire Line
 	4350 2150 4800 2150
 Wire Notes Line
@@ -1120,49 +1160,17 @@ Wire Notes Line
 	3900 900  2150 900 
 Wire Notes Line
 	2150 900  2150 550 
-Text Notes 3850 1000 2    60   ~ 0
-User interactions
 Wire Wire Line
 	1700 1150 3550 1150
 Wire Wire Line
 	3550 1150 3550 2050
 Wire Wire Line
 	3550 2050 4800 2050
-$Comp
-L R_Small R9
-U 1 1 5B00DCEE
-P 4900 1200
-F 0 "R9" H 4930 1220 50  0000 L CNN
-F 1 "100k" H 4930 1160 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 4900 1200 50  0001 C CNN
-F 3 "" H 4900 1200 50  0001 C CNN
-	1    4900 1200
-	0    1    1    0   
-$EndComp
-$Comp
-L R_Small R10
-U 1 1 5B00DF64
-P 5500 1200
-F 0 "R10" H 5530 1220 50  0000 L CNN
-F 1 "470k" H 5500 1100 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 5500 1200 50  0001 C CNN
-F 3 "" H 5500 1200 50  0001 C CNN
-	1    5500 1200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5000 1200 5400 1200
 Wire Wire Line
 	6100 1850 6300 1850
 Connection ~ 5200 1200
-Text Label 1050 6700 0    60   ~ 0
-+BATT
-Text Label 1050 7350 0    60   ~ 0
--BATT
-Text Label 5700 1200 0    60   ~ 0
-+BATT
-Text Label 4700 1200 2    60   ~ 0
--BATT
 Wire Wire Line
 	5600 1200 5700 1200
 Wire Wire Line
@@ -1171,19 +1179,6 @@ Wire Notes Line
 	4350 950  4350 1600
 Wire Notes Line
 	4350 950  6350 950 
-Text Notes 4400 1050 0    60   ~ 0
-Voltage divider for battery measurement
-$Comp
-L JUMPER-SMT_2_NC JP1
-U 1 1 5B0140EF
-P 5800 1400
-F 0 "JP1" H 5700 1500 45  0000 L BNN
-F 1 "JUMPER-disable-batt-measurement" H 5000 1250 45  0000 L BNN
-F 2 "badgeComponents:SMT-JUMPER_2_NC_TRACE_SILK" H 5800 1600 20  0001 C CNN
-F 3 "" H 5800 1400 60  0001 C CNN
-	1    5800 1400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5200 1200 5200 1450
 Wire Wire Line
@@ -1196,17 +1191,6 @@ Wire Notes Line
 	6350 950  6350 1600
 Wire Notes Line
 	6350 1600 4350 1600
-$Comp
-L D_Zener_Small D1
-U 1 1 5B0199E5
-P 4700 1450
-F 0 "D1" H 4700 1350 50  0000 C CNN
-F 1 "D_Zener_3v3" H 4700 1550 50  0000 C CNN
-F 2 "Diodes_SMD:D_SOD-123" V 4700 1450 50  0001 C CNN
-F 3 "" V 4700 1450 50  0001 C CNN
-	1    4700 1450
-	-1   0    0    1   
-$EndComp
 Connection ~ 5200 1400
 Wire Wire Line
 	5200 1450 4800 1450
@@ -1217,8 +1201,6 @@ Wire Wire Line
 Wire Wire Line
 	4750 1250 4750 1200
 Connection ~ 4750 1200
-Text Notes 2500 5700 0    60   ~ 0
-VCC is the upper right pin (towards inside the module)\nthe connector is at the bottom of the display\nthe cable is at the right side
 Wire Notes Line
 	4100 5200 2450 5200
 Wire Notes Line
@@ -1227,4 +1209,53 @@ Wire Notes Line
 	2450 6350 4150 6350
 Wire Notes Line
 	4100 3750 4100 5200
+Wire Wire Line
+	1050 6700 1400 6700
+Wire Wire Line
+	1700 6700 1750 6700
+Wire Wire Line
+	2200 6850 2200 6900
+Connection ~ 2200 6900
+Wire Wire Line
+	2400 4200 2400 4150
+Wire Wire Line
+	800  7350 800  7400
+Wire Wire Line
+	1400 4200 1400 4150
+Connection ~ 1400 4150
+Wire Wire Line
+	8950 3850 8950 4350
+Wire Wire Line
+	8950 4550 8950 5050
+$Comp
+L -BATT #PWR026
+U 1 1 5B062427
+P 800 7350
+F 0 "#PWR026" H 800 7200 50  0001 C CNN
+F 1 "-BATT" H 800 7490 50  0000 C CNN
+F 2 "" H 800 7350 50  0001 C CNN
+F 3 "" H 800 7350 50  0001 C CNN
+	1    800  7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG027
+U 1 1 5B0A20E9
+P -1550 7250
+F 0 "#FLG027" H -1550 7325 50  0001 C CNN
+F 1 "PWR_FLAG" H -1550 7400 50  0000 C CNN
+F 2 "" H -1550 7250 50  0001 C CNN
+F 3 "" H -1550 7250 50  0001 C CNN
+	1    -1550 7250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 7250 2700 7400
+Connection ~ 2700 7400
+Text Label -1550 6700 0    60   ~ 0
++BATT
+Text Label -1550 7250 0    60   ~ 0
+-BATT
+Text Notes -2200 7000 0    60   Italic 0
+Power flags for ERC check run
 $EndSCHEMATC
