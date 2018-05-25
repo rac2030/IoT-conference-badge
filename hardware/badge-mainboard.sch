@@ -356,8 +356,6 @@ F 3 "" H 9600 1000 50  0001 C CNN
 	1    9600 1000
 	1    0    0    -1  
 $EndComp
-Text Notes 7300 6350 2    60   ~ 0
-Needs to be tested first, not sure about the pins
 $Comp
 L GND #PWR013
 U 1 1 5B01D538
@@ -779,7 +777,7 @@ $EndComp
 Text Notes 2500 5700 0    60   ~ 0
 VCC is the upper right pin (towards inside the module)\nthe connector is at the bottom of the display\nthe cable is at the right side
 $Comp
-L D D2
+L D_Schottky D2
 U 1 1 5B07EAD9
 P 1550 6700
 F 0 "D2" H 1550 6800 50  0000 C CNN
