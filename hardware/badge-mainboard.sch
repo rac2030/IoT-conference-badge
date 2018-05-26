@@ -40,8 +40,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
 Title "IoT conference badge - mainboard"
-Date "2018-05-23"
-Rev "0.3.6"
+Date "2018-05-26"
+Rev "0.3.7"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
