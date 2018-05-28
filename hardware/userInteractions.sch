@@ -1,0 +1,371 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ublox_NINA-W102
+LIBS:badgeComponents
+LIBS:badge-mainboard-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SW_Push SW?
+U 1 1 5AE85EE6
+P 3900 2400
+F 0 "SW?" H 3950 2500 50  0000 L CNN
+F 1 "User Button 1" H 3900 2340 50  0000 C CNN
+F 2 "" H 3900 2600 50  0001 C CNN
+F 3 "" H 3900 2600 50  0001 C CNN
+	1    3900 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5AE85F35
+P 4100 2400
+F 0 "C?" H 4110 2470 50  0000 L CNN
+F 1 "1uF" H 4110 2320 50  0000 L CNN
+F 2 "" H 4100 2400 50  0001 C CNN
+F 3 "" H 4100 2400 50  0001 C CNN
+	1    4100 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AE85F88
+P 4000 2750
+F 0 "#PWR?" H 4000 2500 50  0001 C CNN
+F 1 "GND" H 4000 2600 50  0000 C CNN
+F 2 "" H 4000 2750 50  0001 C CNN
+F 3 "" H 4000 2750 50  0001 C CNN
+	1    4000 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5AE85FA4
+P 4000 1550
+F 0 "#PWR?" H 4000 1400 50  0001 C CNN
+F 1 "+3V3" H 4000 1690 50  0000 C CNN
+F 2 "" H 4000 1550 50  0001 C CNN
+F 3 "" H 4000 1550 50  0001 C CNN
+	1    4000 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AE85FC0
+P 4000 1750
+F 0 "R?" H 4030 1770 50  0000 L CNN
+F 1 "10k" H 4030 1710 50  0000 L CNN
+F 2 "" H 4000 1750 50  0001 C CNN
+F 3 "" H 4000 1750 50  0001 C CNN
+	1    4000 1750
+	1    0    0    -1  
+$EndComp
+Text HLabel 4300 1950 2    60   UnSpc Italic 0
+BTN_1
+Wire Wire Line
+	4000 1650 4000 1550
+Wire Wire Line
+	4100 2700 4100 2500
+Wire Wire Line
+	3900 2700 4100 2700
+Wire Wire Line
+	4000 2700 4000 2750
+Wire Wire Line
+	3900 2600 3900 2700
+Connection ~ 4000 2700
+Wire Wire Line
+	3900 2200 3900 2050
+Wire Wire Line
+	3900 2050 4100 2050
+Wire Wire Line
+	4000 2050 4000 1850
+Wire Wire Line
+	4100 2050 4100 2300
+Connection ~ 4000 2050
+Wire Wire Line
+	4300 1950 4000 1950
+Connection ~ 4000 1950
+$Comp
+L SW_Push SW?
+U 1 1 5AE86282
+P 5100 2400
+F 0 "SW?" H 5150 2500 50  0000 L CNN
+F 1 "User Button 2" H 5100 2340 50  0000 C CNN
+F 2 "" H 5100 2600 50  0001 C CNN
+F 3 "" H 5100 2600 50  0001 C CNN
+	1    5100 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5AE86288
+P 5300 2400
+F 0 "C?" H 5310 2470 50  0000 L CNN
+F 1 "1uF" H 5310 2320 50  0000 L CNN
+F 2 "" H 5300 2400 50  0001 C CNN
+F 3 "" H 5300 2400 50  0001 C CNN
+	1    5300 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AE8628E
+P 5200 2750
+F 0 "#PWR?" H 5200 2500 50  0001 C CNN
+F 1 "GND" H 5200 2600 50  0000 C CNN
+F 2 "" H 5200 2750 50  0001 C CNN
+F 3 "" H 5200 2750 50  0001 C CNN
+	1    5200 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5AE86294
+P 5200 1550
+F 0 "#PWR?" H 5200 1400 50  0001 C CNN
+F 1 "+3V3" H 5200 1690 50  0000 C CNN
+F 2 "" H 5200 1550 50  0001 C CNN
+F 3 "" H 5200 1550 50  0001 C CNN
+	1    5200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AE8629A
+P 5200 1750
+F 0 "R?" H 5230 1770 50  0000 L CNN
+F 1 "10k" H 5230 1710 50  0000 L CNN
+F 2 "" H 5200 1750 50  0001 C CNN
+F 3 "" H 5200 1750 50  0001 C CNN
+	1    5200 1750
+	1    0    0    -1  
+$EndComp
+Text HLabel 5500 1950 2    60   UnSpc Italic 0
+BTN_2
+Wire Wire Line
+	5200 1650 5200 1550
+Wire Wire Line
+	5300 2700 5300 2500
+Wire Wire Line
+	5100 2700 5300 2700
+Wire Wire Line
+	5200 2700 5200 2750
+Wire Wire Line
+	5100 2600 5100 2700
+Connection ~ 5200 2700
+Wire Wire Line
+	5100 2200 5100 2050
+Wire Wire Line
+	5100 2050 5300 2050
+Wire Wire Line
+	5200 2050 5200 1850
+Wire Wire Line
+	5300 2050 5300 2300
+Connection ~ 5200 2050
+Wire Wire Line
+	5500 1950 5200 1950
+Connection ~ 5200 1950
+$Comp
+L SW_Push SW?
+U 1 1 5AE86560
+P 6250 2400
+F 0 "SW?" H 6300 2500 50  0000 L CNN
+F 1 "User Button 3" H 6250 2340 50  0000 C CNN
+F 2 "" H 6250 2600 50  0001 C CNN
+F 3 "" H 6250 2600 50  0001 C CNN
+	1    6250 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5AE86566
+P 6450 2400
+F 0 "C?" H 6460 2470 50  0000 L CNN
+F 1 "1uF" H 6460 2320 50  0000 L CNN
+F 2 "" H 6450 2400 50  0001 C CNN
+F 3 "" H 6450 2400 50  0001 C CNN
+	1    6450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AE8656C
+P 6350 2750
+F 0 "#PWR?" H 6350 2500 50  0001 C CNN
+F 1 "GND" H 6350 2600 50  0000 C CNN
+F 2 "" H 6350 2750 50  0001 C CNN
+F 3 "" H 6350 2750 50  0001 C CNN
+	1    6350 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5AE86572
+P 6350 1550
+F 0 "#PWR?" H 6350 1400 50  0001 C CNN
+F 1 "+3V3" H 6350 1690 50  0000 C CNN
+F 2 "" H 6350 1550 50  0001 C CNN
+F 3 "" H 6350 1550 50  0001 C CNN
+	1    6350 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AE86578
+P 6350 1750
+F 0 "R?" H 6380 1770 50  0000 L CNN
+F 1 "10k" H 6380 1710 50  0000 L CNN
+F 2 "" H 6350 1750 50  0001 C CNN
+F 3 "" H 6350 1750 50  0001 C CNN
+	1    6350 1750
+	1    0    0    -1  
+$EndComp
+Text HLabel 6650 1950 2    60   UnSpc Italic 0
+BTN_3
+Wire Wire Line
+	6350 1650 6350 1550
+Wire Wire Line
+	6450 2700 6450 2500
+Wire Wire Line
+	6250 2700 6450 2700
+Wire Wire Line
+	6350 2700 6350 2750
+Wire Wire Line
+	6250 2600 6250 2700
+Connection ~ 6350 2700
+Wire Wire Line
+	6250 2200 6250 2050
+Wire Wire Line
+	6250 2050 6450 2050
+Wire Wire Line
+	6350 2050 6350 1850
+Wire Wire Line
+	6450 2050 6450 2300
+Connection ~ 6350 2050
+Wire Wire Line
+	6650 1950 6350 1950
+Connection ~ 6350 1950
+$Comp
+L SW_Push SW?
+U 1 1 5AE8658C
+P 7450 2400
+F 0 "SW?" H 7500 2500 50  0000 L CNN
+F 1 "User Button 4" H 7450 2340 50  0000 C CNN
+F 2 "" H 7450 2600 50  0001 C CNN
+F 3 "" H 7450 2600 50  0001 C CNN
+	1    7450 2400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C_Small C?
+U 1 1 5AE86592
+P 7650 2400
+F 0 "C?" H 7660 2470 50  0000 L CNN
+F 1 "1uF" H 7660 2320 50  0000 L CNN
+F 2 "" H 7650 2400 50  0001 C CNN
+F 3 "" H 7650 2400 50  0001 C CNN
+	1    7650 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AE86598
+P 7550 2750
+F 0 "#PWR?" H 7550 2500 50  0001 C CNN
+F 1 "GND" H 7550 2600 50  0000 C CNN
+F 2 "" H 7550 2750 50  0001 C CNN
+F 3 "" H 7550 2750 50  0001 C CNN
+	1    7550 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5AE8659E
+P 7550 1550
+F 0 "#PWR?" H 7550 1400 50  0001 C CNN
+F 1 "+3V3" H 7550 1690 50  0000 C CNN
+F 2 "" H 7550 1550 50  0001 C CNN
+F 3 "" H 7550 1550 50  0001 C CNN
+	1    7550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 5AE865A4
+P 7550 1750
+F 0 "R?" H 7580 1770 50  0000 L CNN
+F 1 "10k" H 7580 1710 50  0000 L CNN
+F 2 "" H 7550 1750 50  0001 C CNN
+F 3 "" H 7550 1750 50  0001 C CNN
+	1    7550 1750
+	1    0    0    -1  
+$EndComp
+Text HLabel 7850 1950 2    60   UnSpc Italic 0
+BTN_4
+Wire Wire Line
+	7550 1650 7550 1550
+Wire Wire Line
+	7650 2700 7650 2500
+Wire Wire Line
+	7450 2700 7650 2700
+Wire Wire Line
+	7550 2700 7550 2750
+Wire Wire Line
+	7450 2600 7450 2700
+Connection ~ 7550 2700
+Wire Wire Line
+	7450 2200 7450 2050
+Wire Wire Line
+	7450 2050 7650 2050
+Wire Wire Line
+	7550 2050 7550 1850
+Wire Wire Line
+	7650 2050 7650 2300
+Connection ~ 7550 2050
+Wire Wire Line
+	7850 1950 7550 1950
+Connection ~ 7550 1950
+$EndSCHEMATC

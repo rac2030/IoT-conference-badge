@@ -1,0 +1,78 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BOARD_CONNECTOR
+D Generic connector, single row, 01x04
+K connector
+F ~
+$ENDCMP
+#
+$CMP CP2102N-A01-GQFN20
+D SILICON LABS - CP2102N-A01-GQFN20 - USB-UART INTERFACE BRIDGE, QFN-20
+F https://componentsearchengine.com/Datasheets/2/CP2102N-A01-GQFN20.pdf
+$ENDCMP
+#
+$CMP I2C_HEADER
+D Generic connector, single row, 01x04
+K connector
+F ~
+$ENDCMP
+#
+$CMP JUMPER-SMT_2_NC
+D Normally closed trace jumper This jumper has a trace between two pads so it's normally closed (NC). Use a razor knife to open the connection. For best results follow the IPC guidelines for cutting traces: <ul><li>Cutout at least 0.063 mm (0.005 in).</li><li>Remove all loose material to clean up the cut area.</li><li>Seal the cut with an approved epoxy.</li></ul>Reapply solder to reclose the connection. 
+K PROD_ID:XXX-00000
+$ENDCMP
+#
+$CMP LTC3101EUF#PBF
+D LDO Voltage Regulators 2-Cell AA Multioutput DC/DC Converter
+F http://www.analog.com/media/en/technical-documentation/data-sheets/3101fb.pdf
+$ENDCMP
+#
+$CMP NINA-W102
+D STAND-ALONE MULTIRADIO MODULE
+F https://www.u-blox.com/sites/default/files/NINA-W10_DataSheet_%28UBX-17065507%29.pdf
+$ENDCMP
+#
+$CMP NINA-W102_minimal_breakout
+D ublox NINA-W102 minimal breakout
+F http://rac.su/ninab
+$ENDCMP
+#
+$CMP PCA9306
+D Dual bidirectional I2C Bus and SMBus voltage level translator
+K Dual bidirectional I2C Bus and SMBus voltage level translator
+F http://www.ti.com/lit/ds/symlink/pca9306.pdf
+$ENDCMP
+#
+$CMP PCA9306_c
+D Dual bidirectional I2C Bus and SMBus voltage level translator
+K Dual bidirectional I2C Bus and SMBus voltage level translator
+F http://www.ti.com/lit/ds/symlink/pca9306.pdf
+$ENDCMP
+#
+$CMP Rpi_02x20_WaveShareEPD
+D Rpi 2x20 WaveShare EPD header
+K connector
+F https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT
+$ENDCMP
+#
+$CMP SGPC3-2.5k
+D SENSIRION - SGPC3-2.5K - DIGITAL LOW POWER GAS SENSOR, 1.8V, DFN
+F https://componentsearchengine.com/Datasheets/2/SGPC3-2.5K.pdf
+$ENDCMP
+#
+$CMP SHTC3
+D Humidity and Temperature Sensor IC
+F https://www.glynshop.com/erp/owweb/Daten/Datenblaetter/Sensirion/SHTC3.pdf
+$ENDCMP
+#
+$CMP TPS78918DBVR
+D Texas Instruments TPS78918DBVR, LDO Voltage Regulator, 0.1A, 1.8 V, 2.7  10 Vin, 5-Pin SOT-23
+F http://www.ti.com/lit/ds/symlink/tps789.pdf
+$ENDCMP
+#
+$CMP WS2812b
+D Intelligent control LED integrated light source, 4-pin SMD
+F http://www.adafruit.com/datasheets/WS2812B.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "NINAW102"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "NINAW102")
+        (spec "default")
+    )
+)

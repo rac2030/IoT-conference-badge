@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "SHTC3"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2018-04-11-09:43:20)
+    (mountForm default
+        (footprintRef "SHTC3")
+        (spec "System")
+    )
+)

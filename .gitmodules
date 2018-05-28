@@ -1,0 +1,4 @@
+[submodule "hardware/kicad-libs/rac-libs"]
+	path = hardware/kicad-libs/rac-libs
+	url = git@github.com:rac2030/KiCAD-libs.git
+	branch = master

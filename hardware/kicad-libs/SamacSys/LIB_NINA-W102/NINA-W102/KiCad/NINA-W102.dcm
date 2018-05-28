@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NINA-W102
+D STAND-ALONE MULTIRADIO MODULE
+K
+F https://www.u-blox.com/sites/default/files/NINA-W10_DataSheet_%28UBX-17065507%29.pdf
+$ENDCMP
+#
+#End Doc Library
