@@ -40,7 +40,7 @@ encoding utf-8
 Sheet 1 1
 Title "IoT conference badge - sensors module board"
 Date "2018-05-16"
-Rev "0.1.1"
+Rev "0.1.3"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
