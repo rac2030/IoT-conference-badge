@@ -15,4 +15,5 @@ Implement points from https://github.com/rac2030/IoT-conference-badge/wiki/Softw
 * https://medium.com/home-wireless/use-visual-studio-code-for-arduino-2d0cf4c1760b
 * https://esp-idf.readthedocs.io/en/latest/api-guides/jtag-debugging/
 * https://blogs.msdn.microsoft.com/iotdev/2017/05/27/debug-your-arduino-code-with-visual-studio-code/
+* https://github.com/ricmoo/QRCode
 * 
