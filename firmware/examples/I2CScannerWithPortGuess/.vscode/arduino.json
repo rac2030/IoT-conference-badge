@@ -1,0 +1,7 @@
+{
+    "sketch": "I2CScannerWithPortGuess.ino",
+    "output": "build",
+    "board": "espressif:esp32:nina_w10",
+    "configuration": "UploadSpeed=921600",
+    "port": "/dev/ttyUSB0"
+}
