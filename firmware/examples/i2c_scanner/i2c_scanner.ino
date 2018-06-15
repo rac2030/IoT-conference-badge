@@ -7,7 +7,32 @@
 // Devices with higher bit address might not be seen properly.
 //
 
+/**
+ * Example Output when a device is connected on the user I2C bus:
+ *  I2C Scanner
+ *  Scanning Internal I2C bus...
+ *  >> I2C device found at address 0x58  !
+ *  >> I2C device found at address 0x70  !
+ *  done
+ *  
+ *  Scanning User I2C bus...
+ *  >> I2C device found at address 0x3C  !
+ *  done
+ * 
+ * Or if no user device is connected, the second part will look like:
+ *  Scanning User I2C bus...
+ *  >> No I2C devices found
+ * 
+ * The sensor module on the badge has 2 sensors from Sensirion, those are
+ * - SHTC3 with address 0x70
+ * - SGPC3 with address 0x58
+ **/
+
 #include <Wire.h>
+
+// Define two wire objects (as we are going to use both available I2C buses at the same time)
+TwoWire I2Cone = TwoWire(0);
+TwoWire I2Ctwo = TwoWire(1);
 
 // Internal I2C bus where the sensor module is connected to
 #define SDA1 13  // GPIO35
@@ -21,6 +46,8 @@
 
 void setup()
 {
+  I2Cone.begin(SDA1, SCL1);
+  I2Ctwo.begin(SDA2, SCL2);
   Serial.begin(115200);
   delay(1000); // let serial console settle
   Serial.println("\nI2C Scanner");
@@ -29,17 +56,17 @@ void setup()
 
 void loop()
 {
-  scan("Internal I2C bus", SDA1, SCL1);
-  scan("User I2C bus", SDA2, SCL2);
+  scan("Internal I2C bus", I2Cone);
+  scan("User I2C bus", I2Ctwo);
   delay(5000);           // wait 5 seconds for next scan
 }
 
-void scan(String busDescription, int sda, int scl)
+// We pass a description for displaying (friendly name) and the corresponding wire object as reference
+void scan(String busDescription, TwoWire& wire)
 {
   byte error, address;
   int nDevices;
 
-  Wire.begin(sda, scl);
   Serial.print("Scanning ");
   Serial.print(busDescription);
   Serial.println("...");
@@ -50,8 +77,8 @@ void scan(String busDescription, int sda, int scl)
     // The i2c_scanner uses the return value of
     // the Write.endTransmisstion to see if
     // a device did acknowledge to the address.
-    Wire.beginTransmission(address);
-    error = Wire.endTransmission();
+    wire.beginTransmission(address);
+    error = wire.endTransmission();
 
     if (error == 0)
     {
