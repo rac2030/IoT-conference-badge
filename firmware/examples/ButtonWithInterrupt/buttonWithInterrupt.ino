@@ -70,4 +70,4 @@ void setup()
     Serial.println("Initialized interrupts");
 }
 
-void loop(){}
+void loop(){ /** Not used but needs to be declared for arduino **/}
