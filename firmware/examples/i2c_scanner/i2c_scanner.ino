@@ -9,11 +9,18 @@
 
 #include <Wire.h>
 
+// Internal I2C bus where the sensor module is connected to
+#define SDA1 13  // GPIO35
+#define SCL1 0   // GPIO27
+
+// User I2C bus which is exposed in the 2 breakouts at the bottom of the badge
+// Note that those have the pullups not populated, 
+// depending on the module you connect you might need to populate them
+#define SDA2 2   // GPIO25
+#define SCL2 12  // GPIO36
 
 void setup()
 {
-  Wire.begin();
-
   Serial.begin(115200);
   delay(1000); // let serial console settle
   Serial.println("\nI2C Scanner");
@@ -22,10 +29,20 @@ void setup()
 
 void loop()
 {
+  scan("Internal I2C bus", SDA1, SCL1);
+  scan("User I2C bus", SDA2, SCL2);
+  delay(5000);           // wait 5 seconds for next scan
+}
+
+void scan(String busDescription, int sda, int scl)
+{
   byte error, address;
   int nDevices;
 
-  Serial.println("Scanning...");
+  Wire.begin(sda, scl);
+  Serial.print("Scanning ");
+  Serial.print(busDescription);
+  Serial.println("...");
 
   nDevices = 0;
   for(address = 1; address < 127; address++ ) 
@@ -38,7 +55,7 @@ void loop()
 
     if (error == 0)
     {
-      Serial.print("I2C device found at address 0x");
+      Serial.print(">> I2C device found at address 0x");
       if (address<16) 
         Serial.print("0");
       Serial.print(address,HEX);
@@ -48,16 +65,15 @@ void loop()
     }
     else if (error==4) 
     {
-      Serial.print("Unknown error at address 0x");
+      Serial.print(">> Unknown error at address 0x");
       if (address<16) 
         Serial.print("0");
       Serial.println(address,HEX);
     }    
   }
   if (nDevices == 0)
-    Serial.println("No I2C devices found\n");
+    Serial.println(">> No I2C devices found\n");
   else
     Serial.println("done\n");
-
-  delay(5000);           // wait 5 seconds for next scan
+  delay(1000);
 }
