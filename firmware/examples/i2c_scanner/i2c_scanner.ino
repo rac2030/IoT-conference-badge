@@ -8,8 +8,11 @@
 //
 
 /**
- * A warning, you need to disconnect any I2C device on the user bus prior to programming 
- * as the pins have dual use and thats leading to a lockup and you get an error message during programming.
+ * !!!! A warning, you need to disconnect any I2C device on the user bus prior to programming 
+ * as the pins have dual use and thats leading to a lockup and you get an error message 
+ * during programming. !!!!
+ * 
+ * 
  * Example Output when a device is connected on the user I2C bus:
  *  I2C Scanner
  *  Scanning Internal I2C bus...
