@@ -1,0 +1,6 @@
+{
+    "sketch": "KraftwerkWifiTest.ino",
+    "port": "/dev/ttyUSB0",
+    "board": "espressif:esp32:nina_w10",
+    "configuration": "UploadSpeed=921600"
+}
