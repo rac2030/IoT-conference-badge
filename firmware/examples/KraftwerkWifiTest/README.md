@@ -4,22 +4,6 @@ This is because the APs are configured that weak clients get disconnected to not
 We need to test stability for our badges as then the network admin could adjust the paramters to fit our purpose during the event.
 
 # Example log on Serial
-    rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
-    configsip: 0, SPIWP:0xee
-    clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-    mode:DIO, clock div:2
-    load:0x3fff0018,len:4
-    load:0x3fff001c,len:812
-    load:0x40078000,len:0
-    load:0x40078000,len:11584
-    entry 0x40078a60
-    Current RSSI=0
-    [WiFi-event] event: 2
-    Current RSSI=0
-    .....[WiFi-event] event: 5
-    Current RSSI=0
-    WiFi lost connection. Reason: WIFI_REASON_NO_AP_FOUND
-    ....ets Jun  8 2016 00:22:57
 
     rst:0x1 (POWERON_RESET),boot:0x33 (SPI_FAST_FLASH_BOOT)
     configsip: 0, SPIWP:0xee
