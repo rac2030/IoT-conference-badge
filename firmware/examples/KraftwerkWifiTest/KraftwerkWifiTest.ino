@@ -34,6 +34,7 @@ SYSTEM_EVENT_MAX
 */
 
 #include <WiFi.h>
+
 #define FASTLED_ALLOW_INTERRUPTS 0
 #include "FastLED.h"
 
