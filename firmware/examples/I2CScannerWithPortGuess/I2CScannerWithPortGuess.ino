@@ -10,21 +10,21 @@
 
 void setup() {
   Serial.begin(115200);
-  while (!Serial);             // Leonardo: wait for serial monitor
   Serial.println("\n\nI2C Scanner to scan for devices on each GPIO port pair");
 }
 
 // This is a list of all GPIOs, I excluded GPIs as they are not suitable for I2C AFAIK
 // Those are the actual ESP32 pins
-//uint8_t portArray[] = {23, 32, 33, 21, 25, 26, 27, 22, 19, 1, 3, 4, 2, 0, 5, 18, 14, 15, 13, 12};
+uint8_t portArray[] = {23, 32, 33, 21, 25, 26, 27, 22, 19, 1, 3, 4, 2, 0, 5, 18, 14, 15, 13, 12};
 //This array is just needed to display the friendly name from the NINA-W102 pinout
-//String portMap[] = {"IO1", "IO5", "IO7", "IO8", "IO16", "IO17", "IO18", "IO20", "IO21", "IO22" "IO23", "IO24", "IO25", "IO27", "IO28", "IO29", "IO31", "IO32", "IO35", "IO36" };
-// Disbled ports as there where strange characters...
-uint8_t portArray[] = {32, 33, 21, 25, 26, 27, 22, 4, 2, 0, 5, 18, 14, 15, 13, 12};
-String portMap[] = {"IO5", "IO7", "IO8", "IO16", "IO17", "IO18", "IO20", "IO24", "IO25", "IO27", "IO28", "IO29", "IO31", "IO32", "IO35", "IO36" };
+String portMap[] = {"IO1", "IO5", "IO7", "IO8", "IO16", "IO17", "IO18", "IO20", "IO21", "IO22" "IO23", "IO24", "IO25", "IO27", "IO28", "IO29", "IO31", "IO32", "IO35", "IO36" };
 
-//uint8_t portArray[] = {35, 36};
-//String portMap[] = {"IO35", "IO36"};
+// Disble ports if it hangs at certain ports with strange characters or rebooting...
+//uint8_t portArray[] = {32, 33, 21, 25, 26, 27, 22, 4, 2, 0, 5, 18, 14, 15, 13, 12};
+//String portMap[] = {"IO5", "IO7", "IO8", "IO16", "IO17", "IO18", "IO20", "IO24", "IO25", "IO27", "IO28", "IO29", "IO31", "IO32", "IO35", "IO36" };
+
+//uint8_t portArray[] = {21, 22};
+//String portMap[] = {"IO21", "IO22"};
 
 void scanPorts() { 
   for (uint8_t i = 0; i < sizeof(portArray); i++) {
@@ -35,8 +35,8 @@ void scanPorts() {
         Serial.print(" : ");
         Serial.println(portMap[j]);
         //TODO maybe add speed evaluation?
-        Wire.begin(portArray[i], portArray[j], 400000 /** bus speed in Hz **/);
-        delay(4000);
+        Wire.begin(portArray[i], portArray[j], 100000 /** bus speed in Hz **/);
+        delay(200);
         check_if_exist_I2C();
         Wire.reset();
       }
