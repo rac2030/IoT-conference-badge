@@ -34,7 +34,16 @@ SYSTEM_EVENT_MAX
 */
 
 #include <WiFi.h>
+#define FASTLED_ALLOW_INTERRUPTS 0
+#include "FastLED.h"
 
+#define NUM_LEDS 2
+#define DATA_PIN 27 // GPIO18
+
+// Define the array of leds
+CRGB leds[NUM_LEDS];
+
+// Wifi settings at Kraftwerk
 const char* ssid     = "impacthub";
 const char* password = "coworking@ImpactHub";
 
@@ -46,12 +55,14 @@ void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
     switch (event)
     {
     case SYSTEM_EVENT_STA_GOT_IP:
+        ledConnected();
         Serial.print("WiFi connected and got ");
         Serial.print("IP address: ");
         Serial.println(IPAddress(info.got_ip.ip_info.ip.addr));
         
         break;
     case SYSTEM_EVENT_STA_DISCONNECTED:
+        ledError();
         Serial.print("WiFi lost connection. Reason: ");
         // Reasons found on https://www.esp32.com/viewtopic.php?t=349
         String disconnectReason;
@@ -149,6 +160,8 @@ void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
 void setup()
 {
     Serial.begin(115200);
+    
+    FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 
     // delete old config
     WiFi.disconnect(true);
@@ -157,6 +170,7 @@ void setup()
 
     WiFi.onEvent(WiFiEvent);
     
+    ledOff();
 }
 
 void loop()
@@ -174,8 +188,9 @@ void wifiStart()
   unsigned long timer1 = millis();
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED && millis() - timer1 < 5000UL) {
-    delay(500);
+    ledSearching();
     Serial.print(".");
+    ledSearching();
   }
   if (WiFi.status() == WL_CONNECTED) {
     Serial.println(F(" CONNECTED"));
@@ -183,4 +198,29 @@ void wifiStart()
   else {
     Serial.println(F("Could not connect!"));
   }
+}
+
+void ledOff() {
+  leds[0] = CRGB::Black;
+  leds[1] = CRGB::Black;
+  FastLED.show();
+}
+
+void ledConnected() {
+  leds[0] = CRGB::Green;
+  FastLED.show();
+}
+
+void ledError() {
+  leds[0] = CRGB::Red;
+  FastLED.show();
+}
+
+void ledSearching() {
+  leds[1] = CRGB::Blue;
+  FastLED.show();
+  delay(200);
+  leds[1] = CRGB::Black;
+  FastLED.show();
+  delay(200);
 }
