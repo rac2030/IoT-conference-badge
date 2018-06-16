@@ -25,7 +25,7 @@
  * THE SOFTWARE.
  */
 
-#include <esp32-hal.h>
+//#include <esp32-hal.h>
 #include <Arduino.h>
 
 #ifndef EPDIF_H
