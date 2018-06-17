@@ -55,7 +55,7 @@ void loop()
   Serial.println("drawing corners");
   drawCornerTest();
 
-  Serial.println("Draw font test")
+  Serial.println("Draw font test");
   showFont("FreeMonoBold9pt7b", &FreeMonoBold9pt7b);
   showFont("FreeMonoBold12pt7b", &FreeMonoBold12pt7b);
   //showFont("FreeMonoBold18pt7b", &FreeMonoBold18pt7b);
@@ -114,24 +114,27 @@ void showText(const char text[], const GFXfont* f)
   display.fillScreen(GxEPD_WHITE);
   display.setTextColor(GxEPD_BLACK);
   display.setFont(f);
+  display.setRotation(3);
   display.setCursor(0, 0);
   display.println();
   display.println(text);
   display.update();
+  display.setRotation(0);
 }
 
 void showMZText()
 {
   display.fillScreen(GxEPD_WHITE);
   display.setTextColor(GxEPD_BLACK);
-  display.setFont(&FreeMonoBold24pt7b);
+  display.setFont(&FreeMonoBold18pt7b);
+  display.setRotation(3);
   display.setCursor(0, 0);
   display.println();
   
   // Print MakeZurich big using red for upper case letters
   display.setTextColor(GxEPD_RED);
   display.print("M");
-  display.setTextColor(GxEPD_WHITE);
+  display.setTextColor(GxEPD_BLACK);
   display.print("ake");
   display.setTextColor(GxEPD_RED);
   display.print("Z");
@@ -144,6 +147,7 @@ void showMZText()
   display.println("JUNE 22-30, 2018");
   display.update();
   delay(10000);
+  display.setRotation(0);
 }
 
 void drawCornerTest()
