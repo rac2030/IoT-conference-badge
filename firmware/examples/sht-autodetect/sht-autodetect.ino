@@ -25,7 +25,7 @@ void setup() {
 
 void loop() {
   if (sht.readSample()) {
-      Serial.print("SHT:\n");
+      Serial.print("SHTC3:\n");
       Serial.print("  RH: ");
       Serial.print(sht.getHumidity(), 2);
       Serial.print("\n");
