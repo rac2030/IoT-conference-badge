@@ -1,4 +1,4 @@
-# SHT-Autodetect
+# Sensirion sensor module on MakeZurich 2018 badge
 
 Very simple sensor test using Sensirion SHT sensors (tested with SHT31 and the MakeZurich 2018 badge) based on the examples of [Sensirion's Arduino SHT lib](https://github.com/Sensirion/arduino-sht).
 
@@ -14,4 +14,4 @@ The sensor module on the badge contains a SHTC3 sensor and is on the internal I2
 
 Install the following libraries using Arduino IDE (`Sketch` -> `Include Library` -> `Manage Libraries...`):
 
-* [Sensirion's Arduino SHT](https://github.com/Sensirion/arduino-sht)
+* [MakeZurich-sensirion-module](https://github.com/rac2030/arduino-IoTBadge-SensorModule)
