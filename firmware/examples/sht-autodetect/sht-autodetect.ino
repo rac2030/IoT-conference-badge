@@ -2,14 +2,16 @@
 
 #include "SHTSensor.h"
 
-SHTSensor sht;
+// Internal I2C bus where the sensor module is connected to
+#define SDA1 13  // GPIO35
+#define SCL1 0   // GPIO27
+
+// SHTSensor sht; // Use this if you want to use Autodetect
 // To use a specific sensor instead of probing the bus use this command:
-// SHTSensor sht(SHTSensor::SHT3X);
+SHTSensor sht(SHTSensor::SHTC1); // We have an SHTC3 on the badge but the communication to it is the same
 
 void setup() {
-  // put your setup code here, to run once:
-
-  Wire.begin();
+  Wire.begin(SDA1, SCL1);
   Serial.begin(115200);
   delay(1000); // let serial console settle
 
@@ -18,13 +20,10 @@ void setup() {
   } else {
       Serial.print("init(): failed\n");
   }
-  sht.setAccuracy(SHTSensor::SHT_ACCURACY_MEDIUM); // only supported by SHT3x
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
   if (sht.readSample()) {
       Serial.print("SHT:\n");
       Serial.print("  RH: ");
