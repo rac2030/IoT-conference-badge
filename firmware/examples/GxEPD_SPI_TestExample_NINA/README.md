@@ -18,4 +18,4 @@ Using Arduino Library Manager (`Sketch -> Include Library -> Manage Libraries...
 
 Then install the following one from Github (download as ZIP):
 
-* [GxEDP library](https://github.com/ZinggJM/GxEPD)
+* [GxEPD library](https://github.com/ZinggJM/GxEPD)
