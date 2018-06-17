@@ -33,16 +33,50 @@ SYSTEM_EVENT_ETH_GOT_IP               < ESP32 ethernet got IP from connected AP
 SYSTEM_EVENT_MAX
 */
 
+#define SerialDebug true  // set to true to get Serial output for debugging
+
 #include <WiFi.h>
 
+// LED includes and definitions
 #define FASTLED_ALLOW_INTERRUPTS 0
 #include "FastLED.h"
 
 #define NUM_LEDS 2
 #define DATA_PIN 27 // GPIO18
-
 // Define the array of leds
 CRGB leds[NUM_LEDS];
+
+
+//EPD includes and definitions
+// GxEPD lib and display drivers
+#include <GxEPD.h>
+#include <GxIO/GxIO.cpp>
+#include <GxIO/GxIO_SPI/GxIO_SPI.cpp>
+#include <GxGDEW0213Z16/GxGDEW0213Z16.cpp>  // 2.13" b/w/r
+// FreeFonts from Adafruit_GFX
+#include <Fonts/FreeMonoBold9pt7b.h>
+
+// Those are from the board definition and don't need to be defined as they are standard for NINA
+//static const uint8_t SS    = 5;  //GPIO28
+//static const uint8_t MOSI  = 23; //GPIO1
+//static const uint8_t MISO  = 19; // not used for waveshare display
+//static const uint8_t SCK   = 18; // GPIO29
+
+// Specific pins used on the MakeZurich badge, adjust if you are using the Display and the NINA standalone
+static const uint8_t DC = 22;      //GPIO20
+static const uint8_t RST = 21;     //GPIO8
+static const uint8_t BUSYN = 4;    //GPIO24
+
+// Runtime object instances for EPD
+GxIO_Class io(SPI, SS, DC, RST); 
+GxEPD_Class display(io, RST, BUSYN); 
+
+// Create a holder for the texts to be displayed
+// [0] Searching... or Network SSID if connected
+// [1] Blank or RSSI if connected
+// [2] Blank or IP if connected
+// [3] Blank if connected or the reason if it gots disconected
+String displayText[4];
 
 // Wifi settings at Kraftwerk
 const char* ssid     = "impacthub";
@@ -60,7 +94,12 @@ void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
         Serial.print("WiFi connected and got ");
         Serial.print("IP address: ");
         Serial.println(IPAddress(info.got_ip.ip_info.ip.addr));
-        
+        displayText[0] = ssid;
+        // Set RSSI
+        displayText[1] = WiFi.RSSI();
+        // Set IP
+        displayText[2] = WiFi.localIP().toString();
+        showText();
         break;
     case SYSTEM_EVENT_STA_DISCONNECTED:
         ledError();
@@ -154,6 +193,14 @@ void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
                 break;
         }
         Serial.println(disconnectReason);
+        displayText[0] = "Disconnected";
+        // Reset RSSI
+        displayText[1] = "nc";
+        // Reset IP
+        displayText[2] = "0.0.0.0";
+        // Set reason
+        displayText[3] = disconnectReason;
+        showText();
         break;
     }
 }
@@ -161,13 +208,16 @@ void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
 void setup()
 {
     Serial.begin(115200);
+    // Initiate the display object
+    display.init(115200); // enable diagnostic output on Serial
     
     FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
 
     // delete old config
     WiFi.disconnect(true);
 
-    delay(1000);
+    delay(1000); // let serial console settle
+    Serial.println("\n\nKraftwerk wifi tester for MakeZurich 2018 badge");
 
     WiFi.onEvent(WiFiEvent);
     
@@ -177,6 +227,8 @@ void setup()
 void loop()
 {
     Serial.printf("Current RSSI=%d\n", WiFi.RSSI());
+    displayText[1] = WiFi.RSSI();
+    showText();
     if( WiFi.status() != WL_CONNECTED ) {
         // we are currently not connected, try connecting
         wifiStart();
@@ -188,6 +240,12 @@ void wifiStart()
 {
   unsigned long timer1 = millis();
   WiFi.begin(ssid, password);
+    displayText[0] = "Searching...";
+    // Reset RSSI
+    displayText[1] = "nc";
+    // Reset IP
+    displayText[2] = "0.0.0.0";
+    showText();
   while (WiFi.status() != WL_CONNECTED && millis() - timer1 < 5000UL) {
     ledSearching();
     Serial.print(".");
@@ -224,4 +282,30 @@ void ledSearching() {
   leds[1] = CRGB::Black;
   FastLED.show();
   delay(200);
+}
+
+void showText() {
+    // [0] Searching... or Network SSID if connected
+    // [1] Blank or RSSI if connected
+    // [2] Blank or IP if connected
+    // [3] Blank if connected or the reason if it gots disconected
+  display.fillScreen(GxEPD_WHITE);
+  display.setTextColor(GxEPD_BLACK);
+  display.setFont(&FreeMonoBold9pt7b);
+  display.setRotation(3);
+  display.setCursor(0, 0);
+  display.println();
+  display.print("SSID: ");
+  display.println(displayText[0]);
+  // IP
+  display.print(displayText[2]);
+  display.print(" RSSI: ");
+  display.println(displayText[1]);
+  // disconnect reason
+  display.print("> ");
+  display.println(displayText[3]);
+
+
+  display.update();
+  display.setRotation(0);
 }
