@@ -6,7 +6,7 @@ const log = require('morgan')
 
 const TCP_DELIMITER = '\r'
 const handleRequest = function (request) {
-  let requestType = request['meta']['type']
+  let requestType = request['meta']['type'].trim()
   let service = srv[requestType]
   if (!service) {
     throw new Error(`Unknown request type: ${requestType}`)
