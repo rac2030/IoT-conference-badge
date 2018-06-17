@@ -14,7 +14,7 @@ There are some dependencies that need to be installed for this example to work.
 Using Arduino Library Manager (`Sketch -> Include Library -> Manage Libraries...`), install the following libraries:
 
 * Adafruit GFX
-* Install FastLED
+* FastLED
 
 Then install the following one from Github (download as ZIP):
 
