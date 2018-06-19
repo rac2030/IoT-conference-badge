@@ -59,7 +59,7 @@ void setup() {
   epd.SetPartialWindowBlack(paint.GetImage(), 0, 8, paint.GetWidth(), paint.GetHeight());
 
   paint.Clear(COLORED);
-  paint.DrawStringAt(8, 2, "Hello world", &Font12, UNCOLORED);
+  paint.DrawStringAt(8, 2, "MakeZurich", &Font12, UNCOLORED);
   epd.SetPartialWindowRed(paint.GetImage(), 0, 24, paint.GetWidth(), paint.GetHeight());
   
   paint.SetWidth(64);
