@@ -1,6 +1,0 @@
-{
-    "board": "espressif:esp32:nina_w10",
-    "configuration": "UploadSpeed=115200",
-    "port": "/dev/ttyUSB0",
-    "sketch": "EPD-WaveShare-Demo.ino"
-}
