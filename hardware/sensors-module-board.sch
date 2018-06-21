@@ -39,8 +39,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "IoT conference badge - sensors module board"
-Date "2018-05-16"
-Rev "0.1.3"
+Date "2018-06-21"
+Rev "0.1.4"
 Comp "MakeZürich (makezurich.ch) & GDG Zürich (gdgzh.ch)"
 Comment1 ""
 Comment2 ""
@@ -118,7 +118,7 @@ L R_Small R3
 U 1 1 5AD39621
 P 4800 3950
 F 0 "R3" H 4830 3970 50  0000 L CNN
-F 1 "200k" H 4830 3910 50  0000 L CNN
+F 1 "4.7k" H 4830 3910 50  0000 L CNN
 F 2 "Resistors_SMD:R_1206" H 4800 3950 50  0001 C CNN
 F 3 "" H 4800 3950 50  0001 C CNN
 	1    4800 3950
@@ -129,7 +129,7 @@ L R_Small R2
 U 1 1 5AD39628
 P 4500 3950
 F 0 "R2" H 4530 3970 50  0000 L CNN
-F 1 "200k" H 4530 3910 50  0000 L CNN
+F 1 "4.7k" H 4530 3910 50  0000 L CNN
 F 2 "Resistors_SMD:R_1206" H 4500 3950 50  0001 C CNN
 F 3 "" H 4500 3950 50  0001 C CNN
 	1    4500 3950
@@ -236,8 +236,6 @@ F 3 "" H 7400 2750 50  0001 C CNN
 	1    7400 2750
 	1    0    0    -1  
 $EndComp
-Text Notes 8200 2000 2    60   Italic 0
-leave 200k pullups as TI reference design or put them to 10k as sensirion reference design or to 4.7k as we have it on the other side of the level converter?
 $Comp
 L GND #PWR08
 U 1 1 5AFC5229
