@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceRoot}",
+                "/home/rac/Arduino/hardware/espressif/esp32/cores/esp32",
+                "/home/rac/Arduino/hardware/espressif/esp32/libraries",
+                "/home/rac/Downloads/electronics/arduino-1.8.5/hardware/tools",
+                "/home/rac/Downloads/electronics/arduino-1.8.5/libraries",
+                "/home/rac/Documents/Arduino/hardware/tools",
+                "/home/rac/Documents/Arduino/libraries"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "/home/rac/Arduino/hardware/espressif/esp32/cores/esp32",
+                    "/home/rac/Arduino/hardware/espressif/esp32/libraries",
+                    "/home/rac/Downloads/electronics/arduino-1.8.5/hardware/tools",
+                    "/home/rac/Downloads/electronics/arduino-1.8.5/libraries",
+                    "/home/rac/Documents/Arduino/hardware/tools",
+                    "/home/rac/Documents/Arduino/libraries"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
