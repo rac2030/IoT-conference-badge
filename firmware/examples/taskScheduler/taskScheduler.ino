@@ -1,5 +1,6 @@
 /**
  * Simple test of the task scheduler library using status request objects
+ * Based on examples of https://github.com/arkhipenko/TaskScheduler
  */
 
 #define _TASK_SLEEP_ON_IDLE_RUN
