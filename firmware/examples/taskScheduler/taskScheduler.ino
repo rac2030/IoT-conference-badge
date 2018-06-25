@@ -3,7 +3,7 @@
  * Based on examples of https://github.com/arkhipenko/TaskScheduler
  */
 
-#define _TASK_SLEEP_ON_IDLE_RUN
+//#define _TASK_SLEEP_ON_IDLE_RUN // Seems to not work on ESP32 according to the compile warning
 #define _TASK_STATUS_REQUEST
 #include <TaskScheduler.h>
 
