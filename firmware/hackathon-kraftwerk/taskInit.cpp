@@ -39,7 +39,8 @@ void initBadge() {
         if(preferences.getString(PREF_FIRSTNAME, "") == "") {
             // Name is not yet set, enable the display of the QR init screen until this has been set
             tQRView.enable();
-            Serial.println("Badge not yet registered");
+            Serial.println("Badge not yet registered, try to fetch registration");
+            tFetchRegistration.enable();
         } else {
             // Name is set, get it and display the Name Tag screen accordingly
             firstName = preferences.getString(PREF_FIRSTNAME, "");

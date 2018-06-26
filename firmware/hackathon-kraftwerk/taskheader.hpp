@@ -1,3 +1,5 @@
+#define SerialDebug true  // set to true to get Serial output for debugging
+
 //This is the place to declare every single function
 //and global variable that is going to be reused between cpp files.
 
@@ -22,6 +24,7 @@ extern StatusRequest updateDisplay;
 // Tasks for enable / disable created in main.cpp
 extern Task tInitialize;
 extern Task tUpdateDisplay;
+extern Task tFetchRegistration;
 
 // Show view tasks created in main.cpp
 extern Task tQRView;
@@ -40,6 +43,8 @@ extern void handleQRView();
 extern void handleNameView();
 //// taskSplash.cpp
 extern void handleSplashView();
+//// taskFetchRegistration.cpp
+extern void handleFetchRegistration();
 
 // Global variables
 //// taskInit.cpp

@@ -13,6 +13,7 @@ Task tQRView(100, TASK_ONCE, &handleQRView, &runner);
 Task tNameView(100, TASK_ONCE, &handleNameView, &runner);
 Task tUpdateDisplay(&handleUpdateDisplay, &runner);
 Task tSplashView(100, TASK_ONCE, &handleSplashView, &runnerPriority);
+Task tFetchRegistration(100, TASK_ONCE, &handleFetchRegistration, &runner);
 
 void setup () {
     // Disable networking parts to save energy until we really need it
