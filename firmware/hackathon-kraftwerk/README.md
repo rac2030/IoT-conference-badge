@@ -13,4 +13,4 @@ Then install the following one from Github (download as ZIP or clone into ~/Ardu
 
 * [GxEPD library](https://github.com/ZinggJM/GxEPD)
 * [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
-
+* [MakeZurich-sensirion-module](https://github.com/rac2030/arduino-IoTBadge-SensorModule)

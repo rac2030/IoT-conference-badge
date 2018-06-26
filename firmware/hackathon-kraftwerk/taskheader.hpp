@@ -25,6 +25,7 @@ extern Task tInitialize;
 extern Task tUpdateDisplay;
 extern Task tQRView;
 extern Task tNameView;
+extern Task tSplashView;
 extern void initBadge();
 
 // Show view tasks
@@ -37,6 +38,7 @@ extern void PrepareUpdateDisplayStatus();
 extern void handleUpdateDisplay();
 extern void handleQRView();
 extern void handleNameView();
+extern void handleSplashView();
 
 // Global variables
 //// taskInit.cpp

@@ -18,6 +18,7 @@ Task tInitialize(200, TASK_ONCE, &initBadge, &runnerPriority);
 Task tQRView(100, TASK_ONCE, &handleQRView, &runner);
 Task tNameView(100, TASK_ONCE, &handleNameView, &runner);
 Task tUpdateDisplay(&handleUpdateDisplay, &runner);
+Task tSplashView(100, TASK_ONCE, &handleSplashView, &runnerPriority);
 
 void setup () {
     Serial.begin(115200);

@@ -23,6 +23,10 @@ void getEfuseMac();
 void initBadge() {
     PrepareUpdateDisplayStatus();
     Serial.println("Initialize badge");
+    // Display MZ Logo as splash screen
+    tSplashView.enable();
+    delay(5000); // Wait for 5 seconds before continuing writing next display
+
     // Get the chip id, this is used all over the place
     getEfuseMac();
     
