@@ -16,8 +16,8 @@ void initBadge();
 // helper prototypes
 void getEfuseMac();
 
-#define DUMMY
-void initBadge() {
+void initBadge()
+{
     PrepareUpdateDisplayStatus();
     Serial.println("Initialize badge");
     // Display MZ Logo as splash screen
@@ -26,47 +26,44 @@ void initBadge() {
 
     // Get the chip id, this is used all over the place
     getEfuseMac();
-    
-    #ifdef DUMMY
-        firstName = "Ding";
-        lastName = "Dong";
+
+    // Get the name if already registered or display the QR code otherwise
+    preferences.begin(PREF_TAG, true); // Read only
+    // Check if name is already set, we only check if first name has a value here
+    if (preferences.getString(PREF_FIRSTNAME, "") == "")
+    {
+        // Name is not yet set, enable the display of the QR init screen until this has been set
+        tQRView.enable();
+        Serial.println("Badge not yet registered, try to fetch registration");
+        tFetchRegistration.enable();
+    }
+    else
+    {
+        // Name is set, get it and display the Name Tag screen accordingly
+        firstName = preferences.getString(PREF_FIRSTNAME, "");
+        lastName = preferences.getString(PREF_LASTNAME, "");
+        // Signal the name view to be shown
         tNameView.enable();
-        Serial.println("Dummy name is set");
-    #else
-        // Get the name if already registered or display the QR code otherwise
-        preferences.begin(PREF_TAG, true); // Read only
-        // Check if name is already set, we only check if first name has a value here
-        if(preferences.getString(PREF_FIRSTNAME, "") == "") {
-            // Name is not yet set, enable the display of the QR init screen until this has been set
-            tQRView.enable();
-            Serial.println("Badge not yet registered, try to fetch registration");
-            tFetchRegistration.enable();
-        } else {
-            // Name is set, get it and display the Name Tag screen accordingly
-            firstName = preferences.getString(PREF_FIRSTNAME, "");
-            lastName = preferences.getString(PREF_LASTNAME, "");
-            // Signal the name view to be shown
-            tNameView.enable();
-            Serial.print("Name set is: ");
-            Serial.print(firstName);
-            Serial.print("");
-            Serial.println(lastName);
-        }
-        preferences.end();
-    #endif
+        Serial.print("Name set is: ");
+        Serial.print(firstName);
+        Serial.print("");
+        Serial.println(lastName);
+    }
+    preferences.end();
 }
 
 /**
  * Get the chip ID
  * TODO: Make it lean and less memory hungry
  */
-void getEfuseMac() {
-  uint64_t id = ESP.getEfuseMac();
-  char id_h[9];
-  char id_l[9];
+void getEfuseMac()
+{
+    uint64_t id = ESP.getEfuseMac();
+    char id_h[9];
+    char id_l[9];
 
-  sprintf(id_h, "%08X", (uint32_t)(id>>32));
-  sprintf(id_l, "%08X", (uint32_t)(id));
+    sprintf(id_h, "%08X", (uint32_t)(id >> 32));
+    sprintf(id_l, "%08X", (uint32_t)(id));
 
-  efuseMac = String(id_h) + String(id_l);
+    efuseMac = String(id_h) + String(id_l);
 }
