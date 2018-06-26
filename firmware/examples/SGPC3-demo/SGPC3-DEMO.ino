@@ -59,7 +59,7 @@ void loop() {
   }
 
   // finally, let's print those to the serial console
-  Serial.printf("%f°C with %f RH and a TVOC of %f\n", temp, rh, tvoc, eco2);
+  Serial.printf("%f°C with %f RH and a TVOC of %f\n", temp, rh, tvoc);
   
   // and then, we'll use remainingWaitTimeMS() to ensure the correct
   // Measurement rate
