@@ -12,3 +12,5 @@ Using Arduino Library Manager (`Sketch -> Include Library -> Manage Libraries...
 Then install the following one from Github (download as ZIP or clone into ~/Arduino/Libraries):
 
 * [GxEPD library](https://github.com/ZinggJM/GxEPD)
+* [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
+
