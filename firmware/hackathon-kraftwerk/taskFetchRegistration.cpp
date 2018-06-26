@@ -3,44 +3,55 @@
 #include <WiFi.h>
 
 // Wifi settings at Kraftwerk
-const char* ssid     = "impacthub";
-const char* password = "coworking@ImpactHub";
+const char *ssid = "impacthub";
+const char *password = "coworking@ImpactHub";
 
 // Handlers
-void handleFetchRegistration() {
+void handleFetchRegistration()
+{
     // This handler should only be called with a timeout set, otherwise it might run indefinitely
     Serial.println("TODO: fetch registration from server over Kraftwerk wifi");
     esp_wifi_start();
     Serial.println("Connecting to WiFi network: " + String(ssid));
     WiFi.onEvent(WiFiEvent);
     WiFi.begin(ssid, pwd);
-    
+
     unsigned long timeout = millis();
-    while (WiFi.status() != WL_CONNECTED && millis() - timeout < 5000UL) 
+    while (WiFi.status() != WL_CONNECTED && millis() - timeout < 5000UL)
     {
         Serial.print(".");
         delay(500);
     }
-    if (WiFi.status() == WL_CONNECTED) {
+    if (WiFi.status() == WL_CONNECTED)
+    {
         Serial.println("WiFi connected!");
         Serial.print("IP address: ");
         Serial.println(WiFi.localIP());
     }
-    else {
+    else
+    {
         Serial.println(F("Could not connect!"));
     }
-        
-    
+
     //TODO: Fetch details from server, parse them and update properties if name is returned
     // Maybe look at https://learn.sparkfun.com/tutorials/esp32-thing-hookup-guide/arduino-example-wifi
-    
 
     // Properly disconnect before we disable wifi
     WiFi.disconnect(true);
     // Stop wifi again before we finish this task
     esp_wifi_stop();
     //TODO: If successful, save in preferences and run initialize again
-    //tInitialize.enable();
+    String firstName = ""; //TODO replace with response
+    String lastName = "";
+    if (firstName != "")
+    {
+        preferences.begin(PREF_TAG, false); // Read/write
+        firstName = preferences.putString(PREF_FIRSTNAME, firstName);
+        lastName = preferences.getString(PREF_LASTNAME, lastName);
+        preferences.end();
+    }
+
+    //tInitialize.enable(); or ESP.restart(); to reinit the initialization
 }
 
 /* 
@@ -87,91 +98,92 @@ void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info)
         Serial.print("WiFi lost connection. Reason: ");
         // Reasons found on https://www.esp32.com/viewtopic.php?t=349
         String disconnectReason;
-        switch (info.disconnected.reason) {
-            case 1:
-                disconnectReason = "WIFI_REASON_UNSPECIFIED";
-                break;
-            case 2:
-                disconnectReason = "WIFI_REASON_AUTH_EXPIRE";
-                break;
-            case 3:
-                disconnectReason = "WIFI_REASON_AUTH_LEAVE";
-                break;
-            case 4:
-                disconnectReason = "WIFI_REASON_ASSOC_EXPIRE";
-                break;
-            case 5:
-                disconnectReason = "WIFI_REASON_ASSOC_TOOMANY";
-                break;
-            case 6:
-                disconnectReason = "WIFI_REASON_NOT_AUTHED";
-                break;
-            case 7:
-                disconnectReason = "WIFI_REASON_NOT_ASSOCED";
-                break;
-            case 8:
-                disconnectReason = "WIFI_REASON_ASSOC_LEAVE";
-                break;
-            case 9:
-                disconnectReason = "WIFI_REASON_ASSOC_NOT_AUTHED";
-                break;
-            case 10:
-                disconnectReason = "WIFI_REASON_DISASSOC_PWRCAP_BAD";
-                break;
-            case 11:
-                disconnectReason = "WIFI_REASON_DISASSOC_SUPCHAN_BAD";
-                break;
-            case 13:
-                disconnectReason = "WIFI_REASON_IE_INVALID";
-                break;
-            case 14:
-                disconnectReason = "WIFI_REASON_MIC_FAILURE";
-                break;
-            case 15:
-                disconnectReason = "WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT";
-                break;
-            case 16:
-                disconnectReason = "WIFI_REASON_GROUP_KEY_UPDATE_TIMEOUT";
-                break;
-            case 17:
-                disconnectReason = "WIFI_REASON_IE_IN_4WAY_DIFFERS";
-                break;
-            case 18:
-                disconnectReason = "WIFI_REASON_GROUP_CIPHER_INVALID";
-                break;
-            case 19:
-                disconnectReason = "WIFI_REASON_PAIRWISE_CIPHER_INVALID";
-                break;
-            case 20:
-                disconnectReason = "WIFI_REASON_AKMP_INVALID";
-                break;
-            case 21:
-                disconnectReason = "WIFI_REASON_UNSUPP_RSN_IE_VERSION";
-                break;
-            case 22:
-                disconnectReason = "WIFI_REASON_INVALID_RSN_IE_CAP";
-                break;
-            case 23:
-                disconnectReason = "WIFI_REASON_802_1X_AUTH_FAILED";
-                break;
-            case 24:
-                disconnectReason = "WIFI_REASON_CIPHER_SUITE_REJECTED";
-                break;
-            case 200:
-                disconnectReason = "WIFI_REASON_BEACON_TIMEOUT";
-                break;
-            case 201:
-                disconnectReason = "WIFI_REASON_NO_AP_FOUND";
-                break;
-            case 202:
-                disconnectReason = "WIFI_REASON_AUTH_FAIL";
-                break;
-            case 203:
-                disconnectReason = "WIFI_REASON_ASSOC_FAIL";
-                break;
-            case 204:
-                disconnectReason = "WIFI_REASON_HANDSHAKE_TIMEOUT";
-                break;
+        switch (info.disconnected.reason)
+        {
+        case 1:
+            disconnectReason = "WIFI_REASON_UNSPECIFIED";
+            break;
+        case 2:
+            disconnectReason = "WIFI_REASON_AUTH_EXPIRE";
+            break;
+        case 3:
+            disconnectReason = "WIFI_REASON_AUTH_LEAVE";
+            break;
+        case 4:
+            disconnectReason = "WIFI_REASON_ASSOC_EXPIRE";
+            break;
+        case 5:
+            disconnectReason = "WIFI_REASON_ASSOC_TOOMANY";
+            break;
+        case 6:
+            disconnectReason = "WIFI_REASON_NOT_AUTHED";
+            break;
+        case 7:
+            disconnectReason = "WIFI_REASON_NOT_ASSOCED";
+            break;
+        case 8:
+            disconnectReason = "WIFI_REASON_ASSOC_LEAVE";
+            break;
+        case 9:
+            disconnectReason = "WIFI_REASON_ASSOC_NOT_AUTHED";
+            break;
+        case 10:
+            disconnectReason = "WIFI_REASON_DISASSOC_PWRCAP_BAD";
+            break;
+        case 11:
+            disconnectReason = "WIFI_REASON_DISASSOC_SUPCHAN_BAD";
+            break;
+        case 13:
+            disconnectReason = "WIFI_REASON_IE_INVALID";
+            break;
+        case 14:
+            disconnectReason = "WIFI_REASON_MIC_FAILURE";
+            break;
+        case 15:
+            disconnectReason = "WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT";
+            break;
+        case 16:
+            disconnectReason = "WIFI_REASON_GROUP_KEY_UPDATE_TIMEOUT";
+            break;
+        case 17:
+            disconnectReason = "WIFI_REASON_IE_IN_4WAY_DIFFERS";
+            break;
+        case 18:
+            disconnectReason = "WIFI_REASON_GROUP_CIPHER_INVALID";
+            break;
+        case 19:
+            disconnectReason = "WIFI_REASON_PAIRWISE_CIPHER_INVALID";
+            break;
+        case 20:
+            disconnectReason = "WIFI_REASON_AKMP_INVALID";
+            break;
+        case 21:
+            disconnectReason = "WIFI_REASON_UNSUPP_RSN_IE_VERSION";
+            break;
+        case 22:
+            disconnectReason = "WIFI_REASON_INVALID_RSN_IE_CAP";
+            break;
+        case 23:
+            disconnectReason = "WIFI_REASON_802_1X_AUTH_FAILED";
+            break;
+        case 24:
+            disconnectReason = "WIFI_REASON_CIPHER_SUITE_REJECTED";
+            break;
+        case 200:
+            disconnectReason = "WIFI_REASON_BEACON_TIMEOUT";
+            break;
+        case 201:
+            disconnectReason = "WIFI_REASON_NO_AP_FOUND";
+            break;
+        case 202:
+            disconnectReason = "WIFI_REASON_AUTH_FAIL";
+            break;
+        case 203:
+            disconnectReason = "WIFI_REASON_ASSOC_FAIL";
+            break;
+        case 204:
+            disconnectReason = "WIFI_REASON_HANDSHAKE_TIMEOUT";
+            break;
         }
         Serial.println(disconnectReason);
         break;
