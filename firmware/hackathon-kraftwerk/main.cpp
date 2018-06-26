@@ -16,6 +16,7 @@ Task t2(100, TASK_ONCE, &t2Callback, &runner, true);
 // TODO: Should work iof they are in their own file as it works in the simple example...
 Task tInitialize(200, TASK_ONCE, &initBadge, &runnerPriority);
 Task tQRView(100, TASK_ONCE, &handleQRView, &runner);
+Task tNameView(100, TASK_ONCE, &handleNameView, &runner);
 Task tUpdateDisplay(&handleUpdateDisplay, &runner);
 
 void setup () {

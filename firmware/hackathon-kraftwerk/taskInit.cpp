@@ -19,30 +19,39 @@ void getEfuseMac();
 // Tasks
 //Task tInitialize(200, TASK_ONCE, &initBadge, &runnerPriority, true);
 
+#define DUMMY
 void initBadge() {
     PrepareUpdateDisplayStatus();
     Serial.println("Initialize badge");
     // Get the chip id, this is used all over the place
     getEfuseMac();
-
-    // Get the name if already registered or display the QR code otherwise
-    preferences.begin(PREF_TAG, true); // Read only
-    // Check if name is already set, we only check if first name has a value here
-    if(preferences.getString(PREF_FIRSTNAME, "") == "") {
-        // Name is not yet set, enable the display of the QR init screen until this has been set
-        tQRView.enable();
-        Serial.println("Badge not yet registered");
-    } else {
-        // Name is set, get it and display the Name Tag screen accordingly
-        firstName = preferences.getString(PREF_FIRSTNAME, "");
-        lastName = preferences.getString(PREF_LASTNAME, "");
-        // TODO: Signal the name view to be shown
-        Serial.print("Name set is: ");
-        Serial.print(firstName);
-        Serial.print("");
-        Serial.println(lastName);
-    }
-    preferences.end();
+    
+    #ifdef DUMMY
+        firstName = "Ding";
+        lastName = "Dong";
+        tNameView.enable();
+        Serial.println("Dummy name is set");
+    #else
+        // Get the name if already registered or display the QR code otherwise
+        preferences.begin(PREF_TAG, true); // Read only
+        // Check if name is already set, we only check if first name has a value here
+        if(preferences.getString(PREF_FIRSTNAME, "") == "") {
+            // Name is not yet set, enable the display of the QR init screen until this has been set
+            tQRView.enable();
+            Serial.println("Badge not yet registered");
+        } else {
+            // Name is set, get it and display the Name Tag screen accordingly
+            firstName = preferences.getString(PREF_FIRSTNAME, "");
+            lastName = preferences.getString(PREF_LASTNAME, "");
+            // Signal the name view to be shown
+            tNameView.enable();
+            Serial.print("Name set is: ");
+            Serial.print(firstName);
+            Serial.print("");
+            Serial.println(lastName);
+        }
+        preferences.end();
+    #endif
 }
 
 /**

@@ -24,6 +24,7 @@ extern StatusRequest updateDisplay;
 extern Task tInitialize;
 extern Task tUpdateDisplay;
 extern Task tQRView;
+extern Task tNameView;
 extern void initBadge();
 
 // Show view tasks
@@ -35,6 +36,7 @@ extern Task tQRView;
 extern void PrepareUpdateDisplayStatus();
 extern void handleUpdateDisplay();
 extern void handleQRView();
+extern void handleNameView();
 
 // Global variables
 //// taskInit.cpp
