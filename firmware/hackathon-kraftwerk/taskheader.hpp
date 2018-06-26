@@ -19,25 +19,26 @@ extern GxEPD_Class display;
 // Status request objects
 extern StatusRequest updateDisplay;
 
-// Tasks for enable / disable
-//// taskInit.cpp
+// Tasks for enable / disable created in main.cpp
 extern Task tInitialize;
 extern Task tUpdateDisplay;
+
+// Show view tasks created in main.cpp
 extern Task tQRView;
 extern Task tNameView;
 extern Task tSplashView;
-extern void initBadge();
 
-// Show view tasks
-//// taskQRInit.cpp
-extern Task tQRView;
-
-// Methods that can be globally called, mainly init Methods
+// Methods that can be globally called
 //// taskDisplay.cpp
 extern void PrepareUpdateDisplayStatus();
 extern void handleUpdateDisplay();
+//// taskInit.cpp
+extern void initBadge();
+//// taskQRInit.cpp
 extern void handleQRView();
+//// taskNameView.cpp
 extern void handleNameView();
+//// taskSplash.cpp
 extern void handleSplashView();
 
 // Global variables

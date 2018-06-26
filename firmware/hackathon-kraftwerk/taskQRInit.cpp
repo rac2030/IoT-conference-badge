@@ -13,9 +13,6 @@ void handleQRView();
 // Helper prototypes
 void writeQRInitScreen();
 
-// Task objects
-//Task tQRView(100, TASK_ONCE, &handleQRView, &runner);
-
 // Handlers
 void handleQRView() {
     // Generate the QR Code given the chipID

@@ -7,7 +7,7 @@
 Scheduler runner, runnerPriority; 
 
 // Tasks
-// TODO: Should work iof they are in their own file as it works in the simple example...
+// TODO: Should work if they are in their own file as it works in the simple example... for now they stay here as this works
 Task tInitialize(200, TASK_ONCE, &initBadge, &runnerPriority);
 Task tQRView(100, TASK_ONCE, &handleQRView, &runner);
 Task tNameView(100, TASK_ONCE, &handleNameView, &runner);
@@ -25,8 +25,6 @@ void setup () {
   
     Serial.println("MakeZurich Badge Firmware v0.0.2");
 
-    delay(1000);
-    
     runner.setHighPriorityScheduler(&runnerPriority);
     
     tInitialize.enable();

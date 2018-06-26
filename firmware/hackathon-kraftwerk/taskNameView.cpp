@@ -8,8 +8,6 @@
 // Helper prototypes
 void showName(String firstname, String lastname);
 
-// Task objects
-
 // Handlers
 void handleNameView() {
     showName(firstName, lastName);

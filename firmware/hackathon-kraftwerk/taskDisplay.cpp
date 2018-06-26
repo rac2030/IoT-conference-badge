@@ -34,9 +34,6 @@ StatusRequest updateDisplay;
 // Callback method prototypes
 void handleUpdateDisplay();
 
-// Task objects
-//Task tUpdateDisplay(&handleUpdateDisplay, &runner);
-
 // Handlers
 void handleUpdateDisplay() {
   Serial.println("handleUpdateDisplay() called");

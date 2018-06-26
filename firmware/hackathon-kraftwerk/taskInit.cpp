@@ -16,9 +16,6 @@ void initBadge();
 // helper prototypes
 void getEfuseMac();
 
-// Tasks
-//Task tInitialize(200, TASK_ONCE, &initBadge, &runnerPriority, true);
-
 #define DUMMY
 void initBadge() {
     PrepareUpdateDisplayStatus();
