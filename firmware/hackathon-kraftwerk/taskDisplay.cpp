@@ -44,8 +44,4 @@ void handleUpdateDisplay() {
   delay(3000); // Delay the return so the message stays a bit, only for this demo purpose
   PrepareUpdateDisplayStatus();
 }
-void PrepareUpdateDisplayStatus() {
-    Serial.println("Set display to wait for update signal");
-  updateDisplay.setWaiting();         // set the status request object for waiting 
-  tUpdateDisplay.waitFor(&updateDisplay); //request tasks tUpdateDisplay to wait on the object updateDisplay signal
-}
+

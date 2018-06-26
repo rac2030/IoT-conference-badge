@@ -20,6 +20,9 @@ Task tUpdateDisplay(&handleUpdateDisplay, &runner);
 
 void setup () {
     Serial.begin(115200);
+    // Initiate the display object
+    display.init(115200); // enable diagnostic output on Serial
+  
     Serial.println("MakeZurich Badge Firmware v0.0.1");
 
     delay(1000);
@@ -35,4 +38,10 @@ void setup () {
 
 void loop () {
   runner.execute();
+}
+
+void PrepareUpdateDisplayStatus() {
+    Serial.println("Set display to wait for update signal");
+  updateDisplay.setWaiting();         // set the status request object for waiting 
+  tUpdateDisplay.waitFor(&updateDisplay); //request tasks tUpdateDisplay to wait on the object updateDisplay signal
 }
