@@ -6,7 +6,7 @@
 
 //We are going to use the TaskScheduler, but only the declarations part.
 //Remember to put customization macros before the #include:
-//#define _TASK_SLEEP_ON_IDLE_RUN
+#define _TASK_SLEEP_ON_IDLE_RUN
 #define _TASK_STATUS_REQUEST
 #define _TASK_PRIORITY
 #include <TaskSchedulerDeclarations.h>

@@ -8,7 +8,7 @@
 //Really. This file needs to be short. All stuff is in TaskScheduler.h.
 
 //  #define _TASK_TIMECRITICAL      // Enable monitoring scheduling overruns
-//#define _TASK_SLEEP_ON_IDLE_RUN // Enable 1 ms SLEEP_IDLE powerdowns between tasks if no callback methods were invoked during the pass 
+#define _TASK_SLEEP_ON_IDLE_RUN // Enable 1 ms SLEEP_IDLE powerdowns between tasks if no callback methods were invoked during the pass 
 #define _TASK_STATUS_REQUEST    // Compile with support for StatusRequest functionality - triggering tasks on status change events in addition to time only
 //  #define _TASK_WDT_IDS           // Compile with support for wdt control points and task ids
 //  #define _TASK_LTS_POINTER       // Compile with support for local task storage pointer
