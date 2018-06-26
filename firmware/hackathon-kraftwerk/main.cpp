@@ -29,8 +29,6 @@ void setup () {
     
     runner.setHighPriorityScheduler(&runnerPriority);
     
-    // Enable the display signal
-    //PrepareUpdateDisplayStatus();
     tInitialize.enable();
     runner.startNow();  // set point-in-time for scheduling start
 }
