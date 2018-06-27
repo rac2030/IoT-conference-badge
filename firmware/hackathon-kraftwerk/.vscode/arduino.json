@@ -3,5 +3,5 @@
     "configuration": "UploadSpeed=921600",
     "port": "/dev/ttyUSB0",
     "output": "build",
-    "sketch": "main.ino"
+    "sketch": "hackathon-kraftwerk.ino"
 }
