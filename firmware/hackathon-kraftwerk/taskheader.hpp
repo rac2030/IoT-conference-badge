@@ -30,6 +30,7 @@ extern StatusRequest btn3Pressed;
 extern StatusRequest btn4Pressed;
 extern StatusRequest displaySplash;
 extern StatusRequest displayNameView;
+extern StatusRequest displaySensorView;
 
 // Tasks for enable / disable created in main.cpp
 extern Task tInitialize;
@@ -40,6 +41,7 @@ extern Task tFetchRegistration;
 extern Task tQRView;
 extern Task tNameView;
 extern Task tSplashView;
+extern Task tSensorView;
 
 // Button tasks
 extern Task tBTN1;
@@ -57,6 +59,8 @@ extern void initBadge();
 extern void handleQRView();
 //// taskNameView.cpp
 extern void handleNameView();
+//// taskSensorView.cpp
+extern void handleSensorView();
 //// taskSplash.cpp
 extern void handleSplashView();
 //// taskFetchRegistration.cpp

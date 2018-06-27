@@ -11,6 +11,7 @@ Scheduler runner, runnerPriority;
 Task tInitialize(&initBadge, &runnerPriority);
 Task tQRView(&handleQRView, &runner);
 Task tNameView(&handleNameView, &runner);
+Task tSensorView(&handleSensorView, &runner);
 Task tUpdateDisplay(&handleUpdateDisplay, &runner);
 Task tSplashView(&handleSplashView, &runnerPriority);
 Task tFetchRegistration(&handleFetchRegistration, &runner);
@@ -60,6 +61,8 @@ void setup()
     tSplashView.waitFor(&displaySplash);
     displayNameView.setWaiting();
     tNameView.waitFor(&displayNameView);
+    displaySensorView.setWaiting();
+    tSensorView.waitFor(&displaySensorView);
 
     tInitialize.enable();
     runner.startNow(); // set point-in-time for scheduling start

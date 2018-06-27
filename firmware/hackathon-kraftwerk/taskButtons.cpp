@@ -38,9 +38,9 @@ void handleBTN3()
 
 void handleBTN4()
 {
-    Serial.println("BTN4: Undefined");
-    //TODO: handle
-
+    Serial.println("BTN4: Show sensor data");
+    displaySensorView.signal();
+    
     btn4Pressed.setWaiting();
     tBTN4.waitFor(&btn4Pressed);
 }
