@@ -3,6 +3,8 @@
 
 // FreeFonts from Adafruit_GFX
 #include <Fonts/FreeSansBold24pt7b.h>
+#include <Fonts/FreeSansBold18pt7b.h>
+#include <Fonts/FreeSansBold12pt7b.h>
 #include <Fonts/FreeSans9pt7b.h>
 #include "GxFont_GFX.h"
 
@@ -36,13 +38,32 @@ void showName(String firstname, String lastname)
   int16_t x1, y1;
   uint16_t w, h;
   display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
+  Serial.println(w);
+  if((display.width() - 10 - w) <= 0) {
+    // Text is too big, choose a smaller font and recalculate centering text again
+    display.setFont(&FreeSansBold18pt7b);
+    display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
+  }
+  if((display.width() - 10 - w) <= 0) {
+    // Text is still too big, choose a smaller font and recalculate centering text again
+    display.setFont(&FreeSansBold12pt7b);
+    display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
+  }
+  if((display.width() - 10 - w) <= 0) {
+    // Text is still too big, choose a smaller font and recalculate centering text again
+    // last try, we just choose the one we use for last name
+    display.setFont(&FreeSans9pt7b);
+    display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
+  }
   int firstnamex = ( display.width() - w ) / 2; // Center the text
   display.setCursor(firstnamex /** X **/, 50 /** Y **/);
   display.print(firstname);
 
+  display.setTextColor(GxEPD_BLACK);
+  //TODO: display rigth aligned
   display.setCursor(100 /** X **/, 80 /** Y **/);
   display.setFont(&FreeSans9pt7b);
-  display.setTextColor(GxEPD_BLACK);
+  
   display.print(lastname);
 }
 
