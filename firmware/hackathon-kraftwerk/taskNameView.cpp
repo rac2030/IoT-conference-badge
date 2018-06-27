@@ -38,7 +38,6 @@ void showName(String firstname, String lastname)
   int16_t x1, y1;
   uint16_t w, h;
   display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
-  Serial.println(w);
   if((display.width() - 10 - w) <= 0) {
     // Text is too big, choose a smaller font and recalculate centering text again
     display.setFont(&FreeSansBold18pt7b);
@@ -60,10 +59,10 @@ void showName(String firstname, String lastname)
   display.print(firstname);
 
   display.setTextColor(GxEPD_BLACK);
-  //TODO: display rigth aligned
-  display.setCursor(100 /** X **/, 80 /** Y **/);
   display.setFont(&FreeSans9pt7b);
-  
+  display.getTextBounds( string2char(lastName), 0, 0, &x1, &y1, &w, &h );
+  int lastnamex = ( display.width() - w - 10); // Right align the text
+  display.setCursor(lastnamex /** X **/, 80 /** Y **/);
   display.print(lastname);
 }
 
