@@ -63,6 +63,8 @@ void setup()
     tNameView.waitFor(&displayNameView);
     displaySensorView.setWaiting();
     tSensorView.waitFor(&displaySensorView);
+    displayQRView.setWaiting();
+    tQRView.waitFor(&displayQRView);
 
     tInitialize.enable();
     runner.startNow(); // set point-in-time for scheduling start

@@ -33,8 +33,8 @@ void initBadge()
         // Name is not yet set, enable the display of the QR init screen until this has been set
         // Display MZ Logo as splash screen
         displaySplash.signal();
-        delay(5000); // Wait for 5 seconds before continuing writing next display
-        tQRView.enable();
+        delay(3000); // Wait for 3 seconds before continuing writing next display
+        displayQRView.signal();
         Serial.println("Badge not yet registered, try to fetch registration");
         tFetchRegistration.enable();
     }

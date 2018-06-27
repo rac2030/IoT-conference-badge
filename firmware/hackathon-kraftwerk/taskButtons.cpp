@@ -10,8 +10,8 @@ StatusRequest btn4Pressed;
 // Handlers
 void handleBTN1()
 {
-    Serial.println("BTN1: Undefined");
-    //TODO: handle
+    Serial.println("BTN1: Show QR for registration");
+    displayQRView.signal();
     btn1Pressed.setWaiting();
     tBTN1.waitFor(&btn1Pressed);
 }
