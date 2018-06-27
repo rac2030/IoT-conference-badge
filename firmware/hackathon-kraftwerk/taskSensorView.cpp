@@ -11,75 +11,21 @@
 #include <sensirion_mzbadge.h>
 
 StatusRequest displaySensorView;
-bool initialized = false;
 
-//  Create an instance of SensirionMZBADGE
-SensirionMZBADGE sendorModule;
-
-// Helper prototypes
-void showSensorData(float temp, float rh, float tvoc);
+void showSensorData();
 
 // Handlers
 void handleSensorView()
 {
-  // Check if already initialized, do so if not
-  if (!initialized)
-  {
-    if (sendorModule.initSensors() != 0)
-    {
-      Serial.print("Error while initializing sensors: ");
-      Serial.print(sendorModule.getError());
-      Serial.print("\n");
-      //TODO: Display error on EPD
-      return; //we exit this method as we can't do anything
-    }
-  }
-
-  float temp, rh, tvoc;
-  // we'll start by triggering a measurement of the VOC/CO2 sensor;
-  // it's important to do this first to make sure sleep timing is
-  // correct. If the command succeeds, the local variables will
-  // be set to the values we just read; if it fails, they'll be -1
-  if (sendorModule.measureIAQ() != 0)
-  {
-    Serial.print("Error while measuring IAQ: ");
-    Serial.print(sendorModule.getError());
-    Serial.print("\n");
-  }
-  else
-  {
-    tvoc = sendorModule.getTVOC();
-  }
-
-  // next, we'll trigger the humidity and temperature measurement
-  if (sendorModule.measureRHT() != 0)
-  {
-    Serial.print("Error while measuring RHT: ");
-    Serial.print(sendorModule.getError());
-    Serial.print("\n");
-  }
-  else
-  {
-    temp = sendorModule.getTemperature();
-    rh = sendorModule.getHumidity();
-  }
-
-  // finally, let's print those to the serial console
-  Serial.printf("%f°C with %f RH and a TVOC of %f\n", temp, rh, tvoc);
-
-  showSensorData(temp, rh, tvoc);
+  showSensorData();
   // Signal display to show the buffer
   updateDisplay.signalComplete();
-
-  // and then, we'll use remainingWaitTimeMS() to ensure the correct
-  // Measurement rate
-  delay(sendorModule.remainingWaitTimeMS());
 
   displaySensorView.setWaiting();
   tSensorView.waitFor(&displaySensorView);
 }
 
-void showSensorData(float temp, float rh, float tvoc)
+void showSensorData()
 {
   display.fillScreen(GxEPD_WHITE);
   //display.eraseDisplay(true);

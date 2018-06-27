@@ -8,6 +8,9 @@
 
 #include <Preferences.h>
 
+#include <WiFiType.h>
+#include <WiFi.h>
+
 //We are going to use the TaskScheduler, but only the declarations part.
 //Remember to put customization macros before the #include:
 #define _TASK_SLEEP_ON_IDLE_RUN
@@ -44,6 +47,8 @@ extern Task tQRView;
 extern Task tNameView;
 extern Task tSplashView;
 extern Task tSensorView;
+extern Task tAquireSensorData;
+extern Task tPushSensorData;
 
 // Button tasks
 extern Task tBTN1;
@@ -68,6 +73,7 @@ extern void handleSensorView();
 extern void handleSplashView();
 //// taskFetchRegistration.cpp
 extern void handleFetchRegistration();
+extern void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info);
 //// taskButtons.cpp
 extern void handleBTN1();
 extern void handleBTN2();
@@ -75,12 +81,20 @@ extern void handleBTN3();
 extern void handleBTN4();
 //// taskFetchRegistration.cpp
 extern void handleFetchRegistration();
+//// taskAquireSensorData.cpp
+extern void handleAquireSensorData();
+//// taskPushSensorData.cpp
+extern void handlePushSensorData();
 
 // Global variables
 //// taskInit.cpp
 extern String firstName;
 extern String lastName;
 extern String efuseMac;
+// taskAquireSensorData.cpp
+extern float temp;
+extern float rh;
+extern float tvoc;
 
 // Namespace of preferences
 #define PREF_TAG "mz18badge" 

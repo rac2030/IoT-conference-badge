@@ -16,6 +16,11 @@ Task tUpdateDisplay(&handleUpdateDisplay, &runner);
 Task tSplashView(&handleSplashView, &runnerPriority);
 Task tFetchRegistration(&handleFetchRegistration, &runner);
 
+// Run every minute once
+Task tAquireSensorData(60000L, TASK_FOREVER, &handleAquireSensorData, &runner, true);
+// Run every 15 minutes
+Task tPushSensorData(900000L, TASK_FOREVER, &handlePushSensorData, &runner, true);
+
 // Button tasks
 Task tBTN1(&handleBTN1, &runnerPriority);
 Task tBTN2(&handleBTN2, &runnerPriority);
@@ -51,7 +56,7 @@ void setup()
     // Initiate the display object
     display.init(115200); // enable diagnostic output on Serial
 
-    Serial.println("MakeZurich Badge Firmware v0.0.2");
+    Serial.println("MakeZurich Badge Firmware v0.0.3");
 
     runner.setHighPriorityScheduler(&runnerPriority);
 
