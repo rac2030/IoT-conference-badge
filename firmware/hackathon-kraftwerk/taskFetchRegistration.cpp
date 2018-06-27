@@ -1,10 +1,15 @@
 #include <Arduino.h>
 #include "taskheader.hpp"
 #include <WiFi.h>
+#include <WiFiType.h>
+#include <esp_wifi.h>
+#include <Preferences.h>
 
 // Wifi settings at Kraftwerk
 const char *ssid = "impacthub";
 const char *password = "coworking@ImpactHub";
+
+void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info);
 
 // Handlers
 void handleFetchRegistration()
@@ -14,7 +19,7 @@ void handleFetchRegistration()
     esp_wifi_start();
     Serial.println("Connecting to WiFi network: " + String(ssid));
     WiFi.onEvent(WiFiEvent);
-    WiFi.begin(ssid, pwd);
+    WiFi.begin(ssid, password);
 
     unsigned long timeout = millis();
     while (WiFi.status() != WL_CONNECTED && millis() - timeout < 5000UL)

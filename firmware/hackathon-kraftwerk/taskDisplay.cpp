@@ -39,6 +39,6 @@ void handleUpdateDisplay() {
   Serial.println("handleUpdateDisplay() called");
   display.update(); // Update the display to show the current buffer
   delay(3000); // Delay the return so the message stays a bit, only for this demo purpose
-  PrepareUpdateDisplayStatus();
+  prepareUpdateDisplayStatus();
 }
 

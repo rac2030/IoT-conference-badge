@@ -18,11 +18,7 @@ void getEfuseMac();
 
 void initBadge()
 {
-    PrepareUpdateDisplayStatus();
-    Serial.println("Initialize badge");
-    // Display MZ Logo as splash screen
-    tSplashView.enable();
-    delay(5000); // Wait for 5 seconds before continuing writing next display
+    Serial.println("Initialize badge - Home");
 
     // Get the chip id, this is used all over the place
     getEfuseMac();
@@ -33,6 +29,9 @@ void initBadge()
     if (preferences.getString(PREF_FIRSTNAME, "") == "")
     {
         // Name is not yet set, enable the display of the QR init screen until this has been set
+        // Display MZ Logo as splash screen
+        tSplashView.enable();
+        delay(5000); // Wait for 5 seconds before continuing writing next display
         tQRView.enable();
         Serial.println("Badge not yet registered, try to fetch registration");
         tFetchRegistration.enable();
