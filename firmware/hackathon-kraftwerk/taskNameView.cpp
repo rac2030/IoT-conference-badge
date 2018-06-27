@@ -4,11 +4,14 @@
 // FreeFonts from Adafruit_GFX
 #include <Fonts/FreeSansBold24pt7b.h>
 #include <Fonts/FreeSans9pt7b.h>
+#include "GxFont_GFX.h"
+
 
 StatusRequest displayNameView;
 
 // Helper prototypes
 void showName(String firstname, String lastname);
+char* string2char(String command);
 
 // Handlers
 void handleNameView()
@@ -27,14 +30,25 @@ void showName(String firstname, String lastname)
   //display.eraseDisplay(true);
   display.setRotation(3);
 
-  int firstnamex = ((sizeof(firstname) / sizeof(char *)) * 30) / 2; // Center the text
-  display.setCursor(firstnamex /** X **/, 50 /** Y **/);
   display.setFont(&FreeSansBold24pt7b);
   display.setTextColor(GxEPD_RED);
+  // Get size of rendered text
+  int16_t x1, y1;
+  uint16_t w, h;
+  display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
+  int firstnamex = ( display.width() - w ) / 2; // Center the text
+  display.setCursor(firstnamex /** X **/, 50 /** Y **/);
   display.print(firstname);
 
   display.setCursor(100 /** X **/, 80 /** Y **/);
   display.setFont(&FreeSans9pt7b);
   display.setTextColor(GxEPD_BLACK);
   display.print(lastname);
+}
+
+char* string2char(String command){
+    if(command.length()!=0){
+        char *p = const_cast<char*>(command.c_str());
+        return p;
+    }
 }
