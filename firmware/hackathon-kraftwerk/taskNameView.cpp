@@ -13,7 +13,6 @@ StatusRequest displayNameView;
 
 // Helper prototypes
 void showName(String firstname, String lastname);
-char* string2char(String command);
 
 // Handlers
 void handleNameView()

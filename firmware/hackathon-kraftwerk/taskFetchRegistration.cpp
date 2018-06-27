@@ -4,10 +4,15 @@
 #include <WiFiType.h>
 #include <esp_wifi.h>
 #include <Preferences.h>
+#include <HTTPClient.h>
+#include <ArduinoJson.h>
 
 // Wifi settings at Kraftwerk
 const char *ssid = "impacthub";
 const char *password = "coworking@ImpactHub";
+
+HTTPClient http;
+#define GETNAME_ENDPOINT "https://golgafrincham-mekeyasfsg.now.sh/?type=get-badge-name&id="
 
 void WiFiEvent(WiFiEvent_t event, WiFiEventInfo_t info);
 
@@ -38,16 +43,55 @@ void handleFetchRegistration()
         Serial.println(F("Could not connect!"));
     }
 
-    //TODO: Fetch details from server, parse them and update properties if name is returned
-    // Maybe look at https://learn.sparkfun.com/tutorials/esp32-thing-hookup-guide/arduino-example-wifi
+    String firstName = "";
+    String lastName = "";
+
+    // Fetch details from server, parse them and update properties if name is returned
+    http.begin(String(GETNAME_ENDPOINT) + efuseMac); //Specify the URL
+    int httpCode = http.GET();                       //Make the request
+
+    if (httpCode > 0)
+    { //Check for the returning code
+        String payload = http.getString();
+        Serial.print("HTTP response code: ");
+        Serial.println(httpCode);
+        Serial.println(payload);
+        
+        // Parse the response
+        const size_t bufferSize = 2*JSON_OBJECT_SIZE(2) + 140;
+        StaticJsonDocument<bufferSize> doc;
+
+        // Deserialize the JSON document
+  DeserializationError error = deserializeJson(doc, string2char(payload));
+
+  // Test if parsing succeeds.
+  if (error) {
+    Serial.print(F("deserializeJson() failed: "));
+    Serial.println(error.c_str());
+  }
+
+  // Get the root object in the document
+  JsonObject& root = doc.as<JsonObject>();
+
+        const char* newfirstName = root["payload"]["first"];
+        firstName = String(newfirstName);
+        const char* newlastName = root["payload"]["second"];
+        lastName = String(newlastName);
+
+    }
+
+    else
+    {
+        Serial.println("Error on HTTP request");
+    }
+
+    http.end(); //Free the resources
 
     // Properly disconnect before we disable wifi
     WiFi.disconnect(true);
     // Stop wifi again before we finish this task
     esp_wifi_stop();
-    //TODO: If successful, save in preferences and run initialize again
-    String firstName = ""; //TODO replace with response
-    String lastName = "";
+    // If successful, save in preferences and run initialize again
     if (firstName != "")
     {
         preferences.begin(PREF_TAG, false); // Read/write

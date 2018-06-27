@@ -60,6 +60,7 @@ extern void initBadge();
 extern void handleQRView();
 //// taskNameView.cpp
 extern void handleNameView();
+extern char* string2char(String command);
 //// taskSensorView.cpp
 extern void handleSensorView();
 //// taskSplash.cpp
