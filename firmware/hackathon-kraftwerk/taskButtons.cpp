@@ -20,9 +20,8 @@ void handleBTN2()
 {
     // Should always go to home screen
     // As a quick hack implementation, just redo the init
-    Serial.println("BTN2: Go to home screen");
-    tInitialize.enable(); //TODO: seems not to start it in the scheduler
-
+    Serial.println("BTN2: Go to home screen, display name view");
+    displayNameView.signal();
     btn2Pressed.setWaiting();
     tBTN2.waitFor(&btn2Pressed);
 }
@@ -31,8 +30,8 @@ void handleBTN3()
 {
     Serial.println("BTN3: Show MakeZurich Logo");
     // Display MZ Logo as splash screen
-    tSplashView.enable(); //TODO: seems not to start it in the scheduler
-
+    displaySplash.signal();
+    
     btn3Pressed.setWaiting();
     tBTN3.waitFor(&btn3Pressed);
 }

@@ -32,6 +32,14 @@ const uint64_t BTN3_mask = 1ULL << BTN3;
 const byte BTN4 = D20;
 const uint64_t BTN4_mask = 1ULL << BTN4;
 
+portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;
+void prepareButtonStatus();
+void IRAM_ATTR handleInterruptBTN1();
+void IRAM_ATTR handleInterruptBTN2();
+void IRAM_ATTR handleInterruptBTN3();
+void IRAM_ATTR handleInterruptBTN4();
+void handleInterruptButtonDebounce(byte buttonPin, String text, StatusRequest* btn);
+
 void setup()
 {
     // Disable networking parts to save energy until we really need it
@@ -48,6 +56,10 @@ void setup()
 
     prepareUpdateDisplayStatus();
     prepareButtonStatus();
+    displaySplash.setWaiting();
+    tSplashView.waitFor(&displaySplash);
+    displayNameView.setWaiting();
+    tNameView.waitFor(&displayNameView);
 
     tInitialize.enable();
     runner.startNow(); // set point-in-time for scheduling start
@@ -64,24 +76,6 @@ void prepareUpdateDisplayStatus()
     Serial.println("Set display to wait for update signal");
     updateDisplay.setWaiting();             // set the status request object for waiting
     tUpdateDisplay.waitFor(&updateDisplay); //request tasks tUpdateDisplay to wait on the object updateDisplay signal
-}
-
-// interrupts
-portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;
-
-void IRAM_ATTR handleInterruptBTN1() { 
-  handleInterruptButtonDebounce(BTN1, "Button 1", &btn1Pressed);
-}
-
-void IRAM_ATTR handleInterruptBTN2() {
-  handleInterruptButtonDebounce(BTN2, "Button 2", &btn2Pressed);
-}
-void IRAM_ATTR handleInterruptBTN3() {
-  handleInterruptButtonDebounce(BTN3, "Button 3", &btn3Pressed);
-}
-
-void IRAM_ATTR handleInterruptBTN4() {
-  handleInterruptButtonDebounce(BTN4, "Button 4", &btn4Pressed);
 }
 
 /**
@@ -126,4 +120,20 @@ void prepareButtonStatus()
     attachInterrupt(digitalPinToInterrupt(BTN3), handleInterruptBTN3, FALLING);
     pinMode(BTN4, INPUT_PULLUP);
     attachInterrupt(digitalPinToInterrupt(BTN4), handleInterruptBTN4, FALLING);
+}
+
+// interrupts
+void IRAM_ATTR handleInterruptBTN1() { 
+  handleInterruptButtonDebounce(BTN1, "Button 1", &btn1Pressed);
+}
+
+void IRAM_ATTR handleInterruptBTN2() {
+  handleInterruptButtonDebounce(BTN2, "Button 2", &btn2Pressed);
+}
+void IRAM_ATTR handleInterruptBTN3() {
+  handleInterruptButtonDebounce(BTN3, "Button 3", &btn3Pressed);
+}
+
+void IRAM_ATTR handleInterruptBTN4() {
+  handleInterruptButtonDebounce(BTN4, "Button 4", &btn4Pressed);
 }

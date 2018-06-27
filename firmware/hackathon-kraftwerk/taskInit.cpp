@@ -26,11 +26,13 @@ void initBadge()
     // Get the name if already registered or display the QR code otherwise
     preferences.begin(PREF_TAG, true); // Read only
     // Check if name is already set, we only check if first name has a value here
-    if (preferences.getString(PREF_FIRSTNAME, "") == "")
+    firstName = preferences.getString(PREF_FIRSTNAME, "Unknown");
+    lastName = preferences.getString(PREF_LASTNAME, "Hacker");
+    if (firstName == "Unknown")
     {
         // Name is not yet set, enable the display of the QR init screen until this has been set
         // Display MZ Logo as splash screen
-        tSplashView.enable();
+        displaySplash.signal();
         delay(5000); // Wait for 5 seconds before continuing writing next display
         tQRView.enable();
         Serial.println("Badge not yet registered, try to fetch registration");
@@ -38,11 +40,9 @@ void initBadge()
     }
     else
     {
-        // Name is set, get it and display the Name Tag screen accordingly
-        firstName = preferences.getString(PREF_FIRSTNAME, "");
-        lastName = preferences.getString(PREF_LASTNAME, "");
+        // Name is set, display the Name Tag screen accordingly
         // Signal the name view to be shown
-        tNameView.enable();
+        displayNameView.signal();
         Serial.print("Name set is: ");
         Serial.print(firstName);
         Serial.print("");

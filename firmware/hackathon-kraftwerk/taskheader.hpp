@@ -28,6 +28,8 @@ extern StatusRequest btn1Pressed;
 extern StatusRequest btn2Pressed;
 extern StatusRequest btn3Pressed;
 extern StatusRequest btn4Pressed;
+extern StatusRequest displaySplash;
+extern StatusRequest displayNameView;
 
 // Tasks for enable / disable created in main.cpp
 extern Task tInitialize;
