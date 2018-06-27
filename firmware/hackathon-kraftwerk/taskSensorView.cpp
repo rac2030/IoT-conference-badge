@@ -91,7 +91,7 @@ void showSensorData(float temp, float rh, float tvoc)
   display.println("");
   display.print("Temperature: ");
   display.print(String(temp, 1));
-  display.println("°C");
+  display.println(" °C");
   display.print("Relative Humidity: ");
   display.print(String(rh, 1));
   display.println("%");
