@@ -34,9 +34,8 @@ void initBadge()
         // Display MZ Logo as splash screen
         displaySplash.signal();
         delay(3000); // Wait for 3 seconds before continuing writing next display
-        displayQRView.signal();
         Serial.println("Badge not yet registered, try to fetch registration");
-        tFetchRegistration.enable();
+        displayQRView.signal();
     }
     else
     {
@@ -45,7 +44,7 @@ void initBadge()
         displayNameView.signal();
         Serial.print("Name set is: ");
         Serial.print(firstName);
-        Serial.print("");
+        Serial.print(" ");
         Serial.println(lastName);
     }
     preferences.end();

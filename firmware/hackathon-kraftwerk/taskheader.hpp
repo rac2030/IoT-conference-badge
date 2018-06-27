@@ -32,6 +32,7 @@ extern StatusRequest displaySplash;
 extern StatusRequest displayNameView;
 extern StatusRequest displaySensorView;
 extern StatusRequest displayQRView;
+extern StatusRequest fetchRegistration;
 
 // Tasks for enable / disable created in main.cpp
 extern Task tInitialize;
@@ -72,6 +73,8 @@ extern void handleBTN1();
 extern void handleBTN2();
 extern void handleBTN3();
 extern void handleBTN4();
+//// taskFetchRegistration.cpp
+extern void handleFetchRegistration();
 
 // Global variables
 //// taskInit.cpp

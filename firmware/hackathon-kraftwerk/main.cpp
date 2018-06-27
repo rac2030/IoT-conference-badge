@@ -65,6 +65,8 @@ void setup()
     tSensorView.waitFor(&displaySensorView);
     displayQRView.setWaiting();
     tQRView.waitFor(&displayQRView);
+    fetchRegistration.setWaiting();
+    tFetchRegistration.waitFor(&fetchRegistration);
 
     tInitialize.enable();
     runner.startNow(); // set point-in-time for scheduling start

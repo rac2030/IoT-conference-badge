@@ -27,6 +27,9 @@ void handleQRView()
 
     displayQRView.setWaiting();
     tQRView.waitFor(&displayQRView);
+
+    // As user did go to QR display, lets call the server and see if his name is available
+    fetchRegistration.signal();
 }
 
 /**
