@@ -4,6 +4,7 @@
 #include <esp_wifi.h>
 #include <esp_bt.h>
 #include "version.h"
+#include "networkSettings.h"
 
 Scheduler runner, runnerPriority;
 
@@ -51,13 +52,103 @@ void IRAM_ATTR handleInterruptBTN3();
 void IRAM_ATTR handleInterruptBTN4();
 void handleInterruptButtonDebounce(byte buttonPin, String text, StatusRequest *btn);
 
+/*
+Arduino serial-remote control.
+
+commands
+=========
+separator ;
+
+AT
+
+*/
+String inputString = "";         // a string to hold incoming data
+boolean stringComplete = false;  // whether the string is complete
+
+// Serial commands
+void setFirstName(String newFirstName) {
+    preferences.begin(PREF_TAG, false); // Read/write
+        preferences.putString(PREF_FIRSTNAME, newFirstName);
+        preferences.end();
+        Serial.println("=> new first name saved in NVM");
+}
+void setLastName(String newLastName) {
+    preferences.begin(PREF_TAG, false); // Read/write
+        preferences.putString(PREF_LASTNAME, newLastName);
+        preferences.end();
+        Serial.println("=> new last name saved in NVM");
+}
+
+void command_listener()
+{
+  char buf[50];
+  if (inputString=="AT\r\n") Serial.println("OK");
+  if (inputString.substring(0,6)=="ATSNF+"){
+    // get name
+    setFirstName(inputString.substring(6));
+    Serial.println("OK");
+    }
+    if (inputString.substring(0,6)=="ATSNL+"){
+    // get name
+    setLastName(inputString.substring(6));
+    Serial.println("OK");
+    }
+  if (inputString=="AT+CCLK\r\n"){
+    unsigned long tiempo = millis();
+    sprintf(buf, "%lu", tiempo); 
+    Serial.println( buf );
+    Serial.println("OK");
+    }
+  if (inputString.substring(0,6)=="ATDOH+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),OUTPUT);
+    digitalWrite(strPin.toInt(),HIGH);
+    Serial.println("OK");
+    }
+  if (inputString.substring(0,6)=="ATDOL+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),OUTPUT);
+    digitalWrite(strPin.toInt(),LOW);
+    Serial.println("OK");
+    }
+  
+  if (inputString.substring(0,6)=="ATDIN+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),INPUT);
+    Serial.println(digitalRead(strPin.toInt()));
+    Serial.println("OK");
+    }
+      
+  if (inputString.substring(0,6)=="ATDIP+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),INPUT_PULLUP);
+    Serial.println(digitalRead(strPin.toInt()));
+    Serial.println("OK");
+    }
+      
+  if (inputString.substring(0,6)=="ATAI+"){
+    String strPin =  inputString.substring(5);
+    Serial.println(analogRead(strPin.toInt()));
+    Serial.println("OK");
+    } 
+      
+  if (inputString=="AT+RESET\r\n"){
+    ESP.restart();
+    Serial.println("OK");
+    }   
+ 
+}
+
 void setup()
 {
+    inputString.reserve(200);
+
     // Disable networking parts to save energy until we really need it
     esp_wifi_stop();
     esp_bt_controller_disable();
 
     Serial.begin(115200);
+
     // Initiate the display object
     display.init(115200); // enable diagnostic output on Serial
 
@@ -86,6 +177,25 @@ void setup()
 
 void loop()
 {
+    // print the string when a newline arrives:
+  if (stringComplete) {
+    command_listener();
+    // clear the string:
+    inputString = "";
+    stringComplete = false;
+  }
+    while (Serial.available()) {
+    // get the new byte:
+    char inChar = (char)Serial.read();
+    // add it to the inputString:
+    inputString += inChar;
+    // if the incoming character is a newline, set a flag
+    // so the main loop can do something about it:
+    if (inChar == '\n') {
+      stringComplete = true;
+    }
+  }
+
     runner.execute();
 }
 
