@@ -9,6 +9,8 @@ float temp, rh, tvoc;
 //  Create an instance of SensirionMZBADGE
 SensirionMZBADGE sendorModule;
 
+StatusRequest triggerAquireSensorData;
+
 // Handlers
 void handleAquireSensorData()
 {
@@ -59,4 +61,6 @@ void handleAquireSensorData()
   // and then, we'll use remainingWaitTimeMS() to ensure the correct
   // Measurement rate
   delay(sendorModule.remainingWaitTimeMS());
+  triggerAquireSensorData.setWaiting();
+  tTriggerAquireSensorView.waitFor(&triggerAquireSensorData);
 }

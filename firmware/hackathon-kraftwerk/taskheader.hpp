@@ -36,6 +36,7 @@ extern StatusRequest displayNameView;
 extern StatusRequest displaySensorView;
 extern StatusRequest displayQRView;
 extern StatusRequest fetchRegistration;
+extern StatusRequest triggerAquireSensorData;
 
 // Tasks for enable / disable created in main.cpp
 extern Task tInitialize;
@@ -49,6 +50,8 @@ extern Task tSplashView;
 extern Task tSensorView;
 extern Task tAquireSensorData;
 extern Task tPushSensorData;
+extern Task tSensorViewRefresh;
+extern Task tTriggerAquireSensorView;
 
 // Button tasks
 extern Task tBTN1;
@@ -69,6 +72,7 @@ extern void handleNameView();
 extern char* string2char(String command);
 //// taskSensorView.cpp
 extern void handleSensorView();
+extern void setSensorViewRefresh(boolean state);
 //// taskSplash.cpp
 extern void handleSplashView();
 //// taskFetchRegistration.cpp

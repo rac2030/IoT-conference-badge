@@ -11,6 +11,7 @@ HTTPClient httpsensor;
 // Handlers
 void handlePushSensorData()
 {
+    triggerAquireSensorData.signal();
     // This handler should only be called with a timeout set, otherwise it might run indefinitely
     Serial.println("Post sensor data");
     esp_wifi_start();

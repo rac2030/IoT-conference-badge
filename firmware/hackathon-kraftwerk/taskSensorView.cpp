@@ -14,21 +14,34 @@ StatusRequest displaySensorView;
 
 void showSensorData();
 
+boolean sensorViewRefresh = false;
+
 // Handlers
 void handleSensorView()
 {
+  triggerAquireSensorData.signal();
   showSensorData();
   // Signal display to show the buffer
   updateDisplay.signalComplete();
+  // Check if refresh true sensorViewRefresh
+  if(sensorViewRefresh) {
+    tSensorViewRefresh.enable();
+  } else {
+    tSensorViewRefresh.disable();
+  }
 
   displaySensorView.setWaiting();
   tSensorView.waitFor(&displaySensorView);
 }
 
+void setSensorViewRefresh(boolean state) {
+  sensorViewRefresh = state;
+} 
+
 void showSensorData()
 {
   display.fillScreen(GxEPD_WHITE);
-  //display.eraseDisplay(true);
+  //display.eraseDisplay(true); // does not flush the buffer
   display.setRotation(3);
   display.setCursor(0, 0);
 

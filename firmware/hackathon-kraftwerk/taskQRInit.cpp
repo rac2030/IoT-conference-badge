@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "taskheader.hpp"
+#include "version.h"
 
 // FreeFonts from Adafruit_GFX
 #include <Fonts/FreeMonoBold12pt7b.h>
@@ -65,10 +66,16 @@ void writeQRInitScreen()
 
     // Display init text
     // Make 1 line as space between
-    display.print("\n\n");
-    // on each new line we have to set the X offset again
-    display.setCursor(105, display.getCursorY()); // Use offset to be next to QR code
+    display.print("\n");
+
     display.setFont();
     display.setTextColor(GxEPD_BLACK);
+    // Display badge version
+    display.setCursor(105, display.getCursorY()); // Use offset to be next to QR code
+    display.print("Firmware ");
+    display.println(String(VERSION));
+    display.println();
+    // on each new line we have to set the X offset again
+    display.setCursor(105, display.getCursorY()); // Use offset to be next to QR code
     display.print(efuseMac);
 }

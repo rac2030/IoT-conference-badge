@@ -3,6 +3,7 @@
 #include <Arduino.h> //for Serial and delay
 #include <esp_wifi.h>
 #include <esp_bt.h>
+#include "version.h"
 
 Scheduler runner, runnerPriority;
 
@@ -15,11 +16,15 @@ Task tSensorView(&handleSensorView, &runner);
 Task tUpdateDisplay(&handleUpdateDisplay, &runner);
 Task tSplashView(&handleSplashView, &runnerPriority);
 Task tFetchRegistration(&handleFetchRegistration, &runner);
+Task tTriggerAquireSensorView(&handleAquireSensorData, &runnerPriority);
 
 // Run every 2 minutes once
 Task tAquireSensorData(120000L, TASK_FOREVER, &handleAquireSensorData, &runner, true);
 // Run every 30 minutes
 Task tPushSensorData(1800000L, TASK_FOREVER, &handlePushSensorData, &runner, true);
+
+// Refresh sensor view
+Task tSensorViewRefresh(5000L, TASK_FOREVER, &handleSensorView, &runner, false);
 
 // Button tasks
 Task tBTN1(&handleBTN1, &runnerPriority);
@@ -44,7 +49,7 @@ void IRAM_ATTR handleInterruptBTN1();
 void IRAM_ATTR handleInterruptBTN2();
 void IRAM_ATTR handleInterruptBTN3();
 void IRAM_ATTR handleInterruptBTN4();
-void handleInterruptButtonDebounce(byte buttonPin, String text, StatusRequest* btn);
+void handleInterruptButtonDebounce(byte buttonPin, String text, StatusRequest *btn);
 
 void setup()
 {
@@ -56,7 +61,7 @@ void setup()
     // Initiate the display object
     display.init(115200); // enable diagnostic output on Serial
 
-    Serial.println("MakeZurich Badge Firmware v0.0.5");
+    Serial.println("MakeZurich Badge Firmware " + String(VERSION));
 
     runner.setHighPriorityScheduler(&runnerPriority);
 
@@ -72,10 +77,11 @@ void setup()
     tQRView.waitFor(&displayQRView);
     fetchRegistration.setWaiting();
     tFetchRegistration.waitFor(&fetchRegistration);
+    triggerAquireSensorData.setWaiting();
+    tTriggerAquireSensorView.waitFor(&triggerAquireSensorData);
 
     tInitialize.enable();
     runner.startNow(); // set point-in-time for scheduling start
-
 }
 
 void loop()
@@ -94,23 +100,28 @@ void prepareUpdateDisplayStatus()
  *  This is the handler actually doing the work, locking the mutex (one interrupt at a time) and
  * debouncing it so it counts only if the time beetween both interrupts is greater than 100ms.
  * */
-void handleInterruptButtonDebounce(byte buttonPin, String text, StatusRequest* btn) {
-  portENTER_CRITICAL_ISR(&mux);
-  static unsigned long last_interrupt_time = 0;
-  unsigned long interrupt_time = millis();
-  // If interrupts come faster than 100ms, assume it's a bounce and ignore
-  if (interrupt_time - last_interrupt_time > 100) {
-    // distinguish between pressed and released state
-    if(digitalRead(buttonPin) == LOW) {
-      Serial.print("Interrupt: [pressed] ");
-      btn->signalComplete();
-    } else {
-      Serial.print("Interrupt: [released] ");
+void handleInterruptButtonDebounce(byte buttonPin, String text, StatusRequest *btn)
+{
+    portENTER_CRITICAL_ISR(&mux);
+    static unsigned long last_interrupt_time = 0;
+    unsigned long interrupt_time = millis();
+    // If interrupts come faster than 100ms, assume it's a bounce and ignore
+    if (interrupt_time - last_interrupt_time > 100)
+    {
+        // distinguish between pressed and released state
+        if (digitalRead(buttonPin) == LOW)
+        {
+            Serial.print("Interrupt: [pressed] ");
+            btn->signalComplete();
+        }
+        else
+        {
+            Serial.print("Interrupt: [released] ");
+        }
+        Serial.println(text);
+        last_interrupt_time = interrupt_time;
     }
-    Serial.println(text);
-    last_interrupt_time = interrupt_time;
-  }
-  portEXIT_CRITICAL_ISR(&mux);
+    portEXIT_CRITICAL_ISR(&mux);
 }
 
 void prepareButtonStatus()
@@ -135,17 +146,24 @@ void prepareButtonStatus()
 }
 
 // interrupts
-void IRAM_ATTR handleInterruptBTN1() { 
-  handleInterruptButtonDebounce(BTN1, "Button 1", &btn1Pressed);
+void IRAM_ATTR handleInterruptBTN1()
+{
+    setSensorViewRefresh(false);
+    handleInterruptButtonDebounce(BTN1, "Button 1", &btn1Pressed);
 }
 
-void IRAM_ATTR handleInterruptBTN2() {
-  handleInterruptButtonDebounce(BTN2, "Button 2", &btn2Pressed);
+void IRAM_ATTR handleInterruptBTN2()
+{
+    setSensorViewRefresh(false);
+    handleInterruptButtonDebounce(BTN2, "Button 2", &btn2Pressed);
 }
-void IRAM_ATTR handleInterruptBTN3() {
-  handleInterruptButtonDebounce(BTN3, "Button 3", &btn3Pressed);
+void IRAM_ATTR handleInterruptBTN3()
+{
+    setSensorViewRefresh(false);
+    handleInterruptButtonDebounce(BTN3, "Button 3", &btn3Pressed);
 }
 
-void IRAM_ATTR handleInterruptBTN4() {
-  handleInterruptButtonDebounce(BTN4, "Button 4", &btn4Pressed);
+void IRAM_ATTR handleInterruptBTN4()
+{
+    handleInterruptButtonDebounce(BTN4, "Button 4", &btn4Pressed);
 }
