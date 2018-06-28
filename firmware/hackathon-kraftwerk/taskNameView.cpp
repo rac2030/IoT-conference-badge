@@ -37,17 +37,17 @@ void showName(String firstname, String lastname)
   int16_t x1, y1;
   uint16_t w, h;
   display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
-  if((display.width() - 10 - w) <= 0) {
+  if((display.width() - 10 - w) <= 10) {
     // Text is too big, choose a smaller font and recalculate centering text again
     display.setFont(&FreeSansBold18pt7b);
     display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
   }
-  if((display.width() - 10 - w) <= 0) {
+  if((display.width() - 10 - w) <= 10) {
     // Text is still too big, choose a smaller font and recalculate centering text again
     display.setFont(&FreeSansBold12pt7b);
     display.getTextBounds( string2char(firstname), 0, 0, &x1, &y1, &w, &h );
   }
-  if((display.width() - 10 - w) <= 0) {
+  if((display.width() - 10 - w) <= 10) {
     // Text is still too big, choose a smaller font and recalculate centering text again
     // last try, we just choose the one we use for last name
     display.setFont(&FreeSans9pt7b);

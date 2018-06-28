@@ -6,6 +6,8 @@
         "condition_variable": "cpp",
         "future": "cpp",
         "array": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "typeindex": "cpp",
+        "typeinfo": "cpp"
     }
 }
