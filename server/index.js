@@ -5,7 +5,7 @@ const fmt = require('./serialization')
 const srv = require('./services')
 const log = require('morgan')
 
-const handleRequest = function (request) {
+const handleRequest = async function (request) {
   let requestType = (request['meta']['type'] || '').trim()
   let service = srv[requestType]
   if (!service) {
@@ -50,13 +50,17 @@ const app = express()
 app.use(express.json())
 app.use(log('combined'))
 
-app.post('/', (request, res) => {
-  const response = handleRequest(request.body)
+app.post('/', async (request, res) => {
+  const response = await handleRequest(request.body)
   res.send(response)
 })
-app.get('/', (request, res) => {
-  const response = handleRequest({ meta: request.query })
-  res.send(response)
+app.get('/', async (request, res) => {
+  if (Object.keys(request.query).length > 0) {
+    const response = await handleRequest({ meta: request.query })
+    res.send(response)
+  } else {
+    res.sendFile(__dirname + '/index.html')
+  }
 })
 
 app.listen(80, () => console.log('Started HTTP Server on 80'))
