@@ -56,7 +56,7 @@ void setup()
     // Initiate the display object
     display.init(115200); // enable diagnostic output on Serial
 
-    Serial.println("MakeZurich Badge Firmware v0.0.3");
+    Serial.println("MakeZurich Badge Firmware v0.0.4");
 
     runner.setHighPriorityScheduler(&runnerPriority);
 
