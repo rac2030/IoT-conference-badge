@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/rac2030/IoT-conference-badge",
   "dependencies": {
+    "aws-sdk": "^2.265.1",
     "express": "^4.16.3",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "now-env": "^3.1.0"
   }
 }

@@ -1,3 +1,4 @@
+require('now-env')
 const express = require('express')
 const net = require('net')
 const fmt = require('./serialization')
