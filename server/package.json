@@ -1,0 +1,25 @@
+{
+  "name": "golgafrincham",
+  "version": "1.0.0",
+  "description": "Mothership service for all your badge needs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Gonzalo Casas <gonzalocasas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rac2030/IoT-conference-badge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rac2030/IoT-conference-badge/issues"
+  },
+  "homepage": "https://github.com/rac2030/IoT-conference-badge",
+  "dependencies": {
+    "aws-sdk": "^2.265.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "now-env": "^3.1.0"
+  }
+}
